@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        width: 120px;
+        height: 120px;
+        background-color: aqua;
+        margin: 0 5px;
+        /* display: table-cell; */
+        text-align: center;
+        /* vertical-align: middle; */
+
+        /* アニメーションの速度 */
+        transition: 0.5s;
+      }
+      .circle {
+        /* 色、形、傾きなどを変更する */
+        background-color: pink;
+        border-radius: 50%;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <p>javascriptを使用してdivタグにclassを追加する。</p>
+    <p>クリックしてください。</p>
+    <div class="container">
+      <div class="box" id="box1">
+        abc
+      </div>
+      <div class="box" id="box2">
+        abc
+      </div>
+    </div>
+
+    <script>
+      const box1 = document.getElementById("box1");
+      const box2 = document.getElementById("box2");
+      // クリックイベントを定義する
+      box1.addEventListener("click", () => {
+        console.log("box1 click");
+        // 要素へclassを追加する
+        box1.classList.toggle("circle");
+      });
+      // 要素へclassを追加する
+      box2.addEventListener("click", () => {
+        console.log("box2 click");
+        box2.classList.toggle("circle");
+      });
+    </script>
+  </body>
+</html>
