@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        width: 120px;
+        height: 120px;
+        background-color: aqua;
+        margin: 5px 5px;
+        text-align: center;
+        line-height: 120px;
+        transition: 0.5s;
+        cursor: pointer;
+        user-select: none;
+      }
+      .circle {
+        background-color: pink;
+        border-radius: 50%;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <p>おみくじ</p>
+    <p>クリックしてください。</p>
+    <div class="container">
+      <div class="box" id="box1"></div>
+    </div>
+    <p>
+      <input type="button" onclick="location.reload();" value="リロード" />
+    </p>
+
+    <script>
+      "use strict";
+
+      const box1 = document.getElementById("box1");
+
+      box1.addEventListener("click", () => {
+        // おみくじを生成する
+        const omikuzi = ["大吉", "吉", "中吉", "小吉", "末吉", "凶", "大凶"];
+        const atari = Math.floor(Math.random() * omikuzi.length);
+        console.log(atari);
+        // おみくじを適用する
+        box1.textContent = omikuzi[atari];
+        box1.classList.add("circle");
+      });
+    </script>
+  </body>
+</html>

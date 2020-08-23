@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        width: 120px;
+        height: 120px;
+        background-color: aqua;
+        margin: 5px 5px;
+        text-align: center;
+        line-height: 120px;
+        transition: 0.5s;
+      }
+      .circle {
+        background-color: pink;
+        border-radius: 50%;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <p>for文を使用してdivタグを生成する</p>
+    <p>クリックしてください。</p>
+    <div class="container" id="container1"></div>
+
+    <script>
+      for (let i = 0; i < 10; i++) {
+        const div = document.createElement("div");
+        div.textContent = i;
+        div.classList.add("box");
+        div.addEventListener("click", () => {
+          console.log(i);
+          div.classList.toggle("circle");
+        });
+        document.getElementById("container1").appendChild(div);
+      }
+    </script>
+  </body>
+</html>
