@@ -1,0 +1,8 @@
+dotinstall
+
+詳解JavaScript 基礎文法編 (全26回) 
+https://dotinstall.com/lessons/basic_javascript_grammer_v2
+
+詳解JavaScript オブジェクト編
+https://dotinstall.com/lessons/basic_javascript_objects_v2
+

@@ -1,4 +1,5 @@
 dotinstall
-はじめてのJavaScript (全11回)
-https://dotinstall.com/lessons/basic_javascript_v4
+はじめてのHTML (全14回)
+https://dotinstall.com/lessons/basic_html_v5
+
 
