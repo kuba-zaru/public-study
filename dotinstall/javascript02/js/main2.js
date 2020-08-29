@@ -8,7 +8,7 @@
   console.log("■普通のfunction");
   function sum01(a, b, c) {
     return a + b + c;
-  }
+  };
   console.log(sum01(1, 2, 3));
 
   console.log("関数式");
