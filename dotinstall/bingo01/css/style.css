@@ -1,0 +1,8 @@
+p {
+  background-color: rgb(107, 136, 136);
+}
+
+.bingoo-cell {
+  /* border: 3px; */
+  border: 0.5px solid #ff00ff;
+}
