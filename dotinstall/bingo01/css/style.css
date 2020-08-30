@@ -1,8 +1,54 @@
 p {
-  background-color: rgb(107, 136, 136);
+  /* background-color: rgb(94, 204, 204); */
 }
 
-.bingoo-cell {
-  /* border: 3px; */
+/* bingo cell */
+.sheet-cell {
+  width: 50px;
+  height: 50px;
   border: 0.5px solid #ff00ff;
+  /* text-align: center; */
+  /* vertical-align: middle; */
+  /* display: inline-block; */
+}
+
+/* td { */
+/* vertical-align: bottom; */
+/* vertical-align: middle; */
+/* } */
+
+th.sheet-cell {
+  font-size: 25px;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.bingo-cell {
+  /* width: 40px;
+  height: 40px; */
+  background-color: lightgreen;
+  width: 80%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* line-height: 100%; */
+  line-height: 40px;
+
+  /* display: inline; */
+  /* display: table-cell; */
+  /* vertical-align: middle; */
+  text-align: center;
+  /* vertical-align: middle; */
+
+  /* アニメーションの速度 */
+  transition: 0.5s;
+}
+
+.bingo-open {
+  /* 色、形、傾きなどを変更する */
+  background-color: pink;
+  border-radius: 40%;
+  transform: rotate(360deg);
 }
