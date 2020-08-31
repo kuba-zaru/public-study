@@ -2,7 +2,7 @@ p {
   /* background-color: rgb(94, 204, 204); */
 }
 
-/* bingo cell */
+/* bingo シート cell */
 .sheet-cell {
   width: 50px;
   height: 50px;
@@ -12,19 +12,17 @@ p {
   /* display: inline-block; */
 }
 
-/* td { */
-/* vertical-align: bottom; */
-/* vertical-align: middle; */
-/* } */
-
+/* bingo シート title */
 th.sheet-cell {
   font-size: 25px;
 }
 
+/* 円 */
 .circle {
   border-radius: 50%;
 }
 
+/* bingo cell */
 .bingo-cell {
   /* width: 40px;
   height: 40px; */
@@ -46,6 +44,7 @@ th.sheet-cell {
   transition: 0.5s;
 }
 
+/* bingoクリック後 */
 .bingo-open {
   /* 色、形、傾きなどを変更する */
   background-color: pink;
