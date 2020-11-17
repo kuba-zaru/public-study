@@ -1,3 +1,6 @@
+■git url sample
+https://kuba-zaru.github.io/public-study/wstatic01/htmlAndCSS/learning/bootstrap4_sample/bs10_create/
+
 sample
 http://www.shoeisha.co.jp/book/download/9784798142203
 
@@ -10,5 +13,4 @@ https://validator.w3.org/
 ■CSS文法
 http://www.css-validator.org/
 http://www.css-validator.org/validator.html.ja
-
 
