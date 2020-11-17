@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.my_border {
+	/* 	border: solid 1px; */
+
+}
+
+.main_color {
+	background-color: #a0d8ef;
+}
+
+.my_disp_inline {
+	display: inline-block;
+	/* 	padding: 0em 1em; */
+}
+
+.main_img_area {
+	position: relative;
+}
+
+.main_img {
+	width: 100%;
+}
+
+.main_img_txt_back {
+	position: absolute;
+	font-size: 3em;
+	color: #999999;
+	font-weight: bolder;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.main_img_txt_flont {
+	position: absolute;
+	font-size: 2.999em;
+	color: #ffffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+}
+
+.main_explanation {
+	text-align: center;
+	font-size: 1.5em;
+}

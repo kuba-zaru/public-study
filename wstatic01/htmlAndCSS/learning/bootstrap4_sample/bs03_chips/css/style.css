@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.skyblue {
+	background: skyblue;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+
+.pink {
+	background: pink;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}

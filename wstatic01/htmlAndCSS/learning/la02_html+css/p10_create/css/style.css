@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, p, a, img, ul, li,
+	table, tr, th, td, tbody, footer, header, main, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: normal;
+	list-style: none;
+	text-decoration: none;
+}
+
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+	height: 0;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div {
+	/* 	border: solid 1px; */
+
+}
+
+/* 外枠 */
+#wrap {
+	/* 	width: 780px; */
+
+}
+
+/* ヘッダ */
+#headder_inner {
+	background-color: #eeeeee;
+}
+
+#logo {
+	float: left;
+	width: 30%;
+/* 	border: solid 1px; */
+	height: 2em;
+	vertical-align: middle;
+}
+
+#logo p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#header_contact {
+	float: right;
+	width: 60%;
+	text-align: center;
+}
+
+#header_contact_text {
+	float: left;
+	width: 48%;
+}
+
+#header_contact_text_explanation {
+
+}
+
+#header_contact_text_phone {
+
+}
+
+#header_contact_button {
+	float: right;
+	width: 50%;
+}
+
+.contact_button {
+	background-color: #ff0000;
+	height: 2em;
+	vertical-align: middle;
+	border: solid 1px;
+	/* 	color: #ffffff; */
+}
+
+.contact_button p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+/*未訪問のリンク*/
+.contact_button a:link {
+	color: #ffffff;
+}
+
+/*訪問後のリンク*/
+.contact_button a:visited {
+	color: #ffffff;
+}
+
+/*マウスをのせたとき*/
+.contact_button a:hover {
+	color: #ffffff;
+}
+
+/*クリック中*/
+.contact_button a:active {
+	text-decoration: none;
+}
+
+/* メイン画像 */
+#main_img {
+	position: relative;
+}
+
+#main_img img {
+	width: 100%;
+}
+
+#main_img_txt_back {
+	position: absolute;
+	font-size: 4em;
+	color: #111111;
+	font-weight: bolder;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+}
+
+#main_img_txt_flont {
+	position: absolute;
+	font-size: 3.999em;
+	color: #ffffff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+}
+
+/* メイン説明 */
+#main_explanation {
+	text-align: center;
+	font-size: 2em;
+	padding: 0.5em 0.5em;
+	background-color: #eeeeee;
+}
+
+/* メインナビゲーション */
+#main_nav {
+	text-align: center;
+	/* 	vertical-align: middle; */
+}
+
+ul {
+	/*   display: table; */
+	/* 	vertical-align: middle; */
+
+}
+
+#main_nav_list {
+	width: 70%;
+	margin: auto;
+}
+
+.main_nav {
+	float: left;
+	/* 	width: 30%; */
+	/* 	width: 12em; */
+	/* 	height: 12em; */
+	/* 大きさの調整は妥協してサイズ指定 */
+	width: 30%;
+	height: 12em;
+	/* 	background-color: #ffeecc; */
+	border: solid 1px;
+	border-radius: 50%;
+	margin-left: 1em;
+	/* 位置指定(相対値にする) */
+	position: relative;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+/* メインナビゲーション */
+.main_nav_link {
+	/* 幅は100% */
+	width: 100%;
+	/* 位置指定(絶対値) */
+	position: absolute;
+	/* 50%の位置にずらす */
+	top: 50%;
+	/* 	ずらしすぎた要素を元にもどす */
+	transform: translateY(-50%);
+	/* paddingでリンク幅を広げる */
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+/* #main_nav1 {} */
+/* #main_nav2 {} */
+/* #main_nav3 {} */
+
+/* メインコンテンツ */
+#main_contents {
+	width: 100%;
+}
+
+.main_contents_div {
+	display: table;
+}
+
+.main_contents {
+	/* 	float: left; */
+	width: 48%;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: #eeeeee;
+	border: solid 1px;
+}
+
+.main_contents_img {
+	/* 	width: 48%; */
+
+}
+
+.main_contents_img_tag {
+	width: 100%;
+	/* 		border: solid 1px; */
+}
+
+/* #main_contents_img1 {} */
+/* #main_contents_text1 {} */
+/* #main_contents_img2 {} */
+/* #main_contents_text2 {} */
+/* #main_contents_img3 {} */
+/* #main_contents_text3 {} */
+
+/* メインコンタクト */
+#main_contact {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#main_contact_inner {
+	width: 60%;
+}
+
+#main_contact_text {
+	float: left;
+	width: 48%;
+	text-align: center;
+}
+
+#main_contact_button {
+	float: right;
+	width: 48%;
+	text-align: center;
+}
+
+/* フッタ */
+#footer_inner {
+	background-color: #eeeeee;
+}

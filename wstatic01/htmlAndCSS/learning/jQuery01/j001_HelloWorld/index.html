@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery-3.3.1.js"></script>
+<style type="text/css">
+input[type="button"] {
+  cursor: pointer;
+}
+
+#text01 {
+  color: red;
+}
+</style>
+<script>
+  $(function() {
+
+    // ボタンクリックでテキストの表示を変更するサンプル
+    $('#btn01').click(function() {
+      $('#text01').fadeOut();
+    });
+
+    $('#btn02').click(function() {
+      $('#text01').fadeIn();
+    });
+
+  });
+</script>
+</head>
+<body>
+
+  <h1>
+    <a href="index.html">jquiery サンプル</a>
+  </h1>
+
+  <input id="btn01" type="button" value="btn01">
+  <input id="btn02" type="button" value="btn02">
+  <input type="text">
+  <p id="text01">text01 Hello World.</p>
+  <p id="text02">text02 Hello World.</p>
+
+</body>
+</html>

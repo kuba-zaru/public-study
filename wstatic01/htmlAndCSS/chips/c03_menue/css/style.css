@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* メニューicon
+**********************************************************/
+.icon-hamburger {
+	background: #fff;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	height: 50px;
+	position: relative;
+	width: 50px;
+	display: none;
+	margin-bottom: 0.4em;
+}
+
+.icon-hamburger span {
+	background: #cccccc;
+	display: block;
+	height: 16%;
+	left: 50%;
+	margin: -8% 0 0 -42%;
+	position: absolute;
+	top: 50%;
+	width: 84%;
+}
+
+.icon-hamburger span::before, .icon-hamburger span::after {
+	background: #cccccc;
+	content: "";
+	display: block;
+	height: 100%;
+	left: 50%;
+	margin: -8% 0 0 -50%;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+
+.icon-hamburger span::before {
+	margin-top: -38%;
+}
+
+.icon-hamburger span::after {
+	margin-top: 19%;
+}
+
+@media screen and (max-width: 768px) {
+	.icon-hamburger {
+		display: inline-block;
+	}
+}
+
+/* メニュー
+**********************************************************/
+.menu-container {
+	margin: 0;
+}
+
+.menu-container .menu {
+	border: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-container .menu .menu-item {
+	flex: 1;
+}
+
+.menu-container .menu .menu-item a {
+	background: #fff;
+	border-right: 1px solid #ccc;
+	color: #333;
+	display: block;
+	padding: 0.6em 0.4em;
+	text-align: center;
+	text-decoration: none;
+}
+
+.menu-container .menu .menu-item a:hover {
+	background: #ccc;
+	color: #ffffff;
+}
+
+.menu-container .menu .menu-item:last-child a {
+	border-right: none;
+}
+
+#modal-overlay {
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	height: 120%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+@media screen and (max-width: 768px) {
+	.menu-container .menu {
+		-webkit-transform: translate(-50%, -50%);
+		background: #fff;
+		display: none;
+		height: auto;
+		left: 50%;
+		position: fixed;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		z-index: 100;
+	}
+	.menu-container .menu .menu-item a {
+		border-bottom: 1px solid #ccc;
+		border-right: none;
+	}
+	.menu-container .menu .menu-item:last-child a {
+		border-bottom: none;
+	}
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/style.css">
+<title>Hello, world!</title>
+</head>
+<body>
+    <h1>ハンバーガーサンプル</h1>
+
+    <header>
+        <div id="nav-drawer">
+            <input id="nav-input" type="checkbox" class="nav-unshown"> <label id="nav-open"
+                for="nav-input"><span></span></label> <label class="nav-unshown" id="nav-close"
+                for="nav-input"></label>
+            <div id="nav-content">
+                <p>
+                    <label for="nav-input">ラベルのみ(失敗 メニュー閉じるだけ)</label>
+                </p>
+                <p>
+                    <a href="#bbb">aタグのみ(失敗 アンカーだけ動作する)</a>
+                </p>
+                <p>
+                    <a href="#bbb"><label for="nav-input">aタグ + ラベル(失敗 どっちかが動かない)</label></a>
+                </p>
+                <p>
+                    <a href="#bbb" onclick="close_nav();">aタグ + javascript(成功！！)</a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 id="bbb">
+        <a href="index.html">もどる</a>
+    </h1>
+
+
+    <script type="text/javascript">
+					function close_nav() {
+						var navinput = document.getElementById('nav-input');
+						navinput.checked = false;
+					}
+				</script>
+</body>
+</html>

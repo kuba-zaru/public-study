@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../jquery-3.3.1.js"></script>
+<style type="text/css">
+input[type="button"] {
+  cursor: pointer;
+}
+
+#text01 {
+  color: red;
+}
+
+#wrapper07>P {
+  display: none;
+}
+
+#wrapper07 {
+  border: solid;
+}
+</style>
+<script>
+  // jQueryの型
+  $(function() {
+
+    // ボタンクリックでテキストの表示を変更するサンプル
+    $('#btn01-01').click(function() {
+      $('#text01').fadeOut();
+    });
+
+    $('#btn01-02').click(function() {
+      $('#text01').fadeIn();
+    });
+
+    $('#btn02-01').click(function() {
+      $('#text02').slideUp();
+    });
+
+    $('#btn02-02').click(function() {
+      $('#text02').slideDown();
+    });
+
+    $('#btn03-01').click(function() {
+      $('#text03').css('color', 'red');
+    });
+
+    $('#btn03-02').click(function() {
+      $('#text03').css('color', 'blue');
+    });
+
+    $('#btn04-01').click(function() {
+      $('#text04').text('あいうえお');
+    });
+
+    $('#btn04-02').click(function() {
+      $('#text04').html('<a href=\'index.html\' >index.html</a>');
+    });
+
+    $('#btn04-02').click(function() {
+      $('#text04').html('<a href=\'index.html\' >index.html</a>');
+    });
+
+    $('#btn05-01').hover(function() {
+      $(this).css('color', 'red');
+    });
+
+    $('#btn06-01').click(function() {
+      const text06 = $('#text06');
+      text06.html('<a href=\'index.html\' >index.html</a>');
+    });
+
+    $('#wrapper07').hover(function() {
+      $(this).find('p').fadeIn();
+    }, function() {
+      $(this).find('p').fadeOut();
+    });
+
+  });
+</script>
+</head>
+<body>
+
+  <h1>
+    <a href="index.html">jQuiery Chips</a>
+  </h1>
+
+  <h3>fadeOut</h3>
+  <input id="btn01-01" type="button" value="btn01-01">
+  <input id="btn01-02" type="button" value="btn01-02">
+  <p id="text01">text01 Hello World.</p>
+
+  <h3>slideUp</h3>
+  <input id="btn02-01" type="button" value="btn02-01">
+  <input id="btn02-02" type="button" value="btn02-02">
+  <p id="text02">text02 Hello World.</p>
+
+  <h3>css color</h3>
+  <input id="btn03-01" type="button" value="btn03-01">
+  <input id="btn03-02" type="button" value="btn03-02">
+  <p id="text03">text03 Hello World.</p>
+
+  <h3>css text change</h3>
+  <input id="btn04-01" type="button" value="btn04-01">
+  <input id="btn04-02" type="button" value="btn04-02">
+  <p id="text04">text04 Hello World.</p>
+
+  <h3>this</h3>
+  <input id="btn05-01" type="button" value="btn05-01">
+
+  <h3>オブジェクト</h3>
+  <input id="btn06-01" type="button" value="btn06-01">
+  <p id="text06">text06 Hello World.</p>
+
+  <div id="wrapper07">
+    <h3>find hover</h3>
+    <p>text07 Hello World.</p>
+    <p>text07 Hello World.</p>
+    <p>text07 Hello World.</p>
+    <p>text07 Hello World.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

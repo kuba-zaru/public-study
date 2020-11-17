@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
+
+<title>Hello, world!</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bootstrap v4.2.1</h1>
+
+        <hr>
+
+        <h3>4分割 sm (2*8*2)</h3>
+        <header style="background-color: gray">Header</header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2" style="background-color: red;">Red</div>
+                <div class="col-sm-8" style="background-color: blue;">Blue</div>
+                <div class="col-sm-2" style="background-color: yellow;">Yellow</div>
+            </div>
+        </div>
+        <footer style="background-color: gray">Footer</footer>
+
+        <hr>
+
+        <h3>4分割 md (3*4)</h3>
+        <div class="row">
+            <div class="col-md-3 skyblue">col-md-3</div>
+            <div class="col-md-3 pink">col-md-3</div>
+            <div class="col-md-3 skyblue">col-md-3</div>
+            <div class="col-md-3 pink">col-md-3</div>
+        </div>
+        <br>
+        <h3>2分割(2*6)</h3>
+        <div class="row">
+            <div class="col-md-6 skyblue">col-md-6</div>
+            <div class="col-md-6 pink">col-md-6</div>
+        </div>
+
+        <hr>
+
+        <h1>md以上で5つのカラムが均等に並ぶ例</h1>
+        <div class="row">
+            <div class="col-md" style="background-color: skyblue; height: 100px;">1</div>
+            <div class="col-md" style="background-color: orange; height: 100px;">2</div>
+            <div class="col-md" style="background-color: skyblue; height: 100px;">3</div>
+            <div class="col-md" style="background-color: orange; height: 100px;">4</div>
+            <div class="col-md" style="background-color: skyblue; height: 100px;">5</div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h1 class="text-center">containerとcontainer-fluidの違い</h1>
+
+    <div class="container" style="background-color: skyblue;">
+        <h2>container</h2>
+        <div class="row">
+            <div class="col-lg-4" style="background-color: orange">col-lg-4</div>
+            <div class="col-lg-4" style="background-color: yellow">col-lg-4</div>
+            <div class="col-lg-4" style="background-color: orange">col-lg-4</div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color: pink;">
+        <h2>container-fluid</h2>
+        <div class="row">
+            <div class="col-lg-4" style="background-color: orange">col-lg-4</div>
+            <div class="col-lg-4" style="background-color: yellow">col-lg-4</div>
+            <div class="col-lg-4" style="background-color: orange">col-lg-4</div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <hr>
+
+    <h1 class="text-center">offset-{プレフィックス}-{カラム数}</h1>
+
+    <div class="container" style="background-color: grey;">
+        <div class="row">
+            <div class="offset-lg-2 col-lg-8" style="background-color: skyblue;">
+                ←←col-lg-offset-2で左側に2列分の余白ができた <br> <br> <br> 水色部分がcol-lg-8です。 <br>
+                <br> <br> 本例では1200px以上(lgとxl)で左側に2列分の余白がついて、 1199px以下のサイズでは2列分の余白がなくなります <br>
+                <br> <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <hr>
+
+        <h1>tableの基本形はtableにtableクラスをつけます。</h1>
+
+        <table class="table">
+            <tr>
+                <td>ライトコース</td>
+                <td>26時間のライトコースです</td>
+            </tr>
+            <tr>
+                <td>スタンダードコース</td>
+                <td>48時間のスタンダードコースです</td>
+            </tr>
+            <tr>
+                <td>プロフェッショナルコース</td>
+                <td>80時間のプロフェッショナルコースです</td>
+            </tr>
+            <tr>
+                <td>マンツーマンレッスン</td>
+                <td>単発の完全マンツーマンレッスンです</td>
+            </tr>
+            <tr>
+                <td>出張研修・コンサルティング</td>
+                <td>お客様先で行う出張研修・コンサルティングです</td>
+            </tr>
+        </table>
+
+
+        <hr>
+
+        <h1>tableクラスに加えてtable-hoverを指定すると、マウスオーバーした時に行がハイライトされます。</h1>
+
+        <table class="table table-hover">
+            <tr>
+                <td>ライトコース</td>
+                <td>26時間のライトコースです</td>
+            </tr>
+            <tr>
+                <td>スタンダードコース</td>
+                <td>48時間のスタンダードコースです</td>
+            </tr>
+            <tr>
+                <td>プロフェッショナルコース</td>
+                <td>80時間のプロフェッショナルコースです</td>
+            </tr>
+            <tr>
+                <td>マンツーマンレッスン</td>
+                <td>単発の完全マンツーマンレッスンです</td>
+            </tr>
+            <tr>
+                <td>出張研修・コンサルティング</td>
+                <td>お客様先で行う出張研修・コンサルティングです</td>
+            </tr>
+        </table>
+
+
+        <hr>
+
+        <h1>borderはボックス内の枠線を指定する際に使用するプロパティです。枠線・枠線の色・角丸に設定することができます。</h1>
+
+        <div class="border" style="padding: 10px;">border</div>
+        <!--全辺ボーダー -->
+        <br>
+        <div class="border-top" style="padding: 10px;">border-top</div>
+        <!--上ボーダー -->
+
+        <div class="border border-primary" style="padding: 10px;">border-primary</div>
+        <br>
+        <div class="border border-secondary" style="padding: 10px;">border-secondary</div>
+        <br>
+        <div class="border border-danger" style="padding: 10px;">border-danger</div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col">
+                <div style="width: 100px; height: 100px; background-color: skyblue;" class="rounded">
+                    rounded<br>(角丸)
+                </div>
+            </div>
+            <div class="col">
+                <div style="width: 100px; height: 100px; background-color: skyblue;"
+                    class="rounded-circle">
+                    rounded-circle<br>(円・楕円)
+                </div>
+            </div>
+            <div class="col">
+                <div style="width: 100px; height: 100px; background-color: skyblue;"
+                    class="rounded-top">
+                    rounded-top<br>(上辺を角丸)
+                </div>
+            </div>
+            <div class="col">
+                <div style="width: 100px; height: 100px; background-color: skyblue;"
+                    class="rounded-right">
+                    rounded-right<br>(右辺を角丸)
+                </div>
+            </div>
+            <div class="col">
+                <div style="width: 100px; height: 100px; background-color: skyblue;"
+                    class="rounded-bottom">
+                    rounded-bottom<br>(下辺を角丸)
+                </div>
+            </div>
+            <div class="col">
+                <div style="width: 100px; height: 100px; background-color: skyblue;"
+                    class="rounded-left">
+                    rounded-left<br>(左辺を角丸)
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

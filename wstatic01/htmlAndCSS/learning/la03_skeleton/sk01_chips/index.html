@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>title</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row">
+            <div class="twelve column my_border">
+                <h1>skeleton chips</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve column my_border">
+                <h4>grid12</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns my_border">
+                <h4>grid8</h4>
+            </div>
+            <div class="two columns my_border">
+                <h4>grid2</h4>
+            </div>
+            <div class="two columns my_border">
+                <h4>grid2</h4>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="twelve column my_border">
+                <h4>buttons</h4>
+                <input type="button" class="button input" value="button"> <input
+                    type="submit" class="submit input" value="submit"> <input type="button"
+                    class="button-primary" value="button"> <input type="submit"
+                    class="button-primary" value="submit"> <a class="button button-primary"
+                    href="#">アンカーボタン</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- The above form looks like this -->
+        <div class="row">
+            <form>
+                <div class="row my_border">
+                    <h3>form</h3>
+                </div>
+                <div class="row my_border">
+                    <div class="six columns">
+                        <label for="exampleEmailInput">Your email</label> <input
+                            class="u-full-width" type="email" placeholder="test@mailbox.com"
+                            id="exampleEmailInput">
+                    </div>
+                    <div class="six columns">
+                        <label for="exampleRecipientInput">Reason for contacting</label> <select
+                            class="u-full-width" id="exampleRecipientInput">
+                            <option value="Option 1">Questions</option>
+                            <option value="Option 2">Admiration</option>
+                            <option value="Option 3">Can I get your number?</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row my_border">
+                    <label for="exampleMessage">Message</label>
+                    <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+                    <label class="example-send-yourself-copy"> <input type="checkbox">
+                        <span class="label-body">Send a copy to yourself</span>
+                    </label> <input class="button-primary" type="submit" value="Submit">
+                </div>
+                <div class="row my_border">
+                    <label class="my_disp_inline"> <input type="radio" name="r_group1">
+                        <span class="label-body">radio1</span></label> <label class="my_disp_inline">
+                        <input type="radio" name="r_group1"> <span class="label-body">radio2</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+        <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+
+        <hr>
+
+        <div class="row">
+            <h3>list</h3>
+
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2
+                    <ul>
+                        <li>Item 2.1</li>
+                        <li>Item 2.2</li>
+                    </ul>
+                </li>
+                <li>Item 3</li>
+            </ul>
+        </div>
+
+        <!-- Easily substitute any <ul> or an <ol> to get number lists or sublists. Skeleton doesn't support lists nested deeper than 2 levels -->
+
+        <hr>
+
+        <div class="row">
+            <h3>list + anchor</h3>
+
+
+            <ul>
+                <li class="my_disp_inline"><a href="#">メニュー１</a></li>
+                <li class="my_disp_inline"><a href="#">メニュー２</a></li>
+                <li class="my_disp_inline"><a href="#">メニュー３</a></li>
+                <li class="my_disp_inline"><a href="#">メニュー４</a></li>
+            </ul>
+
+            <hr>
+
+            <div class="row">
+                <h3>grid + anchor</h3>
+
+                <div class="row">
+                    <div class="three columns my_border">
+                        <a href="#">メニュー１</a>
+                    </div>
+                    <div class="three columns my_border">
+                        <a href="#">メニュー２</a>
+                    </div>
+                    <div class="three columns my_border">
+                        <a href="#">メニュー３</a>
+                    </div>
+                    <div class="three columns my_border">
+                        <a href="#">メニュー４</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <h3>table</h3>
+                <table>
+                    <tr>
+                        <th>項目名</th>
+                        <th>項目名</th>
+                        <th>項目名</th>
+                        <th>項目名</th>
+                        <th>項目名</th>
+                    </tr>
+                    <tr>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                    </tr>
+                    <tr>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                        <td>内容</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    </div>
+</body>
+</html>

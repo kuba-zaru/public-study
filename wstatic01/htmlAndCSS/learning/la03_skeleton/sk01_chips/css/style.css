@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.my_border {
+	border: solid 1px;
+}
+
+.my_disp_inline {
+	display: inline-block;
+	padding: 0em 1em;
+}

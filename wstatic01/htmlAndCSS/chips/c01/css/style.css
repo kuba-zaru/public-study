@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, p, a, img, ul, li,
+	table, tr, th, td, tbody, footer, header, main, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: normal;
+	list-style: none;
+	text-decoration: none;
+}
+
+/* 枠 */
+#wrap {
+	margin: 0.5em 0.5em;
+	padding: 0.5em 0.5em;
+}
+
+/* 中央寄せ01 */
+#round01 {
+	border: solid 1px;
+	background-color: #ffffee;
+	border-radius: 50%;
+	width: 10em;
+	height: 10em;
+	/* 位置指定(相対値にする) */
+	position: relative;
+}
+
+#round01 a {
+	border: solid 1px;
+	font-size: 20px;
+	/* 位置指定(絶対値) */
+	position: absolute;
+	/* 50%の位置にずらす */
+	top: 50%;
+	left: 50%;
+	/* 	ずらしすぎた要素を元にもどす */
+	transform: translateY(-50%) translateX(-50%);
+	font-size: 20px;
+}
+
+/* 中央寄せ02 */
+#round02 {
+	border: solid 1px;
+	background-color: #ffccbb;
+	border-radius: 50%;
+	width: 10em;
+	height: 10em;
+	/* 上下中央寄せ */
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#round02 p {
+	border: solid 1px;
+	font-size: 2em;
+	/* 左右中央寄せ */
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* 中央寄せ03 */
+#round03 {
+	border: solid 1px;
+	background-color: #ffffee;
+	border-radius: 50%;
+	width: 10em;
+	height: 10em;
+	/* 上下左右中央寄せ */
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#round03 a {
+	border: solid 1px;
+	font-size: 2em;
+}
+
+/* ボタン01 */
+#button01 {
+	border: solid 1px;
+	/* 	border-radius: 10%; */
+	background-color: #FFF4F6;
+	width: 10em;
+	/* 	height: 3.5em; */
+	transition: 0.4s;
+	width: 10em;
+}
+
+#button01:hover {
+	transform: scale(1.1, 1.1);
+}
+
+#button01 a {
+	display: block;
+	/* 	border: solid 1px; */
+	text-align: center;
+	padding: 1em;
+}

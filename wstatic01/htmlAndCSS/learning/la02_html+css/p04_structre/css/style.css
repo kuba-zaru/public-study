@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+div {
+	border: solid 1px;
+}
+
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+	height: 0;
+}
+
+/* ヘッダ */
+#headder_inner {
+
+}
+
+#logo {
+	float: left;
+}
+
+#header_contact {
+	float: right;
+}
+
+#header_contact_text {
+	float: left;
+}
+
+#header_contact_button {
+	float: right;
+}
+
+/* メイン画像 */
+#main_img {
+
+}
+
+/* メイン説明 */
+#main_explanation {
+
+}
+
+/* メインナビゲーション */
+#main_vav {
+
+}
+
+#main_vav1 {
+	float: left;
+}
+
+#main_vav2 {
+	float: left;
+}
+
+#main_vav3 {
+	float: left;
+}
+
+/* メインコンテンツ */
+#main_contents {
+
+}
+
+#main_contents_img1 {
+	float: left;
+}
+
+#main_contents_text1 {
+	float: left;
+}
+
+#main_contents_img2 {
+	float: left;
+}
+
+#main_contents_text2 {
+	float: left;
+}
+
+#main_contents_img3 {
+	float: left;
+}
+
+#main_contents_text3 {
+	float: left;
+}
+
+/* メインコンタクト */
+#main_contact {
+
+}
+
+#main_contact_text {
+	float: left;
+}
+
+#main_contact_contact {
+	float: right;
+}
+
+/* フッタ */
+#footer_inner {
+
+}

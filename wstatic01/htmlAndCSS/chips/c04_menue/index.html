@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/style.css">
+<title>Hello, world!</title>
+</head>
+<body>
+    <h1>ハンバーガーサンプル</h1>
+
+    <nav>
+        <div class="drawer">
+            <a class="navbar_brand" href="#">Navbar</a>
+            <div class="navbar_toggle">
+                <span class="navbar_toggle_icon"></span> <span class="navbar_toggle_icon"></span> <span
+                    class="navbar_toggle_icon"></span>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">access</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+					$(function() {
+						$('.navbar_toggle').on('click', function() {
+							$(this).toggleClass('open');
+							$('.menu').toggleClass('open');
+						});
+					});
+				</script>
+
+</body>
+</html>
