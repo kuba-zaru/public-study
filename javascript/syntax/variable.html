@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js-test</title>
+    <script type="text/javascript">
+        console.log("■ 変数について");
+
+
+        console.log("■ 変数の分割代入");
+        let [name, age] = ['taro', 20];
+        console.log("name", name);
+        console.log("age", age);
+
+        console.log("■ type");
+        console.log("name", typeof(name));
+        console.log("age", typeof(age));
+
+        console.log("■ テンプレート文字列");
+        console.log(`名前は${name}`);
+
+        console.log("■ undefined");
+        console.log("nullは明示的に代入しないと発生しないのであまり使わない");
+        let udf;
+        console.log("udf", udf);
+
+        console.log("■ array");
+        let arr1 = ['java', 'C++', 'python', ];
+        console.log("arr1", arr1);
+        console.log("arr1", typeof(arr1));
+
+        console.log("■ Object");
+        let obj1 = {
+            name: "taro",
+            age: 20
+        };
+        console.log("obj1", obj1);
+        console.log("obj1.name", obj1.name);
+        console.log("obj1", typeof(obj1));
+
+        console.log("■ function型");
+        let f01 = () => {
+            console.log("It's function type !!");
+        }
+        f01();
+        console.log("f01", f01);
+
+        console.log("■ 文字列の足し算")
+        console.log("aabb", "aa" + "bb")
+
+
+
+        // const my_msg = () => {
+        //     console.log('msg');
+        // }
+    </script>
+</head>
+
+<body>
+    <p>basic sample</p>
+    <!-- <button type="button" onclick="my_msg()">write to console</button> -->
+</body>
+
+</html>

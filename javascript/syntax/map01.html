@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 一般的な構文
+        // const array = [ 配列データ ];
+        // array.map( コールバック関数 );
+
+        const items = [1, 2, 3, 4, 5];
+        const result = items.map(function(value) {
+            // 配列の各要素を2倍にする
+            return value * 2;
+        });
+
+        const result2 = items.map(function(value, index, array) {
+            //「index番号」が偶数の時だけ10倍にする
+            if (index % 2 !== 0) {
+                return value * 10;
+            } else {
+                return value;
+            }
+        });
+
+        // 配列
+        const foodList = {
+            'オムライス': 450,
+            '焼きそば': 500,
+            'お好み焼き': 600,
+            '焼き飯': 400
+        };
+        // 任意のキーワード
+        const order = ['焼き飯', 'お好み焼き'];
+
+        const result3 = order.map(function(value, index, array) {
+            // thisを使ってfoodListを参照し
+            // オブジェクト内の値を取得する
+            return this[value];
+        }, foodList);
+
+        const my_msg = () => {
+            console.log("result", result);
+            console.log("result2", result2);
+            console.log("result3", result3);
+
+            console.log(items.map(item => (item)))
+
+        }
+    </script>
+</head>
+
+<body>
+    <p>basic sample</p>
+    <button type="button" onclick="my_msg()">write to console</button>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div id="root"></div>
+    <div id="root2"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script>
+      // React 要素を生成する
+      const element = React.createElement("p", { id: "the-text", className: "text" }, [
+        "Hello world",
+      ]);
+
+      // 描画元の親要素を取得する
+      const root = document.getElementById("root");
+
+      // React 要素を描画する
+      ReactDOM.render(element, root);
+
+      // ------------------------------------
+
+      const element2 = React.createElement("ul", { className: "list" }, [
+        React.createElement("li", { className: "list-item" }, ["one"]),
+        React.createElement("li", { className: "list-item" }, ["two"]),
+        React.createElement("li", { className: "list-item" }, ["three"]),
+      ]);
+
+      const root2 = document.getElementById("root2");
+
+      ReactDOM.render(element2, root2);
+    </script> -->
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const element = (
+        <p id="the-text" className="text">
+          Hello world
+        </p>
+      );
+      const root = document.getElementById("root");
+      ReactDOM.render(element, root);
+    </script>
+  </body>
+</html>

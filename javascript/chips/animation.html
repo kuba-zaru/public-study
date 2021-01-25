@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="animation.css" />
+    <title>Document</title>
+    <script type="text/javascript">
+      // object 一つ
+      const ob01 = {
+        id: 0,
+        name: "tanaka",
+      };
+
+      // object 配列
+      const members = [
+        { id: 1, name: "松井", age: 39, sex: "male" },
+        { id: 2, name: "今田", age: 34, sex: "female" },
+        { id: 3, name: "鈴木", age: 24, sex: "male" },
+      ];
+
+      // hello
+      const hello = () => {
+        console.log("hello world");
+      };
+
+      const dispMybox = () => {
+        let check = document.getElementById("mycheck");
+        let box = document.getElementById("mybox");
+        box.classList.toggle("is-show");
+      };
+    </script>
+  </head>
+
+  <body>
+    <h3>結果はconsoleに表示する</h3>
+    <p>hello world</p>
+    <button onclick="hello()">hello</button>
+    <hr />
+
+    <p>btn-white 白ボタン</p>
+    <button class="btn-white" onclick="hello()">hello</button>
+
+    <hr />
+    <input type="checkbox" id="mycheck" onchange="dispMybox()" /> ← ON / OFF
+    <div class="box" id="mybox"></div>
+    <hr />
+
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script type="text/javascript">
+      const time = () => {
+        console.log("time");
+      };
+
+      // interval
+      let interval;
+
+      const tStart = () => {
+        // timer start
+        interval = setInterval(time, 10);
+        console.log("tStart");
+      };
+
+      const tStop = () => {
+        // timer stop
+        clearInterval(interval);
+        console.log("tStop");
+      };
+    </script>
+  </head>
+
+  <body>
+    <p>timer sample</p>
+    <p>結果はconsoleに表示する</p>
+    <button type="button" onclick="tStart()">start</button>
+    <button type="button" onclick="tStop()">stop</button>
+  </body>
+</html>

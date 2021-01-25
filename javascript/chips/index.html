@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+  // object 一つ
+  const ob01 = {
+    id: 0,
+    name: "tanaka",
+  };
+
+  // object 配列
+  const members = [
+    { id: 1, name: "松井", age: 39, sex: "male" },
+    { id: 2, name: "今田", age: 34, sex: "female" },
+    { id: 3, name: "鈴木", age: 24, sex: "male" },
+    { id: 4, name: "山田", age: 56, sex: "male" },
+    { id: 5, name: "田中", age: 89, sex: "female" },
+  ];
+
+  // hello
+  const hello = () => {
+    console.log("hello world");
+  };
+
+  // object
+  const ob_one_disp = () => {
+    console.log("ob01", ob01);
+  };
+
+  // object
+  const ob_array_disp = () => {
+    console.log("members", members);
+  };
+
+  // object to json
+  const ob_to_json = () => {
+    const jsontext = JSON.stringify(members);
+    console.log("jsontext", jsontext);
+  };
+
+  // object map
+  const ob_map = () => {
+    members.map((mb) => console.log(mb.name, mb.age, mb.sex));
+  };
+
+  // object for
+  const ob_for_in = () => {
+    for (mb in members) {
+      console.log(members[mb]);
+    }
+  };
+
+  // object for
+  const ob_for_of = () => {
+    for (mb of members) {
+      console.log(mb);
+    }
+  };
+
+  // object for
+  const ob_forEach = () => {
+    members.forEach((item) => console.log(item));
+  };
+
+  // object filter
+  const ob_filter01 = (idx) => {
+    // idxを持つ配列を取得する
+    const mbs = members.filter((item) => item.id === idx);
+    console.log(mbs);
+  };
+
+  // object filter
+  const ob_filter02 = (idx) => {
+    // idx以外を持つ配列を取得する
+    // let new_pd = products.filter((_, i) => i !== idx);
+    const mbs = members.filter((item) => item.id !== idx);
+    console.log(mbs);
+  };
+
+  // object find
+  const ob_find = (idx) => {
+    // idxを持つオブジェクトを取得する
+    const mbs = members.find((item) => item.id === idx);
+    console.log(mbs);
+  };
+</script>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h3>結果はconsoleに表示する</h3>
+    <p>hello world</p>
+    <button onclick="hello()">hello</button>
+    <hr />
+
+    <p>オブジェクト</p>
+    <button onclick="ob_one_disp()">hello</button>
+    <p>オブジェクト配列</p>
+    <button onclick="ob_array_disp()">hello</button>
+    <p>オブジェクト to json</p>
+    <button onclick="ob_to_json()">hello</button>
+    <hr />
+
+    <p>オブジェクト配列の参照(map)</p>
+    <button onclick="ob_map()">hello</button>
+    <p>オブジェクト配列の参照(for in)</p>
+    <button onclick="ob_for_in()">hello</button>
+    <p>オブジェクト配列の参照(for of)</p>
+    <button onclick="ob_for_of()">hello</button>
+    <p>オブジェクト配列の参照(forEach)</p>
+    <button onclick="ob_forEach()">hello</button>
+    <hr />
+
+    <p>オブジェクトにfilterを適用して参照する</p>
+    <button onclick="ob_filter01(2)">hello</button>
+    <p>オブジェクトにfilterを適用して参照する</p>
+    <button onclick="ob_filter02(2)">hello</button>
+    <p>オブジェクトにfindを適用して参照する</p>
+    <button onclick="ob_find(2)">hello</button>
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+    <p>説明</p>
+    <button onclick="hello()">hello</button>
+  </body>
+</html>

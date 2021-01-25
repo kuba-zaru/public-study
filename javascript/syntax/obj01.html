@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        // stateの定義(配列)
+        const products = [];
+
+
+        // produc
+
+        let array = [{
+            key1: 1,
+            key2: 2,
+        }, {
+            key1: 3,
+            key2: 4,
+        }]
+        let my_msg = () => {
+
+            // array.push({
+            //     key1: 5,
+            //     key2: 6,
+            // });
+            array = ([...array, {
+                key1: 5,
+                key2: 6,
+            }]);
+            console.log(array.map(ar => ar))
+        }
+    </script>
+</head>
+
+<body>
+    <p>basic sample</p>
+    <button type="button" onclick="my_msg()">write to console</button>
+</body>
+
+</html>
