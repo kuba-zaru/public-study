@@ -1,0 +1,22 @@
+h1 {
+  color: #e6855e;
+  font-size: 30px;
+  /* 背景の色を#f3f372にしてください */
+  background-color: #f3f372;
+  
+  /* 高さを80pxにしてください */
+  height: 80px;
+  
+  /* 幅を200pxにしてください */
+  width: 200px;
+  
+}
+
+img {
+  /* 高さを50pxにしてください */
+  height: 50px;
+  
+  /* 幅を70pxにしてください */
+  width: 70px;
+  
+}

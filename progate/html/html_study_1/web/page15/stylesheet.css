@@ -1,0 +1,36 @@
+body {
+  font-family: "Avenir Next";
+}
+
+li {
+  list-style: none;
+  float: left;
+  /* 上下のpaddingを33px、左右のpaddingを20pxにしてください */
+  padding: 33px 20px;
+  
+}
+
+.header {
+  background-color: #26d0c9;
+  color: #fff;
+  height: 90px;
+}
+
+.header-logo {
+  float: left;
+  font-size: 36px;
+  /* 上下のpaddingを20px、左右のpaddingを40pxにしてください */
+  padding:20px 40px
+  ;
+  
+}
+
+.main {
+  background-color: #bdf7f1;
+  height: 600px;
+}
+
+.footer {
+  background-color: #ceccf3;
+  height: 270px;
+}

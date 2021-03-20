@@ -1,0 +1,8 @@
+li {
+  color: #444;
+}
+
+/* selectedの文字の色を#ff0000にしてください */
+.selected {
+  color:#ff0000;
+}

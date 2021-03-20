@@ -1,0 +1,19 @@
+h1 {
+  color: #ff0000;
+  /* 文字の大きさを40pxにしてください */
+  font-size: 40px;
+  
+  /* 文字の種類をserifにしてください */
+  font-family: serif;
+  
+}
+
+p {
+  color: #0000ff;
+  /* 文字の大きさを20pxにしてください */
+  font-size: 20px;
+  
+  /* 文字の種類を"Lucida Grande"にしてください */
+  font-family: "Lucida Grande";
+  
+}
