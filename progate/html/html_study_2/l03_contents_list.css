@@ -1,0 +1,66 @@
+/* CSSのリセット */
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+input,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/* main-contants01 ---------------------------- */
+
+/* .main-contants01 {
+} */
+
+.main-contants01 .container {
+  width: 800px;
+  height: 500px;
+  background-color: #eee;
+}
+
+.main-contants01 .contants-item {
+  float: left;
+  width: 33%;
+}
+
+.main-contants01 .img-wrapper {
+  text-align: center;
+  position: relative;
+}
+
+.main-contants01 .img-wrapper img {
+  /* width: 250px; */
+  width: 100%;
+}
+
+.main-contants01 .img-wrapper p {
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  /* width: 100%;  */
+  /* margin: 0 auto; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.main-contants01 .description {
+  padding: 0 1em;
+}
+
+.clear {
+  clear: both;
+}

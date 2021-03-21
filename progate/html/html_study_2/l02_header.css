@@ -1,0 +1,124 @@
+/* CSSのリセット */
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+input,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/* header01 ---------------------------- */
+
+.header01 {
+  background-color: teal;
+  height: 64px;
+  padding: 0 1em;
+}
+
+.header01 h1 {
+  float: left;
+  color: white;
+  height: 64px;
+  line-height: 64px;
+}
+
+.header01 a {
+  float: right;
+  color: white;
+  line-height: 64px;
+  padding: 0 20px;
+  text-decoration: none;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s;
+}
+
+.header01 a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* header02 ---------------------------- */
+
+.header02 {
+  background-color: teal;
+  height: 64px;
+  padding: 0 1em;
+}
+
+.header02 .logo {
+  float: left;
+}
+
+.header02 .logo img {
+  height: 32px;
+  margin-top: 15px;
+}
+
+.header02 .header-item {
+  float: right;
+  margin-left: 1em;
+  /* padding: 0 20px; */
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header02 .header-item a {
+  /* margin-left: 1em; */
+  line-height: 64px;
+  padding: 0 20px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* header03 ---------------------------- */
+
+.main-container {
+  height: 500px;
+  background-image: url("../images/top.png");
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+.header03 {
+  /* background-color: teal; */
+  background-color: rgba(0, 128, 128, 0.7);
+  height: 64px;
+  width: 100%;
+  padding: 0 1em;
+  position: fixed;
+  top: 500px;
+  left: 0px;
+}
+
+.header03 h1 {
+  float: left;
+  color: white;
+  height: 64px;
+  line-height: 64px;
+}
+
+.header03 a {
+  float: right;
+  color: white;
+  line-height: 64px;
+  padding: 0 20px;
+  margin-right: 2em;
+  text-decoration: none;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s;
+}
+
+.header03 a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}

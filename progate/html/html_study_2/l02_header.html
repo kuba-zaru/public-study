@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="l02_header.css" />
+  </head>
+  <body>
+    <h1>ヘッダのレイアウト</h1>
+    <hr />
+
+    <h3>基本</h3>
+    <p>floatで左右に分割して配置</p>
+    <p>line-heightで上下中央寄せ</p>
+
+    <header class="header01">
+      <h1>サイト名</h1>
+      <a href="#">ログイン</a>
+    </header>
+    <hr />
+
+    <h3>ロゴ画像あり、メニュー複数</h3>
+    <p>ロゴはheightとmargin-topを指定して中央に配置</p>
+    <p>メニューはaタグにinline-blockを設定してheightを付ける</p>
+
+    <header class="header02">
+      <div class="container">
+        <div class="logo">
+          <img src="../images/main_logo.png" alt="" />
+        </div>
+        <div class="header-item">
+          <a href="#">ログイン</a>
+        </div>
+        <div class="header-item">
+          <a href="#">案内２</a>
+        </div>
+        <div class="header-item">
+          <a href="#">案内１</a>
+        </div>
+      </div>
+    </header>
+    <hr />
+
+    <h3>背景画像あり、メニュー固定</h3>
+    <p>背景画像を設定</p>
+    <p>ヘッダーはposition: fixedを指定して固定</p>
+
+    <div class="main-container">
+      <header class="header03">
+        <div class="container">
+          <div class="logo">
+            <h1>サイト名</h1>
+          </div>
+          <div class="header-item">
+            <a href="#">ログイン</a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <hr />
+  </body>
+</html>

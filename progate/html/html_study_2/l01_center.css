@@ -1,0 +1,66 @@
+/* CSSのリセット */
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+input,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.background-img {
+  height: 5em;
+  background-image: url(../images/top.png);
+  color: white;
+}
+
+.div-center01 {
+  background-color: #eee;
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.div-center01 span {
+  background-color: #999;
+}
+
+.div-center01 p {
+  background-color: #999;
+}
+
+.div-center01 div {
+  background-color: #999;
+  width: 20em;
+}
+
+.div-center02 {
+  background-color: #eee;
+  /* text-align: center; */
+}
+
+.div-center02 span {
+  background-color: #999;
+  width: 20em;
+  margin: 0 auto;
+}
+
+.div-center02 p {
+  margin: 0 auto;
+  background-color: #999;
+}
+
+.div-center02 div {
+  background-color: #999;
+  width: 20em;
+  margin: 0 auto;
+}
