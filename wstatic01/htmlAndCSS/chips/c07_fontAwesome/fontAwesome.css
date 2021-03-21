@@ -1,0 +1,55 @@
+.fs08 {
+  font-size: 0.8em;
+}
+
+.txt-c-pink {
+  color: pink;
+}
+
+.bomb:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1e2";
+  /* FontAwesome5からはCSSでアイコンを表示する場合に
+  font-weightも合わせて指定する必要があります。
+  Solidタイプのアイコンを表示するときにはfont-weight: 900;を、
+  Regularタイプのアイコンを表示するときにはfont-weight: 400;を
+  合わせて書きましょう。 */
+  font-weight: 900;
+}
+
+/* 見出し用 */
+.twitter:before {
+  /* ブランド系のアイコンを使うときは、font-family名を"Font Awesome 5 Brands"とします。 */
+  font-family: "Font Awesome 5 Brands";
+  content: "\f099";
+}
+
+/* 見出し用 start --------------------------------- */
+h6:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  padding-right: 5px; /*文字との隙間*/
+  color: #f89174; /*アイコンの色*/
+}
+
+h3 {
+  position: relative;
+  background: #f1f8ff;
+  padding: 0.25em 0.5em;
+  border-left: solid 2em #5c9ee7;
+}
+
+h3:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f303";
+  position: absolute;
+  padding: 0em;
+  color: white;
+  font-weight: 900;
+  left: -1.35em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* 見出し用 end --------------------------------- */
