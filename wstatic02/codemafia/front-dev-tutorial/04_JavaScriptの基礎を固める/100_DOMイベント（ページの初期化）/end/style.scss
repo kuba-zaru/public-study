@@ -1,0 +1,11 @@
+strong {
+    display: block;
+    color: red;
+}
+.done {
+    color: green;
+
+    &::before{
+        content: '✔';
+    }
+}

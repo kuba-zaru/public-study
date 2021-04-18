@@ -1,0 +1,45 @@
+$cWhite: white;
+$cBlack: black;
+
+#container {
+    text-align: center;
+}
+
+.btn {
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cBlack;
+    padding: 10px 40px;
+    margin: 50px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &.slide-bg {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        
+        & span {
+           display: inline-block;
+           width: 100%;
+           height: 100%;
+           background-color: $cBlack;
+           position: absolute;
+           top: 0;
+           left: 0;
+           transform: translateX(-100%);
+           transition: transform 0.3s;
+           z-index: -1;
+        }
+
+        &:hover {
+            color: $cWhite;
+
+            & span {
+                transform: none;
+            }
+        }
+    }
+}
+

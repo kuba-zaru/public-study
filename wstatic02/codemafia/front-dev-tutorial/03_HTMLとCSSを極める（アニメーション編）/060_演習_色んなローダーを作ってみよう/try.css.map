@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": ";AAEA,AAAA,IAAI,CAAC;EACH,uBAAuB;CAExB",
+    "sources": [
+        "try.scss",
+        "_mixin.scss"
+    ],
+    "names": [],
+    "file": "try.css"
+}

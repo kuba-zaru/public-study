@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.try .btn {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: 600;
+  padding: 10px 40px;
+  margin: 10px auto;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: black;
+  text-decoration: none !important;
+  /* ここにボタンのスタイルを追加していこう */
+}
+/*# sourceMappingURL=try.css.map */

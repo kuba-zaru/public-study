@@ -1,0 +1,33 @@
+#container {
+  padding: 1rem;
+  background-color: gray;
+}
+
+div {
+  font-weight: 600;
+  padding: 0.5rem;
+  font-size: 1.1em;
+  width: 150px;
+  height: 150px;
+  -webkit-box-shadow: 7px 7px 0 0 #000;
+          box-shadow: 7px 7px 0 0 #000;
+}
+
+.div-1 {
+  background: orange;
+}
+
+.div-2 {
+  background: tomato;
+}
+
+.div-3 {
+  background: teal;
+}
+
+.div-4 {
+  width: 80px;
+  height: 80px;
+  background-color: violet;
+}
+/*# sourceMappingURL=style.css.map */

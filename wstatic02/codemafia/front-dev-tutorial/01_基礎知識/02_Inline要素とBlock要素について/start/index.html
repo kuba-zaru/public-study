@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p>block要素はmargin 0 autoでセンタリング</p>
+    <div>こんにちは！ 日本！</div>
+    <div>こんにちは！ 日本！</div>
+    <hr />
+    <p>inine-block要素は親タグのtext-alignでセンタリング</p>
+    <span>こんにちは！ 日本！</span>
+    <span>こんにちは！ 日本！</span>
+    <style>
+      body {
+        text-align: center;
+      }
+      div {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        border: 1px solid;
+      }
+      span {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        background-color: skyblue;
+        border: 1px solid;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+.parent {
+  background-color: #51dada;
+  height: 600px;
+  width: 100%;
+}
+
+.child {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  font-weight: 600;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+}
+
+.child.v1 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.child.v2 {
+  background-color: palevioletred;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+.child.v3 {
+  background-color: rebeccapurple;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+/**
+ * 横方向のレイアウト
+ */
+/* インライン要素に対して */
+/* ブロック要素を中央揃え */
+/**
+ * 上下方向のレイアウト
+ */
+/*# sourceMappingURL=style.css.map */

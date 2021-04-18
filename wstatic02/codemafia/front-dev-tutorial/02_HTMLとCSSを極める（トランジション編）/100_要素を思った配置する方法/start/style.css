@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.parent {
+  background-color: #51dada;
+  height: 600px;
+  width: 100%;
+}
+
+.child {
+  background-color: orange;
+  width: 100px;
+  height: 100px;
+  font-weight: 600;
+}
+
+.child.v2 {
+  background-color: palevioletred;
+}
+
+.child.v3 {
+  background-color: rebeccapurple;
+}
+
+/**
+ * 横方向のレイアウト
+ */
+/* インライン要素に対して */
+/* ブロック要素を中央揃え */
+/**
+ * 上下方向のレイアウト
+ */
+/*# sourceMappingURL=style.css.map */
