@@ -15,13 +15,15 @@ $cBlack: black;
   cursor: pointer;
   transition: all 0.3s;
 
-  &.slide-bg {
+  &.cover-3d {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     z-index: 1;
+    transform-style: preserve-3d;
+    perspective: 300px;
 
     &::before {
-      content: '';
+      content: "";
       display: inline-block;
       width: 100%;
       height: 100%;
@@ -29,9 +31,11 @@ $cBlack: black;
       position: absolute;
       top: 0;
       left: 0;
-      transform: translateX(-100%);
+      transform: rotateX(90deg);
       transition: transform 0.3s;
+      transform-origin: top center;
       z-index: -1;
+      opacity: 0;
     }
 
     &:hover {
@@ -39,6 +43,7 @@ $cBlack: black;
 
       &::before {
         transform: none;
+        opacity: 1;
       }
     }
   }

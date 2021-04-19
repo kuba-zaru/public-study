@@ -3,6 +3,10 @@ $cBlack: rgb(90, 82, 116);
 
 #container {
   text-align: center;
+
+  .btn {
+    font-size: 2em;
+  }
 }
 
 .btn {
@@ -19,4 +23,13 @@ $cBlack: rgb(90, 82, 116);
     background-color: $cBlack;
     color: $cWhite;
   }
+
+  &-qube {
+    color: black;
+    & inner {
+      color: blanchedalmond;
+    }
+  }
 }
+
+// #container

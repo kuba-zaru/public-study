@@ -3,4 +3,24 @@
   height: 100px;
   margin: 0 auto;
   background-color: orangered;
+
+  transition: all 0.3s;
+
+  // 表示位置
+  // transform: translate(50%, 50%);
+
+  // 回転
+  // transform: rotate(30deg);
+
+  // 平行四辺形
+  // transform: skew(10deg);
+
+  // 大きさの変更
+  // transform: scale(2, 2);
+
+  // transform: translate(50%, 50%) scale(1.1, 1.1);
+
+  &:hover {
+    transform: translate(50%, 50%) scale(1.5, 1.5);
+  }
 }

@@ -20,7 +20,8 @@
   z-index: 1;
 }
 
-.btn.slide-bg span {
+.btn.slide-bg::before {
+  content: "";
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -41,7 +42,7 @@
   color: white;
 }
 
-.btn.slide-bg:hover span {
+.btn.slide-bg:hover::before {
   -webkit-transform: none;
           transform: none;
 }

@@ -14,8 +14,35 @@
   transition: all 0.3s;
 }
 
-.btn:hover {
+.btn.slide-bg {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn.slide-bg span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
   background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  z-index: -1;
+}
+
+.btn.slide-bg:hover {
   color: white;
+}
+
+.btn.slide-bg:hover span {
+  -webkit-transform: none;
+          transform: none;
 }
 /*# sourceMappingURL=style.css.map */

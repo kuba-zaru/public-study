@@ -3,5 +3,12 @@
   height: 100px;
   margin: 0 auto;
   background-color: orangered;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.rect:hover {
+  -webkit-transform: translate(50%, 50%) scale(1.5, 1.5);
+          transform: translate(50%, 50%) scale(1.5, 1.5);
 }
 /*# sourceMappingURL=style.css.map */

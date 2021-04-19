@@ -22,17 +22,18 @@
  */
 /* インライン要素に対して */
 // .parent {
-//   text-align: left;
+//   text-align: right;
+//   // letter-spacing: -6px;
 // }
 // .child {
-//     display: inline-block;
+//   display: inline-block;
 // }
 
 /* ブロック要素を中央揃え */
 // .parent {
 // }
 // .child {
-//     margin: 0 auto;
+//   margin: 0 auto;
 // }
 
 /**
@@ -48,9 +49,12 @@
 //   transform: translate(-50%, -50%);
 // }
 
-// .parent {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: flex-end;
-// }
+/**
+ * flex
+ */
+.parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // flex-direction: column;
+}
