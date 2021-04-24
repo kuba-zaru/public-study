@@ -1,1 +1,20 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+a {
+  color: orange;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+a:focus {
+  color: green;
+}
+
+a:active {
+  color: yellow;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+// map keyとvalueの組み合わせ
+$pattern: (
+  "up": translateY(6px),
+  "down": translateY(-6px),
+  "left": translateX(40px),
+  "right": translateX(-40px),
+);
+
+// mapをloopする
+@each $key, $value in $pattern {
+  .appear.#{$key} {
+    & .item {
+      transform: $value;
+    }
+  }
+}
+
+.appear {
+  & .item {
+    width: 200px;
+    transition: all 0.8s;
+    opacity: 0;
+    // transform: translateY(6px);
+  }
+
+  &.inview {
+    & .item {
+      opacity: 1;
+      transform: none;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.1s;
+        }
+      }
+    }
+  }
+}

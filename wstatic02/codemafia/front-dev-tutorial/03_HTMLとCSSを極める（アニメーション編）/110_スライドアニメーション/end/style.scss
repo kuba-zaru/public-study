@@ -136,10 +136,10 @@ img {
 
 .img-bg50 {
   position: relative;
-  
+
   &::before {
     display: block;
-    content: '';
+    content: "";
     padding-top: 50%;
   }
 }

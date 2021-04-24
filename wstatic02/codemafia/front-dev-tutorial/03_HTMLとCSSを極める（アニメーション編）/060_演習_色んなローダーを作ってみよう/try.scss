@@ -1,6 +1,114 @@
 @import "mixin";
 
+$cBlack: #333;
+
 .try {
+  // perspective: 120px;
+  // transform-origin: center center;
   /** ここに記述しよう */
-  
+
+  // -----------------------------
+  .spinner {
+    width: 40px;
+    height: 40px;
+    background-color: $cBlack;
+    margin: 100px auto;
+
+    @include animation(
+      $name: sk-rotateplane2,
+      $duration: 1.2s,
+      $iteration-count: infinite,
+      $timing-function: ease-in-out
+    );
+  }
+  // -----------------------------
+  .double-spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+
+    & > div {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #333;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include animation(
+        $name: sk-bounce2,
+        $duration: 2s,
+        $iteration-count: infinite,
+        $timing-function: ease-in-out
+      );
+
+      &:nth-child(2) {
+        animation-delay: -1s;
+      }
+    }
+  }
+  // -----------------------------
+  .rect-spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    letter-spacing: -2px;
+
+    & > div {
+      background-color: $cBlack;
+      height: 100%;
+      width: 6px;
+      display: inline-block;
+
+      @include animation(
+        $name: sk-stretchdelay2,
+        $duration: 1.2s,
+        $iteration-count: infinite,
+        $timing-function: ease-in-out
+      );
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation-delay: -1.3s + ($i * 0.1);
+        }
+      }
+    }
+  }
+}
+
+@keyframes sk-stretchdelay2 {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce2 {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sk-rotateplane2 {
+  0% {
+    transform: perspective(120px) rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
 }

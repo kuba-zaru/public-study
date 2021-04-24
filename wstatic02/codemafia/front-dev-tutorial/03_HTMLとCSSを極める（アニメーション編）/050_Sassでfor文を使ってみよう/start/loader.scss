@@ -10,14 +10,21 @@ $cBlack: black;
     background-color: $cBlack;
     border-radius: 50%;
     animation: sk-bouncedelay 1.4s infinite;
-  }
 
-  & .bounce1 {
-    animation-delay: -0.32s;
-  }
+    @for $i from 1 to 6 {
+      // @for $i from 1 through 2 {
+      &:nth-child(#{$i}) {
+        // 単位(s)を含めたまま四則演算できる！
+        animation-delay: -0.32s / $i;
+      }
+    }
 
-  & .bounce2 {
-    animation-delay: -0.16s;
+    // &:nth-child(1) {
+    //   animation-delay: -0.32s;
+    // }
+    // &:nth-child(2) {
+    //   animation-delay: -0.16s;
+    // }
   }
 }
 

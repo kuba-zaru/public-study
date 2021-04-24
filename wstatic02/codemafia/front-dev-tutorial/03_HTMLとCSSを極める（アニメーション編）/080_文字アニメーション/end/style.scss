@@ -1,7 +1,7 @@
 @import "mixin";
 
 html {
-    font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
 }
 
 body {
@@ -37,9 +37,9 @@ body {
       );
 
       @for $i from 1 through 9 {
-          &:nth-child(#{$i}) {
-              animation-delay: $i * 0.04s;
-          }
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.04s;
+        }
       }
     }
   }

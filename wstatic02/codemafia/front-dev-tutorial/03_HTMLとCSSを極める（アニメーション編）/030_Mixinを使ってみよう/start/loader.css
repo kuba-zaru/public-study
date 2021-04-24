@@ -7,8 +7,10 @@ body {
   width: 100px;
   height: 100px;
   background-color: black;
-  -webkit-animation: sk-bouncedelay 1.4s;
-          animation: sk-bouncedelay 1.4s;
+  -webkit-animation-name: sk-bouncedelay;
+          animation-name: sk-bouncedelay;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .paused {

@@ -1,0 +1,52 @@
+$cWhite: white;
+$cBlack: black;
+
+#container {
+  text-align: center;
+}
+
+.btn {
+  background-color: $cWhite;
+  color: $cBlack;
+  border: 1px solid $cBlack;
+  padding: 10px 40px;
+  margin: 50px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.slide-bg {
+    // ボタンを相対位置にする(spanを絶対位置にしたい為)
+    position: relative;
+    // ボタンの枠外にはみ出した要素は非表示とする
+    overflow: hidden;
+    // spanをかぶせたあとに親要素を上に持ってきたいのでzを指定する
+    z-index: 10;
+
+    // ボタンの上にかぶせる為のspan
+    & > span {
+      background-color: $cBlack;
+      // 幅、高さを持たせたいのでinline-blockにする
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      // 絶対位置でボタンの左上に配置する
+      position: absolute;
+      top: 0;
+      left: 0;
+      // 初期位置を左に100%ずらす
+      transform: translateX(-100%);
+      transition: all 0.3s;
+      // ボタンの文字の後ろに配置したいので、zをマイナスにする
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $cWhite;
+      & > span {
+        // 初期配置でずらした分を解除する
+        transform: none;
+      }
+    }
+  }
+}

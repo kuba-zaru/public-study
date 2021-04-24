@@ -1,0 +1,40 @@
+$cBlack: black;
+
+.three-dot-spinner {
+  text-align: center;
+
+  & div {
+    background-color: $cBlack;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    // アニメーションの基本設定
+    animation: sk-bouncedelay 1.4s infinite;
+  }
+
+  // アニメーションの開始タイミングを設定する
+  & .bounce1 {
+    animation-delay: -0.32s;
+  }
+  & .bounce2 {
+    animation-delay: -0.16s;
+  }
+}
+
+// アニメーションの内容を設定する
+@keyframes sk-bouncedelay {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

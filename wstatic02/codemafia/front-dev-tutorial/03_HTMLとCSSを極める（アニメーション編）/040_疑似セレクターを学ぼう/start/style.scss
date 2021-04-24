@@ -1,0 +1,26 @@
+a {
+  color: orange;
+
+  // リンククリック後
+  &:visited {
+    color: blue;
+  }
+
+  // hover
+  &:hover {
+    color: red;
+  }
+
+  // フォーカスが当たっている
+  &:focus {
+    color: green;
+  }
+
+  // クリックしている状態
+  &:active {
+    color: yellow;
+  }
+}
+
+div {
+}

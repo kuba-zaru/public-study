@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="loader.css">
-</head>
+    <link rel="stylesheet" href="loader.css" />
+  </head>
 
-<body>
-    <div class="rect">
-    </div>
-</body>
+  <body>
+    <div class="rect"></div>
+    <div><button onclick="pausedHandle()">paused</button></div>
 
+    <script>
+      // アニメーションを止める
+      function pausedHandle() {
+        let rect = document.querySelector(".rect");
+        rect.classList.toggle("paused");
+      }
+    </script>
+  </body>
 </html>

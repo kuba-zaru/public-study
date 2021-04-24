@@ -9,15 +9,29 @@ body {
   width: 100px;
   height: 100px;
   background-color: $cBlack;
-  animation: sk-bouncedelay 1.4s;
+  animation: sk-bouncedelay 1.4s; // 基本設定
+  animation-timing-function: ease; // timing-function
+  animation-delay: 0.3s; // 開始タイミング
+  animation-iteration-count: 4; // 繰り返す数
+  animation-direction: alternate-reverse; // 逆再生、折り返し
+  animation-fill-mode: forwards; // animation終了時に表示を残す
+  // animation-play-state: paused; // animationを止める
+}
+
+.paused {
+  animation-play-state: paused; // animationを止める
 }
 
 @keyframes sk-bouncedelay {
+  // 0%(fromは0%)
   from {
     transform: scale(0);
+    background-color: black;
   }
 
+  // 100%(toは0%)
   to {
+    background-color: green;
     transform: scale(1);
   }
 }
