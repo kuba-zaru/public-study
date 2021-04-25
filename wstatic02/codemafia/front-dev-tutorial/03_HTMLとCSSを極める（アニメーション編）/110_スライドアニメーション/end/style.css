@@ -202,7 +202,7 @@ img {
 
 .img-bg50::before {
   display: block;
-  content: '';
+  content: "";
   padding-top: 50%;
 }
 /*# sourceMappingURL=style.css.map */
