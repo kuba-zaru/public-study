@@ -1,7 +1,7 @@
 @import "mixin";
 
 html {
-    font-family: 'Teko', sans-serif;
+  font-family: "Teko", sans-serif;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 }
 
 .animate-title,
-.animate-title-2 {
+.tween-animate-title {
   // position: absolute;
   // top: 50%;
   // left: 50%;
@@ -29,19 +29,24 @@ body {
 
     & .char {
       display: inline-block;
+    }
+  }
+  & .char {
+    opacity: 0;
+  }
+}
 
-      @include animation(
-        $name: kf-animate-chars,
-        $duration: 0.5s,
-        $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
-        $fill-mode: both
-      );
+.animate-title.inview .char {
+  @include animation(
+    $name: kf-animate-chars,
+    $duration: 0.5s,
+    $timing-function: cubic-bezier(0.39, 1.57, 0.58, 1),
+    $fill-mode: both
+  );
 
-      @for $i from 1 through 30 {
-          &:nth-child(#{$i}) {
-              animation-delay: $i * 0.04s;
-          }
-      }
+  @for $i from 1 through 30 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * 0.04s;
     }
   }
 }

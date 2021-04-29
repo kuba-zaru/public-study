@@ -1,0 +1,64 @@
+body {
+  width: 100%;
+  height: 500vh;
+  background-color: rgb(143, 143, 143);
+}
+
+.item {
+  width: 150px;
+  height: 100px;
+  background-color: rgba(255, 192, 203, 0.3);
+}
+
+#d01 > .item {
+  & > img {
+    width: 100%;
+    transform: translateX(-30%);
+    transition: all 0.3s;
+    opacity: 0;
+  }
+  &.inview {
+    & > img {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+#d02 > .item {
+  & > div {
+    width: 100%;
+    height: 100%;
+    transform: translateX(-30%);
+    transition: all 0.3s;
+    opacity: 0;
+
+    & > input {
+      width: 80%;
+    }
+    & > p {
+      margin: 2px 2px;
+    }
+  }
+  &.inview {
+    & > div {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+#d03 > .item {
+  & > img {
+    width: 100%;
+    transform: translateX(-30%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  &.inview {
+    & > img {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
