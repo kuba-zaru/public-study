@@ -1,0 +1,175 @@
+$cWhite: white;
+$cMainFont: #444;
+$cMenutiTlesub: gray;
+$cTestGray: darkgray; // テスト
+$cTestSkyblue: skyblue; // テスト
+$cTestLightgray: lightgray; // テスト
+$cLineBlack: #333;
+$cLineWhite: #ddd;
+$hHeaderHeight: 50px; // headerの高さ
+$wMenuWidth: 300px; // menuの幅
+$sMenuOpenAnimation: 0.4s;
+
+body {
+  color: $cMainFont;
+}
+
+#container {
+  height: 100%;
+  // background-color: $cMenutiTlesub;
+  position: relative;
+  transition: all $sMenuOpenAnimation;
+  z-index: 1;
+
+  & > #menu-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+    cursor: pointer;
+  }
+}
+
+// menu open
+.menu-open {
+  & > #container {
+    transform: translateX(-$wMenuWidth);
+    box-shadow: 0 8px 30px -10px rgba(0, 0, 0, 0.8);
+    & #menu-cover {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  & > #nav-menu li {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+header {
+  // background-color: $cTestSkyblue;
+  width: 100%;
+  height: $hHeaderHeight;
+  // position: fixed; // ヘッダー固定
+  // // position: absolute; // ヘッダー固定
+  // top: 0; //トップの（プラウザの）余白
+  // left: 0; // 左の（プラウザの）余白
+  border-bottom: 1px solid $cLineWhite;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+
+  .logo-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    // align-items: center;
+    align-items: center;
+    // background-color: $cTestGray;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      // background-color: $cTestLightgray;
+      margin-left: 0.4em;
+      i {
+        font-size: 1.5em;
+      }
+      span {
+        font-size: 1.5em;
+        margin-left: 0.2em;
+      }
+    }
+  }
+
+  #mobil-menu-btn {
+    width: 20%;
+    height: 100%;
+    // background-color: $cTestGray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    // button {
+    //   background-color: $cTestLightgray;
+    //   margin-right: 0.5em;
+    //   cursor: pointer;
+    // }
+
+    i {
+      margin-right: 0.1em;
+      font-size: 3em;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+}
+
+#nav-menu {
+  // background-color: $cTestLightgray;
+  // display: none;
+  // z-index: -10;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: $wMenuWidth;
+  height: 100%;
+  padding-top: $hHeaderHeight;
+
+  ul {
+    margin-left: 2em;
+  }
+
+  li {
+    margin-bottom: 1em;
+    transition: all $sMenuOpenAnimation;
+    transform: translateX(50%);
+    transform: scale(0.4);
+    opacity: 0;
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 0.05s;
+      }
+    }
+  }
+}
+
+.menu-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: $cMainFont;
+  a {
+    text-decoration: none;
+    &:visited {
+      color: $cMainFont;
+    }
+  }
+}
+
+.menu-title-sub {
+  display: block;
+  font-size: 0.8em;
+  color: $cMenutiTlesub;
+  margin-top: 0.2em;
+  a {
+    text-decoration: none;
+    &:visited {
+      color: $cMenutiTlesub;
+    }
+  }
+}
+
+#main-contents {
+  background-color: $cWhite;
+  // background-color: $cTestSkyblue;
+  height: 100vh;
+  padding: 0.5em 0.5em;
+  // margin-top: $hHeaderHeight;
+}

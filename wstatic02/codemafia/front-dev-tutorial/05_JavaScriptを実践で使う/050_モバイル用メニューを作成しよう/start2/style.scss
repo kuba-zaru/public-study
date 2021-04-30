@@ -1,0 +1,92 @@
+$cWhite: white;
+$cTestGray: darkgray; // テスト
+$cTestSkyblue: skyblue; // テスト
+$cTestLightgray: lightgray; // テスト
+$cLineBlack: #333;
+$cLineWhite: #ddd;
+$hHeaderHeight: 50px; // headerの高さ
+$wMenuWidth: 300px; // menuの幅
+
+#container {
+  background-color: red;
+  position: relative;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+// menu open
+.menu-open {
+  & > #container {
+    transform: translateX(-$wMenuWidth);
+  }
+
+  & > #nav-menu li {
+    opacity: 1;
+  }
+}
+
+header {
+  background-color: $cTestSkyblue;
+  width: 100%;
+  height: $hHeaderHeight;
+  // position: fixed; // ヘッダー固定
+  // // position: absolute; // ヘッダー固定
+  // top: 0; //トップの（プラウザの）余白
+  // left: 0; // 左の（プラウザの）余白
+  border-bottom: 1px solid $cLineWhite;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+
+  .logo-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $cTestGray;
+
+    .logo {
+      background-color: $cTestLightgray;
+      margin-left: 0.5em;
+    }
+  }
+
+  #mobil-menu-btn {
+    width: 20%;
+    height: 100%;
+    background-color: $cTestGray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+      background-color: $cTestLightgray;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+#nav-menu {
+  // background-color: $cTestLightgray;
+  // display: none;
+  // z-index: -10;
+  position: fixed;
+  right: 0;
+  top: $hHeaderHeight;
+  width: $wMenuWidth;
+  // transition: all 0.5s;
+  ul {
+    margin: 0;
+  }
+
+  li {
+    transition: all 0.5s;
+    opacity: 0;
+  }
+}
+
+#main-contents {
+  background-color: $cTestSkyblue;
+  height: 100vh;
+  // margin-top: $hHeaderHeight;
+}

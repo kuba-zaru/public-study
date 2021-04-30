@@ -1,0 +1,90 @@
+#container {
+  background-color: red;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.menu-open > #container {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+}
+
+.menu-open > #nav-menu li {
+  opacity: 1;
+}
+
+header {
+  background-color: skyblue;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .logo-container {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: darkgray;
+}
+
+header .logo-container .logo {
+  background-color: lightgray;
+  margin-left: 0.5em;
+}
+
+header #mobil-menu-btn {
+  width: 20%;
+  height: 100%;
+  background-color: darkgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #mobil-menu-btn button {
+  background-color: lightgray;
+  margin-right: 0.5em;
+}
+
+#nav-menu {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  width: 300px;
+}
+
+#nav-menu ul {
+  margin: 0;
+}
+
+#nav-menu li {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+#main-contents {
+  background-color: skyblue;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
