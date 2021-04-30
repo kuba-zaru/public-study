@@ -6,6 +6,7 @@ img {
 .cover-slide {
   position: relative;
   overflow: hidden;
+  margin-bottom: 80vh;
 }
 
 .cover-slide::after {
@@ -202,7 +203,7 @@ img {
 
 .img-bg50::before {
   display: block;
-  content: '';
+  content: "";
   padding-top: 50%;
 }
 /*# sourceMappingURL=style.css.map */

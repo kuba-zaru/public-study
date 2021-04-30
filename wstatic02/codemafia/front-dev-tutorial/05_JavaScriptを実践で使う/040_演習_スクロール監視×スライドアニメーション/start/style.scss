@@ -8,6 +8,7 @@ img {
 .cover-slide {
   position: relative;
   overflow: hidden;
+  margin-bottom: 80vh;
 
   &::after {
     content: "";
@@ -136,10 +137,10 @@ img {
 
 .img-bg50 {
   position: relative;
-  
+
   &::before {
     display: block;
-    content: '';
+    content: "";
     padding-top: 50%;
   }
 }

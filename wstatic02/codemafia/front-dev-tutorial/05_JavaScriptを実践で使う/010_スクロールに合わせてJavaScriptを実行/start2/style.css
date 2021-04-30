@@ -51,8 +51,8 @@ body {
 
 #d03 > .item > img {
   width: 100%;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: all 1s;
   transition: all 1s;
   opacity: 0;
