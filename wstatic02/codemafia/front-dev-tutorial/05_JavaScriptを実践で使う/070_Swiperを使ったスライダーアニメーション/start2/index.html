@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <div id="content">
+          <div class="hero">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="images/image-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/image-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/image-3.jpg" alt="" />
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination swiper-pagination-white"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev swiper-button-white"></div>
+              <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+          </div>
+          <h3>スライダー Sample</h3>
+          <p># 適用</p>
+          <p>スライダーの表示</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
