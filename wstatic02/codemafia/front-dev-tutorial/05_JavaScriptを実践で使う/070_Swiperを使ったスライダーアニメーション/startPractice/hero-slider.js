@@ -8,10 +8,10 @@ class HeroSlider {
       direction: "horizontal", // スライド方向を指定
       loop: true, // ループ
       effect: "slide",
-      //   effect: "flip",
+      // effect: "flip",
       //   effect: "coverflow",
-      //   effect: "cube",
-      //   effect: "fade",
+      // effect: "cube",
+      // effect: "fade",
       slidesPerView: 1.2, //スライドを2つ（分）表示
 
       spaceBetween: 10,

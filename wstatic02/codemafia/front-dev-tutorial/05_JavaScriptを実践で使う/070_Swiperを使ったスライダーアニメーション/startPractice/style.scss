@@ -2,13 +2,14 @@ $cWhite: white;
 $cMainFont: #444;
 $cMenuTitleSub: gray;
 $cMenu: rgba(230, 230, 230, 0.4);
+$cMenu2: rgba(200, 200, 200, 0.4);
 $cTestGray: darkgray; // テスト
 $cTestSkyblue: skyblue; // テスト
 $cTestLightgray: lightgray; // テスト
 $cLineBlack: #333;
 $cLineWhite: #ddd;
 $hHeaderHeight: 50px; // headerの高さ
-$wMenuWidth: 300px; // menuの幅
+$wMenuWidth: 250px; // menuが開くの幅
 $sMenuOpenAnimation: 0.4s;
 
 @import "hero-slider";
@@ -20,6 +21,7 @@ body {
 #global-container {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
 }
 
 #container {
@@ -54,9 +56,12 @@ body {
       visibility: visible;
     }
   }
-  & > #nav-menu li {
-    opacity: 1;
-    transform: none;
+  & > #nav-menu {
+    // background-color: $cMenu2;
+    & li {
+      opacity: 1;
+      transform: none;
+    }
   }
 }
 
@@ -124,12 +129,15 @@ header {
   // background-color: $cTestLightgray;
   // display: none;
   // z-index: -10;
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   width: $wMenuWidth;
+  // width: 100%;
   height: 100%;
   padding-top: $hHeaderHeight;
+  // transition: all $sMenuOpenAnimation;
 
   ul {
     margin-left: 2em;
@@ -141,6 +149,7 @@ header {
     transform: translateX(50%);
     transform: scale(0.4);
     opacity: 0;
+    border-bottom: dotted 1px lightgray;
 
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {

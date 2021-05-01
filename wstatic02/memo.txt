@@ -12,6 +12,11 @@ https://codebyzach.github.io/pace/
 画像表示用スワイパー
 Swiper
 https://swiperjs.com/
+## 参考サイト
+サンプル付き！簡単にスライドを作れるライブラリSwiper.js超解説（各種ナビゲーションカスタマイズ編）
+https://garigaricode.com/swiper_navigation/
+スライダープラグイン Swiper（v5）の使い方
+https://www.webdesignleaves.com/pr/plugins/swiper_js.html
 
 # icon
 Material Icons by Google - Google Fonts
