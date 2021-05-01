@@ -2,3 +2,19 @@
 # Udemy
 https://www.udemy.com/course/front-dev-tutorial/
 
+
+#pace.js
+ローディング中のプログレスバー
+PACEPACE Automatic page load progress bar
+https://codebyzach.github.io/pace/
+
+#swiper
+画像表示用スワイパー
+Swiper
+https://swiperjs.com/
+
+#icon
+Material Icons by Google - Google Fonts
+https://fonts.google.com/icons
+
+
