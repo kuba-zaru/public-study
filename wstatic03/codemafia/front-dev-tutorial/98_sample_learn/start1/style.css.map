@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACEA,AAAA,EAAE,CAAC;EACD,gBAAgB,EAAE,MAAM;EACxB,KAAK,EAAE,GAAG;CACX;;ADcD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EEjBnC,AAAA,EAAE,CAAC;IACD,KAAK,EAAE,IAAI;GACZ",
+    "sources": [
+        "style.scss",
+        "mobile.scss",
+        "desktop.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

@@ -1,0 +1,30 @@
+// ★各種media用のcssを読み込む
+
+// base スマートフォン(縦)を想定
+@import "breakpoints/base";
+
+// スマートフォン(横)を想定
+@media (min-width: 480px) {
+  @import "breakpoints/480up";
+}
+// タブレット(縦)を想定
+@media (min-width: 600px) {
+  @import "breakpoints/600up";
+}
+// モニタタブレット(横)を想定
+@media (min-width: 960px) {
+  @import "breakpoints/960up";
+}
+// PCモニタを想定
+@media (min-width: 1280px) {
+  @import "breakpoints/1280up";
+}
+// レティナディスプレイ用
+// 192dps または 通常の2倍の解像度の場合
+@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2) {
+  @import "breakpoints/2x";
+}
+// 印刷時
+@media print {
+  @import "breakpoints/print";
+}

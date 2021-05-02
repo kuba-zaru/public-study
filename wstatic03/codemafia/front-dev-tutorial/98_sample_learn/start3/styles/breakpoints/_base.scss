@@ -1,0 +1,48 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+// Font スモール
+.font-sm {
+  font-size: 14px;
+}
+// Font ミディアム
+.font-sm {
+  font-size: 17px;
+}
+// Font ラージ
+.font-lr {
+  font-size: 17px;
+}
+// Font ラージ2
+.font-lg {
+  font-size: 25px;
+}
+// 余白 通常
+.md-sm {
+  margin-bottom: 16px !important;
+}
+// 余白 大き目
+.md-lg {
+  margin-bottom: 80px !important;
+}
+// 余白 通常
+.pd-sm {
+  padding-bottom: 16px !important;
+}
+// 余白 大き目
+.pd-lg {
+  padding-bottom: 80px !important;
+}
+
+// コンテンツ全体の幅
+.content-width {
+  width: 90%; // 横幅
+  margin: 0 auto; // 中央寄せ
+  max-width: $contentMaxWidth; // 横幅最大
+}

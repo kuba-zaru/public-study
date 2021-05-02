@@ -1,0 +1,33 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+// Font スモール
+.font-sm {
+  font-size: 16px;
+}
+// Font ミディアム
+.font-sm {
+  font-size: 19px;
+}
+// Font ラージ
+.font-lr {
+  font-size: 23px;
+}
+// Font ラージ2
+.font-lg {
+  font-size: 36px;
+}
+// 余白 大き目
+.md-lg {
+  margin-bottom: 150px !important;
+}
+// 余白 大き目
+.pd-lg {
+  padding-bottom: 150px !important;
+}
