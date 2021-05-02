@@ -1,6 +1,7 @@
 .cover-slide {
   position: relative;
   overflow: hidden;
+  margin-bottom: 80vh;
 
   &::after {
     content: "";
@@ -20,8 +21,7 @@
       @include animation(
         $name: kf-cover-slide,
         $duration: 1.6s,
-        $timing-function: ease-in-out,
-        $fill-mode: both
+        $timing-function: ease-in-out
       );
     }
   }
@@ -92,7 +92,6 @@
     z-index: 1;
     transition: background-color 0.3s ease;
     pointer-events: none;
-
     @include animation(
       $name: kf-img-show,
       $duration: 1.6s,

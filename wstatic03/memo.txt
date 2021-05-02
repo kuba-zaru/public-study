@@ -8,6 +8,10 @@ https://www.udemy.com/course/front-dev-tutorial/
 PACEPACE Automatic page load progress bar
 https://codebyzach.github.io/pace/
 
+# Tweenmax
+アニメーションライブラリ
+https://greensock.com/
+
 # swiper
 画像表示用スワイパー
 Swiper
