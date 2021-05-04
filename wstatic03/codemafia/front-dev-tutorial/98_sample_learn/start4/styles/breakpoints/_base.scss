@@ -87,3 +87,24 @@ img {
     flex-basis: 100%; // ボタンは必ず横幅いっぱいにする
   }
 }
+
+.popular {
+  @extend .content-width;
+  &__inner {
+    @extend .flex;
+  }
+  &__container {
+  }
+  &__item {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 150px;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    flex-basis: 100%; // ボタンは必ず横幅いっぱいにする
+  }
+}

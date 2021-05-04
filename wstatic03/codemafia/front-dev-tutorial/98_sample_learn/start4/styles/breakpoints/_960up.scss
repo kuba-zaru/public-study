@@ -31,3 +31,14 @@ body {
 .pd-lg {
   padding-bottom: 150px !important;
 }
+
+.popular {
+  &__container {
+    flex-basis: 25%;
+  }
+  &__item {
+    img {
+      height: 335px;
+    }
+  }
+}

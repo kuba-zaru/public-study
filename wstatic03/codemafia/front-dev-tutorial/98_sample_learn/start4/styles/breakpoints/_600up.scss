@@ -16,3 +16,11 @@ Stylesheet: 600px以上のタブレットやモニタで適用
     margin-bottom: 60px;
   }
 }
+
+.popular {
+  &__container {
+    flex-basis: 50%;
+  }
+  &__item {
+  }
+}
