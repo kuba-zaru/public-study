@@ -12,7 +12,7 @@ body {
   font-size: 16px;
 }
 // Font ミディアム
-.font-sm {
+.font-md {
   font-size: 19px;
 }
 // Font ラージ
@@ -24,21 +24,19 @@ body {
   font-size: 36px;
 }
 // 余白 大き目
-.md-lg {
+.mb-lg {
   margin-bottom: 150px !important;
 }
 // 余白 大き目
-.pd-lg {
+.pb-lg {
   padding-bottom: 150px !important;
 }
 
 .popular {
-  &__container {
+  &__item {
     flex-basis: 25%;
   }
-  &__item {
-    img {
-      height: 335px;
-    }
+  &__img {
+    height: 335px;
   }
 }

@@ -17,3 +17,16 @@
     fill-mode: $fill-mode;
   }
 }
+
+@mixin p-base($which: before, $top: 0, $left: 0, $content: "", $position: absolute, $width: 100%, $height: 100%, $display: block) {
+  &::#{$which} {
+    display: $display;
+    content: $content;
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    @content;
+  }
+}

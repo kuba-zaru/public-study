@@ -153,8 +153,6 @@ main {
       transition: transform 0.3s ease 1.6s;
       transform-origin: right;
     }
-
-    
   }
 
   &__sub {
@@ -311,7 +309,7 @@ main {
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 
   & .tween-animate-title {
     color: $cBlack;
@@ -357,12 +355,12 @@ main {
     background-size: contain;
   }
 
-  &.twitter{
+  &.twitter {
     &::before {
       background-image: url(../images/twitter.svg);
     }
   }
-  &.fb{
+  &.fb {
     &::before {
       background-image: url(../images/facebook.svg);
     }

@@ -19,8 +19,9 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 
 .popular {
   &__container {
-    flex-basis: 50%;
+    justify-content: space-between;
   }
   &__item {
+    flex-basis: 47%;
   }
 }
