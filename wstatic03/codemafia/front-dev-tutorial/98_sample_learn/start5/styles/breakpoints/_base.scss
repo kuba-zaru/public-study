@@ -58,6 +58,7 @@ img {
   @extend .font-lg;
   font-weight: 600;
   margin-bottom: 0;
+  display: block;
 }
 
 .sub-title {
@@ -187,6 +188,17 @@ img {
     @extend .content-width;
     @extend .pb-sm;
   }
+
+  &__title {
+    @extend .font-md;
+    @extend .mb-sm;
+  }
+
+  &__btn {
+    text-align: center;
+    flex-basis: 100%; // ボタンは必ず横幅いっぱいにする
+  }
+
   &__img {
     height: 150px;
     overflow: hidden;
@@ -199,13 +211,50 @@ img {
       width: 100%;
     }
   }
+}
 
-  &__title {
-    @extend .font-md;
-    @extend .mb-sm;
+.logo {
+  font-size: 42px;
+  display: flex;
+
+  &__img {
+    width: 0.7em;
   }
-  &__btn {
+
+  &__world {
+    color: $cWineRed;
+  }
+}
+
+.footer {
+  padding: 60px 0;
+  @extend .content-width;
+
+  &__nav {
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-    flex-basis: 100%; // ボタンは必ず横幅いっぱいにする
+  }
+
+  &__ul {
+    @extend .flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__li {
+    padding: 0;
+    margin: 10px;
+
+    & > a {
+      color: $cSubTitle;
+    }
+  }
+
+  & .logo {
+    font-size: 38px;
+    justify-content: center;
   }
 }
