@@ -752,6 +752,7 @@
 /******************************************************************
 
 Stylesheet: ベーススタイル
+基本的なスタイルはこのファイルに記述する
 
 ******************************************************************/
 body {
@@ -783,7 +784,7 @@ img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg {
+.mb-lg, .travel {
   margin-bottom: 80px !important;
 }
 
@@ -830,17 +831,53 @@ img {
           justify-content: space-between;
   padding: 15px;
   background-color: #eaebe6;
+  position: relative;
+  z-index: 0;
+}
+
+.travel__title {
+  position: relative;
+}
+
+.travel__title::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  width: 100px;
+  height: 1px;
+  background-color: black;
+  -webkit-transform: translateY(-50%) scaleX(0);
+          transform: translateY(-50%) scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease 1.6s;
+  transition: -webkit-transform 0.3s ease 1.6s;
+  transition: transform 0.3s ease 1.6s;
+  transition: transform 0.3s ease 1.6s, -webkit-transform 0.3s ease 1.6s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .travel__img {
   height: 300px;
+  -webkit-transition: -webkit-box-shadow 1ms linear 0.8s;
+  transition: -webkit-box-shadow 1ms linear 0.8s;
+  transition: box-shadow 1ms linear 0.8s;
+  transition: box-shadow 1ms linear 0.8s, -webkit-box-shadow 1ms linear 0.8s;
 }
 
 .travel__img > img {
+  position: relative;
+  z-index: -1;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.travel__img.inview {
+  -webkit-box-shadow: inset 0 0 30px black;
+          box-shadow: inset 0 0 30px black;
 }
 
 .houses__btn {
@@ -959,7 +996,7 @@ Stylesheet: 960px以上のモニタで適用
   .font-lg, .main-title {
     font-size: 36px;
   }
-  .mb-lg {
+  .mb-lg, .travel {
     margin-bottom: 150px !important;
   }
   .pb-lg {
@@ -977,6 +1014,9 @@ Stylesheet: 960px以上のモニタで適用
   }
   .travel__description {
     margin-bottom: 40px;
+  }
+  .travel__title::before {
+    display: block;
   }
 }
 

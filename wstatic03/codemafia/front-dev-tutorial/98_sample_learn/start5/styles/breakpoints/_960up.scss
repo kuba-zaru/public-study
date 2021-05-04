@@ -33,6 +33,7 @@ Stylesheet: 960px以上のモニタで適用
   &__item {
     flex-basis: 25%;
   }
+
   &__img {
     height: 335px;
   }
@@ -45,5 +46,10 @@ Stylesheet: 960px以上のモニタで適用
 
   &__description {
     margin-bottom: 40px;
+  }
+  &__title {
+    &::before {
+      display: block;
+    }
   }
 }
