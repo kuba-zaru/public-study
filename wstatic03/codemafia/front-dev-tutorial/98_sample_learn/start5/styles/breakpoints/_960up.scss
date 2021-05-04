@@ -4,9 +4,6 @@ Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
 
-body {
-  font-family: "Kameron", "Noto Sans JP", sans-serif;
-}
 // Font スモール
 .font-sm {
   font-size: 16px;
@@ -38,5 +35,15 @@ body {
   }
   &__img {
     height: 335px;
+  }
+}
+
+.travel {
+  &__img {
+    height: 400px;
+  }
+
+  &__description {
+    margin-bottom: 40px;
   }
 }

@@ -70,6 +70,39 @@ img {
   flex-direction: column;
 }
 
+.purple {
+  color: $cWineRed;
+}
+
+.travel {
+  @extend .content-width;
+  &__inner {
+    @extend .flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: $cBgGray;
+  }
+
+  &__sub {
+    @extend .mb-sm;
+  }
+
+  &__img {
+    height: 300px;
+    @extend .mb-sm;
+    & > img {
+      object-fit: cover;
+      // object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__texts {
+    @extend .pb-sm;
+  }
+}
+
 .houses {
   @extend .content-width;
 
