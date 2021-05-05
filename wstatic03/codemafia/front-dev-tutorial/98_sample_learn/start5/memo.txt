@@ -7,4 +7,5 @@ section popular
 section travel
 footer
 header menu
+side
 

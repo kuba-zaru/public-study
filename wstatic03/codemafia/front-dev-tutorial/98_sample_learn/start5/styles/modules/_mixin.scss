@@ -1,3 +1,4 @@
+// アニメーション
 @mixin animation(
   $name,
   $duration: 1s,
@@ -18,7 +19,17 @@
   }
 }
 
-@mixin p-base($which: before, $top: 0, $left: 0, $content: "", $position: absolute, $width: 100%, $height: 100%, $display: block) {
+// 疑似要素
+@mixin p-base(
+  $which: before,
+  $top: 0,
+  $left: 0,
+  $content: "",
+  $position: absolute,
+  $width: 100%,
+  $height: 100%,
+  $display: block
+) {
   &::#{$which} {
     display: $display;
     content: $content;
