@@ -1,11 +1,11 @@
-@import 'modules/variables';
-@import 'modules/mixin';
-@import 'modules/appear';
-@import 'modules/button';
-@import 'modules/hero-slider';
-@import 'modules/text-animation';
-@import 'modules/image-slide';
-@import 'modules/mobile-menu';
+@import "modules/variables";
+@import "modules/mixin";
+@import "modules/appear";
+@import "modules/button";
+@import "modules/hero-slider";
+@import "modules/text-animation";
+@import "modules/image-slide";
+@import "modules/mobile-menu";
 
 @import "breakpoints/base";
 
@@ -25,8 +25,7 @@
   @import "breakpoints/1280up";
 }
 
-@media (min-resolution: 192dpi)
-      ,(-webkit-min-device-pixel-ratio: 2) {
+@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2) {
   @import "breakpoints/2x";
 }
 

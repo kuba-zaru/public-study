@@ -53,3 +53,15 @@ Stylesheet: 960px以上のモニタで適用
     }
   }
 }
+
+.header {
+  &__nav {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  &__btn {
+    display: none;
+  }
+}

@@ -53,27 +53,85 @@ img {
   margin: 0 auto; // 中央寄せ
   max-width: $contentMaxWidth; // 横幅最大
 }
-
 .main-title {
   @extend .font-lg;
   font-weight: 600;
   margin-bottom: 0;
   display: block;
 }
-
 .sub-title {
   @extend .font-sm;
   color: $cSubTitle;
 }
-
 .flex {
   // 要素を縦1列に並べる
   display: flex;
   flex-direction: column;
 }
-
 .purple {
   color: $cWineRed;
+}
+
+#content {
+  padding-top: $navHeight;
+}
+
+#container {
+  background-color: $cWhite;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s, transform 0.5s;
+}
+
+.header {
+  position: fixed; // 画面上部で固定
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navHeight;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+
+  &.triggered {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__li {
+    margin-left: 20px;
+
+    & > a {
+      color: $cBlack;
+      text-decoration: none !important;
+      text-transform: uppercase;
+    }
+  }
+
+  & .logo {
+    font-size: 38px;
+    justify-content: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
 }
 
 .travel {
@@ -104,12 +162,6 @@ img {
       transition: transform 0.3s ease 1.6s;
       transform-origin: right;
     }
-
-    // &.inview {
-    //   &::before {
-    //     transform: translateY(-50%);
-    //   }
-    // }
   }
 
   &__sub {
