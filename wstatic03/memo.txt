@@ -1,4 +1,3 @@
-
 # Udemy
 https://www.udemy.com/course/front-dev-tutorial/
 
@@ -33,4 +32,11 @@ https://fonts.google.com/
 # normalize css
 https://getbootstrap.jp/docs/4.4/content/reboot/
 
+
+# Chips
+- ブラウザのNetworkパネルで3G回線などが疑似的に設定でき
+  遅い回線の際の挙動が確認できる。
+
+# 課題
+thisのbind 理解不足
 

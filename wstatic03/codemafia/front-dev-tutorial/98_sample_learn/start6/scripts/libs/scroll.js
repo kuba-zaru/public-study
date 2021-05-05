@@ -16,6 +16,7 @@ class ScrollObserver {
     const callback = function (entries, observer) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // console.log("ScrollObserver init", this);
           this.cb(entry.target, true);
           if (this.once) {
             observer.unobserve(entry.target);

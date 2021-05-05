@@ -1,42 +1,97 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const hero = new HeroSlider(".swiper-container");
-  // hero.start();
+  const main = new Main();
+});
 
-  const cb = function (el, isIntersecting) {
-    if (isIntersecting) {
-      const ta = new TweenTextAnimation(el);
-      ta.animate();
-    }
-  };
+class Main {
+  constructor() {
+    this.header = document.querySelector(".header");
+    this._observers = []; // 「_」が付与されている変数はsetterとgetterを持っている可能性あり
+    this._init();
+  }
 
-  const so = new ScrollObserver(".tween-animate-title", cb);
+  // setter
+  set observers(val) {
+    this._observers.push(val);
+  }
 
-  // スライド画像のアニメーション用
-  // cover-slide
-  const _inviewAnimation = function (el, inview) {
+  // getter
+  get observers() {
+    return this._observers;
+  }
+
+  _init() {
+    new MobileMenu();
+    this.hero = new HeroSlider(".swiper-container");
+    Pace.on("done", this._paseDone.bind(this)); // ロード完了時に反映したい場合の設定方法
+  }
+
+  // ロード完了時に反映したい項目を記述する
+  _paseDone() {
+    this._scrollInit();
+  }
+
+  // スライドする画像のアニメーション用
+  _inviewAnimation(el, inview) {
     if (inview) {
       el.classList.add("inview");
     } else {
       el.classList.remove("inview");
     }
-  };
-  const so2 = new ScrollObserver(".cover-slide", _inviewAnimation);
+  }
 
   // ヘッダーの背景色用
-  // nav-trigger
-  const header = document.querySelector(".header");
-  const _navAnimation = function (el, inview) {
+  _navAnimation(el, inview) {
     if (inview) {
-      console.log("_navAnimation 1");
-      header.classList.remove("triggered");
+      this.header.classList.remove("triggered");
     } else {
-      console.log("_navAnimation 2");
-      header.classList.add("triggered");
+      this.header.classList.add("triggered");
     }
-  };
-  const so3 = new ScrollObserver(".nav-trigger", _navAnimation, {
-    once: false,
-  });
+  }
 
-  new MobileMenu();
-});
+  // 波打つテキストアニメーション用
+  _textAnimation(el, inview) {
+    if (inview) {
+      const ta = new TweenTextAnimation(el);
+      ta.animate();
+    }
+  }
+
+  // heroスライダーの自動スクロール用
+  _toggleSlideAnimation(el, inview) {
+    if (inview) {
+      this.hero.start();
+    } else {
+      this.hero.stop();
+    }
+  }
+
+  // observersの監視を破棄
+  _destroyObservers() {
+    this.observers.forEach((ob) => {
+      ob.destroy();
+    });
+  }
+
+  // observersの監視を破棄
+  destroy() {
+    this._destroyObservers();
+  }
+
+  _scrollInit() {
+    this.observers = new ScrollObserver(
+      ".nav-trigger",
+      this._navAnimation.bind(this),
+      { once: false }
+    );
+    this.observers = new ScrollObserver(".cover-slide", this._inviewAnimation);
+    this.observers = new ScrollObserver(
+      ".tween-animate-title",
+      this._textAnimation
+    );
+    this.observers = new ScrollObserver(
+      ".swiper-container",
+      this._toggleSlideAnimation.bind(this),
+      { once: false }
+    );
+  }
+}
