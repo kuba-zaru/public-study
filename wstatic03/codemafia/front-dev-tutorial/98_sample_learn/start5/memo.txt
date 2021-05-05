@@ -1,7 +1,7 @@
 # 着手
-hero
 
 # 完了
+hero
 section houses
 section popular
 section travel
