@@ -1,0 +1,71 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+
+// Font スモール
+.font-sm {
+  font-size: 16px;
+}
+// Font ミディアム
+.font-md {
+  font-size: 19px;
+}
+// Font ラージ
+.font-lr {
+  font-size: 23px;
+}
+// Font ラージ2
+.font-lg {
+  font-size: 36px;
+}
+// 余白 大き目
+.mb-lg {
+  margin-bottom: 150px !important;
+}
+// 余白 大き目
+.pb-lg {
+  padding-bottom: 150px !important;
+}
+
+.popular {
+  &__item {
+    flex-basis: 25%;
+  }
+
+  &__img {
+    height: 335px;
+  }
+}
+
+.travel {
+  &__img {
+    height: 400px;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+  }
+  &__title {
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.header {
+  &__nav {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  &__btn {
+    display: none;
+  }
+}
+
+.swiper-slide {
+  box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+}
