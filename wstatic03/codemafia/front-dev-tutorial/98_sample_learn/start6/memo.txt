@@ -8,4 +8,5 @@ section travel
 footer
 header menu
 side
+loader
 
