@@ -39,4 +39,6 @@ https://getbootstrap.jp/docs/4.4/content/reboot/
 
 # 課題
 thisのbind 理解不足
+OGP
+内部SEO
 

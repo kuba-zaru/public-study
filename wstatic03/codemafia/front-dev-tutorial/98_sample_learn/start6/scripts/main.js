@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 class Main {
   constructor() {
     this.header = document.querySelector(".header");
+    this.sides = document.querySelectorAll(".side");
     this._observers = []; // 「_」が付与されている変数はsetterとgetterを持っている可能性あり
     this._init();
   }
@@ -22,11 +23,11 @@ class Main {
   _init() {
     new MobileMenu();
     this.hero = new HeroSlider(".swiper-container");
-    Pace.on("done", this._paseDone.bind(this)); // ロード完了時に反映したい場合の設定方法
+    Pace.on("done", this._paceDone.bind(this)); // ロード完了時に反映したい場合の設定方法
   }
 
   // ロード完了時に反映したい項目を記述する
-  _paseDone() {
+  _paceDone() {
     this._scrollInit();
   }
 
@@ -45,6 +46,15 @@ class Main {
       this.header.classList.remove("triggered");
     } else {
       this.header.classList.add("triggered");
+    }
+  }
+
+  // サイドアニメーション用
+  _sideAnimation(el, inview) {
+    if (inview) {
+      this.sides.forEach((side) => side.classList.add("inview"));
+    } else {
+      this.sides.forEach((side) => side.classList.remove("inview"));
     }
   }
 
@@ -84,14 +94,21 @@ class Main {
       { once: false }
     );
     this.observers = new ScrollObserver(".cover-slide", this._inviewAnimation);
+    this.observers = new ScrollObserver(".appear", this._inviewAnimation);
     this.observers = new ScrollObserver(
       ".tween-animate-title",
-      this._textAnimation
+      this._textAnimation,
+      { rootMargin: "-200px 0px" }
     );
     this.observers = new ScrollObserver(
       ".swiper-container",
       this._toggleSlideAnimation.bind(this),
       { once: false }
+    );
+    this.observers = new ScrollObserver(
+      "#main-content",
+      this._sideAnimation.bind(this),
+      { once: false, rootMargin: "-300px 0px" }
     );
   }
 }
