@@ -1,0 +1,85 @@
+$cHeaderColor: skyblue;
+$cSectionColor: pink;
+$cLiteGray: lightgray;
+$contentMaxWidth: 800px; // 画面の横幅の最大値
+$mobileMenuWidth: 250px;
+$headerHeight: 52px;
+$menuOpenTime: 0.3s;
+
+// 全体の幅の最大値を設定する
+.global-max-width {
+  width: 90%;
+  max-width: $contentMaxWidth;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+#global-container {
+  background-color: white;
+}
+
+#container {
+  // transition: transform 0.3s;
+  transition: all $menuOpenTime;
+
+  &.menu-open {
+    transform: translateX(-$mobileMenuWidth);
+
+    & .header {
+      background-color: transparent;
+      // width: 5000px;
+    }
+  }
+}
+
+.header {
+  background-color: rgba(135, 206, 235, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color, $menuOpenTime;
+
+  height: $headerHeight;
+
+  &__inner {
+    @extend .global-max-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .logo {
+    // padding-left: 0.2em;
+  }
+}
+
+#content {
+  @extend .global-max-width;
+  background-color: lightgray;
+}
+
+.hero {
+  padding-top: $headerHeight;
+}
+
+main {
+}
+
+section {
+  background-color: $cSectionColor;
+}
+
+.section2 {
+  height: 100vh;
+}
+
+.mobile-menu {
+}
+
+.footer {
+  @extend .global-max-width;
+}
