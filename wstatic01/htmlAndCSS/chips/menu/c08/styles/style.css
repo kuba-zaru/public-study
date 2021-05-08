@@ -1,0 +1,67 @@
+.global-max-width, .header__inner, #content, .footer {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+#global-container {
+  background-color: white;
+}
+
+#container {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#container.menu-open {
+  -webkit-transform: translateX(-250px);
+          transform: translateX(-250px);
+}
+
+#container.menu-open .header {
+  background-color: transparent;
+}
+
+.header {
+  background-color: rgba(135, 206, 235, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: background-color, 0.3s;
+  transition: background-color, 0.3s;
+  height: 52px;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#content {
+  background-color: lightgray;
+}
+
+.hero {
+  padding-top: 52px;
+}
+
+section {
+  background-color: pink;
+}
+
+.section2 {
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
