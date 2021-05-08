@@ -3,8 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
   mmBtn.addEventListener(judgeClickEventType(), () =>
     toggleClass("#container", "menu-open")
   );
-});
+  const mmCover = document.querySelector(".mobile-menu__cover");
+  mmCover.addEventListener(judgeClickEventType(), () =>
+    toggleClass("#container", "menu-open")
+  );
 
-// function manuButtonHandle() {
-//   console.log("manuButtonHandle");
-// }
+  const mmLinks = document.querySelectorAll(".mobile-menu__link");
+  mmLinks.forEach((item) => {
+    item.addEventListener(judgeClickEventType(), () =>
+      toggleClass("#container", "menu-open")
+    );
+  });
+});

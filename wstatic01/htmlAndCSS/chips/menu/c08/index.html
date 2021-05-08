@@ -11,6 +11,8 @@
   <body>
     <div id="global-container">
       <div id="container">
+        <div class="mobile-menu__cover"></div>
+        <!-- header -->
         <header class="header">
           <div class="header__inner">
             <div class="logo">Logo</div>
@@ -21,25 +23,35 @@
           </div>
         </header>
         <div id="content">
+          <!-- hero -->
           <div class="hero">
             <p>hero</p>
           </div>
           <div id="main-content">
             <main>
-              <section class="section1">
+              <!-- section1 -->
+              <section id="section1" class="section1">
                 <div class="section1__inner">
                   <p>Section 1</p>
                   <h3>実装</h3>
                   <p>ヘッダーの上部固定</p>
                   <p>メニューの開閉</p>
+                  <p>メニューオープン時のカバー</p>
+                  <p>モバイルメニューの開閉</p>
+                  <p>リンククリック時のスクロール</p>
                 </div>
+                <a href="#section1">section1</a>
+                <a href="#section2">section2</a>
+                <a href="#section3">section3</a>
               </section>
-              <section class="section2">
+              <!-- section2 -->
+              <section id="section2" class="section2">
                 <div class="section2__inner">
                   <p>Section 2</p>
                 </div>
               </section>
-              <section class="section3">
+              <!-- section3 -->
+              <section id="section3" class="section3">
                 <div class="section3__inner">
                   <p>Section 3</p>
                 </div>
@@ -47,15 +59,32 @@
             </main>
           </div>
         </div>
+        <!-- footer -->
         <footer class="footer">
           <div class="footer__inner">footer</div>
         </footer>
       </div>
+      <!-- mobile-menu -->
       <nav class="mobile-menu">
         <ul>
-          <li>Section 1</li>
-          <li>Section 2</li>
-          <li>Section 3</li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Section 1</span>
+              <span class="sub-title">Section 1 について</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Section 2</span>
+              <span class="sub-title">Section 2 について</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#section3">
+              <span class="main-title">Section 3</span>
+              <span class="sub-title">Section 3 について</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
