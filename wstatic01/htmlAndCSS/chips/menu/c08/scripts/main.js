@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const mmBtn = document.querySelector(".mobile-menu-button > button");
+  const mmBtn = document.querySelector(".mobile-menu__button > button");
   mmBtn.addEventListener(judgeClickEventType(), () =>
     toggleClass("#container", "menu-open")
   );

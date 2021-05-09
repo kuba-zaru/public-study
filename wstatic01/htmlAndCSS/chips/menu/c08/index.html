@@ -17,7 +17,27 @@
           <div class="header__inner">
             <div class="logo">Logo</div>
             <!-- <nav class="header__nav"></nav> -->
-            <div class="mobile-menu-button">
+            <nav class="header-menu">
+              <ul>
+                <li class="header-menu__item">
+                  <a class="header-menu__link" href="#section1">
+                    <span class="">Section 1</span>
+                  </a>
+                </li>
+                <li class="header-menu__item">
+                  <a class="header-menu__link" href="#section2">
+                    <span class="">Section 2</span>
+                  </a>
+                </li>
+                <li class="header-menu__item">
+                  <a class="header-menu__link" href="#section3">
+                    <span class="">Section 3</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="mobile-menu__button">
               <button>Menu</button>
             </div>
           </div>
@@ -32,13 +52,16 @@
               <!-- section1 -->
               <section id="section1" class="section1">
                 <div class="section1__inner">
-                  <p>Section 1</p>
+                  <div class="main-title">Section 1</div>
+                  <div class="sub-title">Section 1 について</div>
                   <h3>実装</h3>
                   <p>ヘッダーの上部固定</p>
                   <p>メニューの開閉</p>
                   <p>メニューオープン時のカバー</p>
                   <p>モバイルメニューの開閉</p>
                   <p>リンククリック時のスクロール</p>
+                  <p>cssの分割</p>
+                  <p>レスポンシブ対応(breakpoint 770)</p>
                 </div>
                 <a href="#section1">section1</a>
                 <a href="#section2">section2</a>
@@ -47,13 +70,15 @@
               <!-- section2 -->
               <section id="section2" class="section2">
                 <div class="section2__inner">
-                  <p>Section 2</p>
+                  <div class="main-title">Section 2</div>
+                  <div class="sub-title">Section 2 について</div>
                 </div>
               </section>
               <!-- section3 -->
               <section id="section3" class="section3">
                 <div class="section3__inner">
-                  <p>Section 3</p>
+                  <div class="main-title">Section 3</div>
+                  <div class="sub-title">Section 3 について</div>
                 </div>
               </section>
             </main>
@@ -68,13 +93,13 @@
       <nav class="mobile-menu">
         <ul>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#">
+            <a class="mobile-menu__link" href="#section1">
               <span class="main-title">Section 1</span>
               <span class="sub-title">Section 1 について</span>
             </a>
           </li>
           <li class="mobile-menu__item">
-            <a class="mobile-menu__link" href="#">
+            <a class="mobile-menu__link" href="#section2">
               <span class="main-title">Section 2</span>
               <span class="sub-title">Section 2 について</span>
             </a>

@@ -1,0 +1,44 @@
+/******************************************************************
+
+Stylesheet: 770px以上のモニタで適用
+
+******************************************************************/
+
+.header {
+  background-color: rgba(255, 206, 235, 0.6);
+
+  .header-menu {
+    // PC用のメニューを表示する
+    visibility: visible;
+    width: 300px;
+    height: 100%;
+    display: block;
+
+    & ul {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+    }
+
+    &__item {
+      list-style: none;
+      display: inline;
+
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  // モバイル用のメニュー、ボタンは非表示とする
+  visibility: hidden;
+  &__button {
+    display: none;
+    visibility: hidden;
+  }
+}

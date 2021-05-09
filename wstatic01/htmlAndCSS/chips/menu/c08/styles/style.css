@@ -1,8 +1,15 @@
+@charset "UTF-8";
+/******************************************************************
+
+Stylesheet: ベーススタイル
+基本的なスタイルはこのファイルに記述する
+
+******************************************************************/
 html {
   scroll-behavior: smooth;
 }
 
-.global-max-width, .header__inner, #content, .footer {
+.global-max-width, .header__inner, #content, .footer__inner {
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
@@ -10,6 +17,16 @@ html {
 
 .logo {
   font-size: 24px;
+}
+
+.main-title {
+  font-size: 24px;
+  display: block;
+}
+
+.sub-title {
+  font-size: 16px;
+  opacity: 0.8;
 }
 
 #global-container {
@@ -59,6 +76,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+}
+
+.header .header-menu {
+  visibility: hidden;
+  display: none;
 }
 
 #content {
@@ -84,8 +107,9 @@ section {
 .mobile-menu {
   z-index: 10;
   position: fixed;
-  top: 0;
-  right: 10%;
+  right: 0;
+  top: 52px;
+  width: 250px;
 }
 
 .mobile-menu__cover {
@@ -101,7 +125,60 @@ section {
   opacity: 0;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
-  -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: -10px 0px 15px 5px black;
+          box-shadow: -10px 0px 15px 5px black;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: rgba(135, 206, 235, 0.6);
+}
+
+@media (min-width: 770px) {
+  /******************************************************************
+
+Stylesheet: 770px以上のモニタで適用
+
+******************************************************************/
+  .header {
+    background-color: rgba(255, 206, 235, 0.6);
+  }
+  .header .header-menu {
+    visibility: visible;
+    width: 300px;
+    height: 100%;
+    display: block;
+  }
+  .header .header-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .header-menu__item {
+    list-style: none;
+    display: inline;
+  }
+  .header .header-menu__item a {
+    text-decoration: none;
+  }
+  .mobile-menu {
+    visibility: hidden;
+  }
+  .mobile-menu__button {
+    display: none;
+    visibility: hidden;
+  }
 }
 /*# sourceMappingURL=style.css.map */
