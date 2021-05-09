@@ -1,0 +1,84 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+基本的なスタイルはこのファイルに記述する
+
+******************************************************************/
+
+html {
+  scroll-behavior: smooth; // ページ内リンククリックの際にスムーズにスクロールさせる
+}
+
+// 全体の幅の最大値を設定する
+.global-max-width {
+  width: 90%; // 左右5%づつは開ける
+  max-width: $contentMaxWidth;
+  margin: 0 auto; // 中央寄せ
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.main-title {
+  font-size: 24px;
+  display: block;
+}
+
+.sub-title {
+  font-size: 16px;
+  opacity: 0.8; // とりあえず半透明
+}
+
+#global-container {
+  // background-color: white;
+}
+
+#container {
+}
+
+.header {
+  background-color: rgba($color: $cHeaderColor, $alpha: 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color, $menuOpenTime;
+
+  height: $headerHeight;
+
+  &__inner {
+    @extend .global-max-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+#content {
+  @extend .global-max-width;
+  background-color: $cContentColor;
+}
+
+.hero {
+  padding-top: $headerHeight;
+}
+
+section {
+  background-color: $cSectionColor;
+}
+
+.section2 {
+  height: 100vh;
+}
+
+.footer {
+  background-color: rgba($color: $cFooterColor, $alpha: 0.6);
+
+  &__inner {
+    @extend .global-max-width;
+    // background-color: $cSectionColor;
+  }
+}

@@ -1,0 +1,15 @@
+$cHeaderColor: skyblue;
+$cFooterColor: skyblue;
+$cSectionColor: pink;
+$cContentColor: lightgray;
+$contentMaxWidth: 800px; // 画面の横幅の最大値
+$mobileMenuWidth: 250px;
+$headerHeight: 52px;
+$menuOpenTime: 0.3s;
+
+@import "modules/appear";
+@import "breakpoints/base";
+
+@media (min-width: 770px) {
+  @import "breakpoints/770up";
+}
