@@ -1,0 +1,88 @@
+$inviewTime: 0.5s;
+
+.dulay10 {
+  // アニメーションのディレイを設定する
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      transition-delay: $i * 0.1s;
+    }
+  }
+}
+
+.dulay5 {
+  // アニメーションのディレイを設定する
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      transition-delay: $i * 0.1s;
+    }
+  }
+}
+
+.item_container {
+  background-color: lightgray;
+
+  opacity: 0;
+  transition: opacity $inviewTime;
+
+  // フェードイン後の見え方
+  &.inview {
+    opacity: 1;
+  }
+
+  & .item {
+    & img {
+      height: 50px;
+    }
+  }
+}
+
+.item_container2 {
+  background-color: lightgray;
+
+  // フェードイン後の見え方
+  &.inview {
+    & .item {
+      opacity: 1;
+      // アニメーションのディレイを設定する
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.3s;
+        }
+      }
+    }
+  }
+
+  & .item {
+    opacity: 0;
+    transition: opacity $inviewTime;
+
+    & img {
+      height: 50px;
+    }
+  }
+}
+
+.item_container3 {
+  background-color: lightgray;
+
+  // フェードイン後の見え方
+  &.inview {
+    // アニメーション後の設定
+    & .item {
+      opacity: 1;
+      transform: none;
+      @extend .dulay5; // ディレイ
+    }
+  }
+
+  & .item {
+    // アニメーション前の設定
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity $inviewTime, transform $inviewTime;
+
+    & img {
+      height: 50px;
+    }
+  }
+}
