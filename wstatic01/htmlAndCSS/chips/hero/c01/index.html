@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>StayWorld</title>
     <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
@@ -21,7 +25,22 @@
         <div id="content">
           <!-- hero -->
           <div class="hero">
-            <p>hero</p>
+            <div class="swiper-container">
+              <!-- slides -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/image-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/image-2.jpg" alt="" />
+                </div>
+              </div>
+              <!-- pagination -->
+              <div class="swiper-pagination swiper-pagination-white"></div>
+              <!-- Navigation arrows -->
+              <div class="swiper-button-prev swiper-button-white"></div>
+              <div class="swiper-button-next swiper-button-white"></div>
+            </div>
           </div>
           <div id="main-content">
             <main>
@@ -52,6 +71,8 @@
       </div>
       <nav class="mobile-menu"></nav>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts/modules/hero-slider.js"></script>
     <script src="scripts/util.js"></script>
     <script src="scripts/main.js"></script>
   </body>

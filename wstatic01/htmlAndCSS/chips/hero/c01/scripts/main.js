@@ -3,4 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // btn01.addEventListener(judgeClickEventType(), () =>
   //   toggleClass(".item_container", "inview")
   // );
+
+  const heroSlider = new HeroSlider();
 });

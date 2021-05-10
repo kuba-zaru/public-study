@@ -1,6 +1,6 @@
-$cHeaderColor: skyblue;
+$cHeaderColor: rgb(240, 240, 240);
 $cFooterColor: skyblue;
-$cSectionColor: pink;
+$cSectionColor: rgb(240, 240, 240);
 $cContentColor: lightgray;
 $contentMaxWidth: 800px; // 画面の横幅の最大値
 $mobileMenuWidth: 250px;
@@ -8,6 +8,7 @@ $headerHeight: 52px;
 $menuOpenTime: 0.3s;
 
 @import "modules/appear";
+@import "modules/hero-slider";
 @import "breakpoints/base";
 
 @media (min-width: 770px) {
