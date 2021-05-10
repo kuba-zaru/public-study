@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>StayWorld</title>
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <!-- header -->
+        <header class="header">
+          <div class="header__inner">
+            <div class="logo">Logo</div>
+            <nav class="header__nav"></nav>
+          </div>
+        </header>
+        <div id="content">
+          <!-- hero -->
+          <div class="hero">
+            <div class="swiper-container">
+              <!-- slides -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/image-1.jpg" alt="" />
+                  <div class="hero__sub-title">welcome</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/image-2.jpg" alt="" />
+                  <div class="hero__sub-title">take your time</div>
+                </div>
+              </div>
+              <!-- pagination -->
+              <div class="swiper-pagination swiper-pagination-white"></div>
+              <!-- Navigation arrows -->
+              <div class="swiper-button-prev swiper-button-white"></div>
+              <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+            <div class="hero__main-title">Hello World</div>
+          </div>
+          <div id="main-content">
+            <main>
+              <!-- section1 -->
+              <section id="section1" class="section1">
+                <div class="main-title">section1</div>
+                <div>ひな形</div>
+              </section>
+
+              <!-- section2 -->
+              <section id="section2" class="section2">
+                <div class="main-title">section2</div>
+              </section>
+
+              <!-- section3 -->
+              <section id="section3" class="section3">
+                <div class="main-title">section3</div>
+              </section>
+            </main>
+          </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+          <div class="footer__inner">
+            <div>footer</div>
+          </div>
+        </footer>
+      </div>
+      <nav class="mobile-menu"></nav>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts/modules/hero-slider.js"></script>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

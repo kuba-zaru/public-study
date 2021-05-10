@@ -1,0 +1,229 @@
+@charset "UTF-8";
+.appear.up .item {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.appear.down .item {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+.appear.left .item {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.appear.right .item {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.appear.inview .item {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.appear.inview .item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.appear.inview .item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.appear.inview .item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.appear.inview .item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.appear.inview .item:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.appear.inview .item:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.appear.inview .item:nth-child(7) {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.appear.inview .item:nth-child(8) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.appear.inview .item:nth-child(9) {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+.appear.inview .item:nth-child(10) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.appear .item {
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.hero {
+  position: relative;
+  z-index: 0;
+}
+
+.hero__main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  z-index: 10;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.swiper-slide > img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-slide > .hero__sub-title {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(40px) translateX(-50%);
+          transform: translateY(40px) translateX(-50%);
+  z-index: 10;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  opacity: 0;
+}
+
+.swiper-slide-active > .hero__sub-title {
+  -webkit-transform: translateY(20px) translateX(-50%);
+          transform: translateY(20px) translateX(-50%);
+  opacity: 0.75;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination {
+  opacity: 0.7;
+}
+
+/******************************************************************
+
+Stylesheet: ベーススタイル
+基本的なスタイルはこのファイルに記述する
+
+******************************************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+.global-max-width, .header__inner, #content, .footer__inner {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.main-title {
+  font-size: 24px;
+  display: block;
+}
+
+.sub-title {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.header {
+  background-color: rgba(240, 240, 240, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-transition: background-color, 0.3s;
+  transition: background-color, 0.3s;
+  -webkit-box-shadow: 0px 1px 10px -5px black;
+          box-shadow: 0px 1px 10px -5px black;
+  height: 52px;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#content {
+  background-color: lightgray;
+}
+
+section {
+  background-color: #f0f0f0;
+}
+
+.section2 {
+  height: 100vh;
+}
+
+.footer {
+  background-color: rgba(135, 206, 235, 0.6);
+}
+
+@media (min-width: 770px) {
+  /******************************************************************
+
+Stylesheet: 770px以上のモニタで適用
+
+******************************************************************/
+  .header {
+    background-color: rgba(255, 206, 235, 0.6);
+  }
+}
+/*# sourceMappingURL=style.css.map */
