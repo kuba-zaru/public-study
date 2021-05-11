@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>StayWorld</title>
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <!-- header -->
+        <header class="header">
+          <div class="header__inner">
+            <div class="logo">Logo</div>
+            <nav class="header__nav"></nav>
+          </div>
+        </header>
+        <div id="content">
+          <!-- hero -->
+          <div class="hero">
+            <p>hero</p>
+          </div>
+          <div id="main-content">
+            <main>
+              <!-- section1 -->
+              <section id="section1" class="section1">
+                <h2>section1</h2>
+                <h3>画像表示</h3>
+                <!-- img01 -->
+                <p>
+                  img01
+                  imgタグにwidthを設定した場合、画像はアスペクト比を保って縮小(拡大)される
+                </p>
+                <div class="img01-container">
+                  <img src="images/08-99015.jpeg" alt="" />
+                </div>
+
+                <!-- img02 -->
+                <p>
+                  img02
+                  divタグにwidthを設定した場合、画像はアスペクト比を保って縮小(拡大)される
+                </p>
+                <div class="img02-container">
+                  <img src="images/08-99015.jpeg" alt="" />
+                </div>
+
+                <!-- img03 -->
+                <p>
+                  img03 divタグにwidth、heightを設定した場合、アスペクト比を崩す
+                </p>
+                <div class="img03-container">
+                  <img src="images/08-99015.jpeg" alt="" />
+                </div>
+
+                <hr />
+
+                <!-- img10 -->
+                <p>
+                  img10
+                  divタグにwidth、heightを設定した場合、imgタグにobject-fit:
+                  coverを設定すればアスペクト比を保つ(端の部分は切れる)
+                </p>
+                <div class="img10-container">
+                  <img src="images/08-99015.jpeg" alt="" />
+                </div>
+
+                <!-- img11 -->
+                <p>
+                  img11 imgタグにobject-fit:
+                  coverを設定すれば横長の表示も簡単。これ便利！！
+                </p>
+                <div class="img11-container">
+                  <img src="images/08-99015.jpeg" alt="" />
+                </div>
+
+                <!-- img12 -->
+                <p>
+                  img12 imgタグにobject-fit:
+                  containを設定した場合はdivタグの範囲内に画像を縮小して表示する。
+                  画像全体を固定範囲に表示したい場合は便利そう。
+                </p>
+                <div class="img12-container">
+                  <img src="images/08-99015.jpeg" alt="" />
+                </div>
+              </section>
+
+              <!-- section2 -->
+              <section id="section2" class="section2">
+                <h2>section2</h2>
+              </section>
+              <!-- section3 -->
+              <section id="section3" class="section3">
+                <h2>section3</h2>
+              </section>
+            </main>
+          </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+          <div class="footer__inner">
+            <div>footer</div>
+          </div>
+        </footer>
+      </div>
+      <nav class="mobile-menu"></nav>
+    </div>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
