@@ -1,0 +1,21 @@
+.accordion-1__item {
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.accordion-1__contents {
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion-1 .open .accordion-1__contents {
+  background-color: lightgray;
+  height: 200px;
+  opacity: 1;
+  visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */

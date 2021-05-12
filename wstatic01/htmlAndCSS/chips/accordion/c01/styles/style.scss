@@ -1,0 +1,31 @@
+.accordion-1 {
+  &__item {
+    //   background-color: red;
+    cursor: pointer;
+    //   opacity: 0;
+    transition: all 1s;
+  }
+
+  // コンテンツ
+  // 初期状態
+  &__contents {
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  & .open {
+    // background-color: red;
+
+    // コンテンツ
+    // 表示後
+    & .accordion-1__contents {
+      background-color: lightgray;
+      // transition: t;
+      height: 200px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
