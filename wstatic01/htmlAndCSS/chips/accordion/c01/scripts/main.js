@@ -22,4 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleClassToClass(".accordion-2 " + className, "open")
     );
   });
+
+  const aBtn3 = document.querySelectorAll(".accordion-3 .accordion-3__item");
+  aBtn3.forEach((item, idx) => {
+    let className = ".item-" + (idx + 1);
+    item.addEventListener(judgeClickEventType(), () =>
+      toggleClassToClass(".accordion-3 " + className, "open")
+    );
+  });
 });

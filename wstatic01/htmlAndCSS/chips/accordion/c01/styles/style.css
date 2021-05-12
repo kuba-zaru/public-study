@@ -18,4 +18,58 @@
   opacity: 1;
   visibility: visible;
 }
+
+.accordion-2__item {
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.accordion-2__contents {
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion-2 .open .accordion-2__contents {
+  background-color: lightgray;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.accordion-3__item {
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.accordion-3__img {
+  width: 200px;
+  height: 100px;
+}
+
+.accordion-3__img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.accordion-3__contents {
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion-3 .open .accordion-3__contents {
+  background-color: lightgray;
+  height: 200px;
+  opacity: 1;
+  visibility: visible;
+}
 /*# sourceMappingURL=style.css.map */
