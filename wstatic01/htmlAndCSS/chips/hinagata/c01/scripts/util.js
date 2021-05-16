@@ -1,11 +1,20 @@
 /**
- * 指定したクラスをtoggleする
+ * 指定した要素のクラスをtoggleする
+ * @param {*} el
+ * @param {*} cName
+ */
+function toggleElementToClass(el, cName) {
+  el.classList.toggle(cName);
+}
+
+/**
+ * 指定した要素のクラスをtoggleする
  * @param {*} elName
  * @param {*} cName
  */
-function toggleClass(elName, cName) {
+function toggleClassToClass(elName, cName) {
   const el = document.querySelector(elName);
-  el.classList.toggle(cName);
+  toggleElementToClass(el, cName);
 }
 
 /**

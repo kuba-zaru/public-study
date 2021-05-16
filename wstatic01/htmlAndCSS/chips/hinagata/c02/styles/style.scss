@@ -1,15 +1,23 @@
-$cHeaderColor: skyblue;
-$cFooterColor: skyblue;
-$cSectionColor: pink;
-$cContentColor: lightgray;
-$contentMaxWidth: 800px; // 画面の横幅の最大値
-$mobileMenuWidth: 250px;
-$headerHeight: 52px;
-$menuOpenTime: 0.3s;
+$cHeaderColor: skyblue; // header color
+$cFooterColor: skyblue; // footer color
+$cSectionColor: pink; // section color
+$cContentColor: lightgray; // content color
+$contentMaxWidth: 800px; // 全体の幅
+$mobileMenuWidth: 250px; // mobileメニューの幅
+$headerHeight: 52px; // ヘッダー部分の高さ
+$menuOpenTime: 0.3s; // mobileメニューの動作
 
 @import "modules/appear";
 @import "breakpoints/base";
 
-@media (min-width: 770px) {
-  @import "breakpoints/770up";
+@media (min-width: 600px) {
+  @import "breakpoints/600up";
+}
+
+@media (min-width: 960px) {
+  @import "breakpoints/960up";
+}
+
+@media (min-width: 1280px) {
+  @import "breakpoints/1280up";
 }
