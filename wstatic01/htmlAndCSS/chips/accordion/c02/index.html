@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>StayWorld</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <!-- header -->
+        <header class="header">
+          <div class="header__inner">
+            <div class="logo">Logo</div>
+            <nav class="header__nav"></nav>
+          </div>
+        </header>
+        <div id="content">
+          <!-- hero -->
+          <div class="hero">
+            <p>hero</p>
+          </div>
+          <div id="main-content">
+            <main>
+              <!-- section1 -->
+              <section id="section1" class="section1">
+                <h2>section1</h2>
+
+                <!-- accordion-1 -->
+                <p>a-1 アコーディオン 画像クリックで開く</p>
+                <div class="accordion-1">
+                  <div class="accordion-1__inner">
+                    <!-- item1 -->
+                    <div class="accordion-1__item item-1">
+                      <div class="accordion-1__img">
+                        <!-- <div class="accordion-1__img-inner"> -->
+                        <img src="images/08-99015.jpeg" />
+                        <div class="accordion-1__img-title">BookList</div>
+                        <!-- </div> -->
+                      </div>
+                      <div class="accordion-1__contents">
+                        <pre class="app-description">
+## BookList
+Google Books APIを利用した書籍検索ツール。
+シングルページアプリケーション。
+### リンク
+<a href="http://google.com" target="_blank" >アプリケーションへ移動する</a>
+### フロントエンド
+- React
+- Material-UI
+### バックエンド
+- 無し
+### その他
+Google Books(Web API)
+                        </pre>
+                      </div>
+                    </div>
+
+                    <!-- item2 -->
+                    <div class="accordion-1__item item-2">
+                      <div class="accordion-1__img">
+                        <img src="images/08-99015.jpeg" />
+                      </div>
+                      <div class="accordion-1__contents">
+                        <pre class="app-description">
+## BookList
+Google Books APIを利用した書籍検索ツール。
+シングルページアプリケーション。
+### フロントエンド
+- React
+- Material-UI
+### バックエンド
+- 無し
+### その他
+Google Books(Web API)
+                        </pre>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- section2 -->
+              <section id="section2" class="section2">
+                <h2>section2</h2>
+              </section>
+              <!-- section3 -->
+              <section id="section3" class="section3">
+                <h2>section3</h2>
+              </section>
+            </main>
+          </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+          <div class="footer__inner">
+            <div>footer</div>
+          </div>
+        </footer>
+      </div>
+      <nav class="mobile-menu"></nav>
+    </div>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

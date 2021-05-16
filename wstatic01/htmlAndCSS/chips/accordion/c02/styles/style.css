@@ -1,0 +1,94 @@
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+
+.content-width, #container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.mb-sm, .accordion-1__item {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+.accordion-1 {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.accordion-1__item {
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.accordion-1__img {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.accordion-1__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 5;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.accordion-1__img img:hover {
+  -webkit-transform: scale(1.15, 1.15);
+          transform: scale(1.15, 1.15);
+}
+
+.accordion-1__img .accordion-1__img-title {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 42px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  z-index: 10;
+}
+
+.accordion-1__contents {
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion-1__contents .app-description {
+  font-size: 11px;
+}
+
+.accordion-1 .open .accordion-1__contents {
+  background-color: #f0f0f0;
+  height: 250px;
+  opacity: 1;
+  visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */

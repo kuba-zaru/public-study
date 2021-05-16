@@ -1,0 +1,96 @@
+$contentMaxWidth: 600px;
+
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+}
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+#container {
+  @extend .content-width;
+  // border: 1px solid;
+}
+
+.accordion-1 {
+  // background-color: lightslategray;
+  width: 96%;
+  margin: 0 auto;
+
+  &__item {
+    cursor: pointer;
+    @extend .mb-sm;
+    transition: all 1s;
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden; // はみでた部分を非表示にする
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 5;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.15, 1.15);
+      }
+    }
+
+    & .accordion-1__img-title {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 42px;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      z-index: 10;
+    }
+  }
+
+  // コンテンツ
+  // 初期状態
+  &__contents {
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    & .app-description {
+      font-size: 11px;
+    }
+  }
+
+  & .open {
+    // コンテンツ
+    // 表示後
+    & .accordion-1__contents {
+      background-color: rgb(240, 240, 240);
+      height: 250px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
