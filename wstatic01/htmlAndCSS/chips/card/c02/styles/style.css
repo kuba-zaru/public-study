@@ -1,0 +1,122 @@
+.global-max-width, #container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mb-sm, .skill__head, .skill__item {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+#container {
+  background-color: white;
+}
+
+.skill__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skill__head {
+  width: 100%;
+  padding-left: 0.2em;
+  font-size: 24px;
+  border-bottom: 3px solid gray;
+}
+
+.skill__item {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+          box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+  border-radius: 5px;
+}
+
+.skill__item-head {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.skill__item-desc {
+  font-size: 16px;
+}
+
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+          box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+  background-color: #f5f5fa;
+  padding: 30px;
+}
+
+.about__img-wrap {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.about__item-wrap {
+  width: 100%;
+}
+
+.about__img {
+  background-color: lightblue;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.about__img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about__item-head {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about__item-desc {
+  font-size: 16px;
+}
+
+@media (min-width: 600px) {
+  .about__inner {
+    padding-left: 0;
+  }
+  .about__img-wrap {
+    width: 35%;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+  .about__item-wrap {
+    width: 65%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
