@@ -1,1 +1,62 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.global-max-width, #container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mb-sm, .skill__head, .skill__item {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+#container {
+  background-color: white;
+}
+
+.skill__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skill__head {
+  width: 100%;
+  padding-left: 0.2em;
+  font-size: 24px;
+  border-bottom: 3px solid gray;
+}
+
+.skill__item {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+          box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+  border-radius: 5px;
+}
+
+.skill__item-head {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.skill__item-desc {
+  font-size: 16px;
+}
+/*# sourceMappingURL=style.css.map */

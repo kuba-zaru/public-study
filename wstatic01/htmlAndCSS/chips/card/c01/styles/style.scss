@@ -1,0 +1,83 @@
+$contentMaxWidth: 800px; // 全体の幅
+$cContentColor: white; // content color
+
+// 全体の幅の最大値を設定する
+.global-max-width {
+  width: 90%; // 左右5%づつは開ける
+  max-width: $contentMaxWidth;
+  margin: 0 auto; // 中央寄せ
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+#container {
+  @extend .global-max-width;
+  background-color: $cContentColor;
+}
+
+.skill {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__head {
+    @extend .mb-sm;
+
+    width: 100%;
+    padding-left: 0.2em;
+    font-size: 24px;
+
+    border-bottom: 3px solid gray;
+  }
+
+  &__item {
+    @extend .mb-sm;
+
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+
+    // box-shadow: 0 0 8px gray;
+    box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+    border-radius: 5px;
+  }
+
+  &__item-head {
+    font-size: 18px;
+    font-weight: 600;
+    // padding: 1rem 2rem;
+    // padding: 0 0.5rem;
+    // border-left: 2px solid #000;
+  }
+
+  &__item-desc {
+    font-size: 16px;
+  }
+}
+
+// @media (min-width: 600px) {
+//   // @import "breakpoints/600up";
+//   .skill {
+//     &__inner {
+//       display: flex;
+//       flex-wrap: wrap;
+//       flex-direction: row;
+//       justify-content: space-between;
+//     }
+//     &__item {
+//       width: 48%;
+//     }
+//   }
+// }
