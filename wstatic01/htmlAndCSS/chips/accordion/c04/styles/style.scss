@@ -1,0 +1,24 @@
+$cHeaderColor: rgb(240, 240, 250); // header color
+$cFooterColor: skyblue; // footer color
+$cSectionColor: white; // section color
+$cContentColor: white; // content color
+$contentMaxWidth: 800px; // 全体の幅
+$mobileMenuWidth: 250px; // mobileメニューの幅
+$headerHeight: 52px; // ヘッダー部分の高さ
+$menuOpenTime: 0.3s; // mobileメニューの動作
+
+@import "modules/appear";
+@import "modules/accordion";
+@import "breakpoints/base";
+
+@media (min-width: 600px) {
+  @import "breakpoints/600up";
+}
+
+@media (min-width: 960px) {
+  @import "breakpoints/960up";
+}
+
+@media (min-width: 1280px) {
+  @import "breakpoints/1280up";
+}
