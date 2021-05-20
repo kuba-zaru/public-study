@@ -30,4 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // helo
   const heroSlider = new HeroSlider();
+
+  // accordion
+  const aBtn1 = document.querySelectorAll(".accordion-1 .accordion-1__item");
+  aBtn1.forEach((item, idx) => {
+    let className = ".item-" + (idx + 1);
+    item.addEventListener(judgeClickEventType(), () =>
+      toggleClass(".accordion-1 " + className, "open")
+    );
+  });
 });

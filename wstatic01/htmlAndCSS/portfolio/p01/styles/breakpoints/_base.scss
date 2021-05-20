@@ -21,6 +21,19 @@ body {
   margin: 0 auto; // 中央寄せ
 }
 
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 40px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 40px !important;
+}
+
 .logo {
   font-size: 24px;
   &__icon {
@@ -69,11 +82,20 @@ body {
 }
 
 .hero {
+  @extend .mb-lg;
   padding-top: $headerHeight;
 }
 
 section {
+  @extend .mb-lg;
   background-color: $cSectionColor;
+}
+
+.section-title {
+  color: $cLinkColor;
+  font-size: 28px;
+  text-align: center;
+  @extend .mb-sm;
 }
 
 .section-skill {

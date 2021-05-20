@@ -4,10 +4,20 @@ Stylesheet: 600px
 
 ******************************************************************/
 
-// $headerHeight: 80px; // ヘッダー部分の高さ
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
 
 .header {
-  // background-color: rgba(255, 206, 235, 0.6);
   background-color: $cHeaderColor;
 
   .header-menu {
@@ -54,4 +64,17 @@ Stylesheet: 600px
 
 .swiper-slide {
   height: 300px; // 画像の高さ
+}
+
+.accordion-1 {
+  &__inner {
+    // 横に並べる
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 49%;
+  }
 }
