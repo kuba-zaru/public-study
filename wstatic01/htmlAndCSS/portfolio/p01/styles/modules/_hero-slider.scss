@@ -1,0 +1,70 @@
+.hero {
+  position: relative;
+  z-index: 0;
+
+  &__main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-30%) translateX(-50%);
+    z-index: 10;
+
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  height: 200px; // 画像の高さ
+  overflow: hidden;
+
+  position: relative;
+  z-index: 0;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    // transform: scale(1.3);
+    // transition: transform 1.9s ease;
+  }
+
+  & > .hero__sub-title {
+    position: absolute;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+
+    top: 50%;
+    left: 50%;
+    transform: translateY(40px) translateX(-50%);
+    z-index: 10;
+
+    transition: all 2s;
+    opacity: 0;
+  }
+
+  // 画像がactiveとなった
+  &-active {
+    & > .hero__sub-title {
+      transform: translateY(20px) translateX(-50%);
+      opacity: 0.75;
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination {
+  //   color: white;
+  opacity: 0.3;
+}
+
+.swiper-button-white {
+  opacity: 0.01;
+}

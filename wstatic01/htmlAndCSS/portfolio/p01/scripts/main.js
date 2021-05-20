@@ -27,4 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleClass(".mobile-menu", "inview")
     );
   });
+
+  // helo
+  const heroSlider = new HeroSlider();
 });

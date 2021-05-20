@@ -192,6 +192,72 @@
   color: rgba(51, 49, 50, 0.8);
 }
 
+.hero {
+  position: relative;
+  z-index: 0;
+}
+
+.hero__main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-30%) translateX(-50%);
+          transform: translateY(-30%) translateX(-50%);
+  z-index: 10;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.swiper-slide > img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-slide > .hero__sub-title {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(40px) translateX(-50%);
+          transform: translateY(40px) translateX(-50%);
+  z-index: 10;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  opacity: 0;
+}
+
+.swiper-slide-active > .hero__sub-title {
+  -webkit-transform: translateY(20px) translateX(-50%);
+          transform: translateY(20px) translateX(-50%);
+  opacity: 0.75;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination {
+  opacity: 0.3;
+}
+
+.swiper-button-white {
+  opacity: 0.01;
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -330,6 +396,12 @@ Stylesheet: 600px
   .mobile-menu__button {
     display: none;
     visibility: hidden;
+  }
+  .hero__main-title {
+    font-size: 42px;
+  }
+  .swiper-slide {
+    height: 300px;
   }
 }
 

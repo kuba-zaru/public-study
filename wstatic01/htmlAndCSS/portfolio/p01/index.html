@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HelloWorld</title>
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
     <link
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
       rel="stylesheet"
@@ -13,7 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
@@ -64,7 +68,29 @@
         <div id="content">
           <!-- hero -->
           <div class="hero">
-            <p>hero</p>
+            <div class="swiper-container">
+              <!-- slides -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/image-1.jpg" alt="" />
+                  <div class="hero__sub-title">welcome</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/image-2.jpg" alt="" />
+                  <div class="hero__sub-title">take your time</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/08-99015.jpeg" alt="" />
+                  <div class="hero__sub-title">thank you</div>
+                </div>
+              </div>
+              <!-- pagination -->
+              <div class="swiper-pagination swiper-pagination-white"></div>
+              <!-- Navigation arrows -->
+              <div class="swiper-button-prev swiper-button-white"></div>
+              <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+            <div class="hero__main-title">Hello World</div>
           </div>
           <div id="main-content">
             <main>
@@ -135,6 +161,8 @@
         </ul>
       </nav>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts/modules/hero-slider.js"></script>
     <script src="scripts/util.js"></script>
     <script src="scripts/main.js"></script>
   </body>
