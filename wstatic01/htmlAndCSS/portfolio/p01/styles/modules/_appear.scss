@@ -1,0 +1,41 @@
+// map
+// translateのパターンを定義する
+$pattern: (
+  "up": translateY(6px),
+  "down": translateY(-6px),
+  "left": translateX(10px),
+  "right": translateX(-10px),
+);
+
+// 「.appear.up」のような定義を作成する
+@each $key, $value in $pattern {
+  .appear.#{$key} {
+    & .item {
+      transform: $value;
+    }
+  }
+}
+
+.appear {
+  // フェードイン後の設定
+  &.inview {
+    & .item {
+      opacity: 1;
+      transform: none;
+      // アニメーションのディレイを設定する
+      // 10のitemまで対応
+      // 無駄に10のcssが作られてしまう
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.1s;
+        }
+      }
+    }
+  }
+
+  // フェードイン前の設定
+  & .item {
+    opacity: 0;
+    transition: all 0.8s;
+  }
+}

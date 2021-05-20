@@ -1,0 +1,351 @@
+@charset "UTF-8";
+.appear.up .item {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+.appear.down .item {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+.appear.left .item {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.appear.right .item {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.appear.inview .item {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.appear.inview .item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.appear.inview .item:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.appear.inview .item:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.appear.inview .item:nth-child(4) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.appear.inview .item:nth-child(5) {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.appear.inview .item:nth-child(6) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.appear.inview .item:nth-child(7) {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.appear.inview .item:nth-child(8) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.appear.inview .item:nth-child(9) {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+.appear.inview .item:nth-child(10) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.appear .item {
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.header {
+  background-color: rgba(240, 240, 240, 0.6);
+  -webkit-box-shadow: 0px 2px 5px -4px grey;
+          box-shadow: 0px 2px 5px -4px grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-transition: background-color, 0.3s;
+  transition: background-color, 0.3s;
+  height: 60px;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.header__inner .logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__inner .logo__icon {
+  font-size: 26px;
+  padding-right: 0.15em;
+}
+
+.header .header-menu {
+  visibility: hidden;
+  display: none;
+}
+
+.header .header-menu ul li a {
+  color: #007bff;
+}
+
+.mobile-menu {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  top: 60px;
+  width: 250px;
+}
+
+.mobile-menu__cover {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  -webkit-box-shadow: -6px 0px 5px 5px grey;
+          box-shadow: -6px 0px 5px 5px grey;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding-left: 12.5px;
+  padding-left: 25px;
+  width: 90%;
+}
+
+.mobile-menu ul li {
+  border-bottom: 2px solid rgba(0, 123, 255, 0.3);
+  margin-bottom: 16px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.mobile-menu ul li > a {
+  display: block;
+  color: #007bff;
+}
+
+.mobile-menu__button {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.mobile-menu__button .icon {
+  font-size: 32px;
+  color: rgba(51, 49, 50, 0.8);
+}
+
+/******************************************************************
+
+Stylesheet: ベーススタイル
+基本的なスタイルはこのファイルに記述する
+
+******************************************************************/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+  color: #333132;
+}
+
+.global-max-width, .header__inner, #content, .footer__inner {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo__icon {
+  color: #5d79e1;
+}
+
+.main-title {
+  font-size: 24px;
+  display: block;
+}
+
+.sub-title {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+#global-container {
+  background-color: white;
+}
+
+#container {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 50;
+}
+
+#container.menu-open {
+  -webkit-transform: translateX(-250px);
+          transform: translateX(-250px);
+}
+
+#container.menu-open .header {
+  background-color: transparent;
+}
+
+#container.menu-open .mobile-menu__cover {
+  visibility: visible;
+  opacity: 1;
+}
+
+#content {
+  background-color: white;
+}
+
+.hero {
+  padding-top: 60px;
+}
+
+section {
+  background-color: white;
+}
+
+.section-skill {
+  height: 100vh;
+}
+
+.section-work .img11-container {
+  width: 100%;
+  height: 200px;
+}
+
+.section-work .img11-container > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer {
+  background-color: rgba(135, 206, 235, 0.6);
+}
+
+@media (min-width: 600px) {
+  /******************************************************************
+
+Stylesheet: 600px
+
+******************************************************************/
+  .header {
+    background-color: rgba(240, 240, 240, 0.5);
+  }
+  .header .header-menu {
+    visibility: visible;
+    width: 300px;
+    height: 100%;
+    display: block;
+  }
+  .header .header-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .header-menu__item {
+    list-style: none;
+    display: inline;
+  }
+  .header .header-menu__item a {
+    text-decoration: none;
+  }
+  .mobile-menu {
+    visibility: hidden;
+  }
+  .mobile-menu__button {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 960px) {
+  /******************************************************************
+
+Stylesheet: 960px
+
+******************************************************************/
+}
+
+@media (min-width: 1280px) {
+  /******************************************************************
+
+Stylesheet: 1280px
+
+******************************************************************/
+}
+/*# sourceMappingURL=style.css.map */

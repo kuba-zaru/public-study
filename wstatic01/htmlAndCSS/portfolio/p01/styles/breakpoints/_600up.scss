@@ -1,0 +1,47 @@
+/******************************************************************
+
+Stylesheet: 600px
+
+******************************************************************/
+
+// $headerHeight: 80px; // ヘッダー部分の高さ
+
+.header {
+  // background-color: rgba(255, 206, 235, 0.6);
+  background-color: $cHeaderColor;
+
+  .header-menu {
+    // PC用のメニューを表示する
+    visibility: visible;
+    width: 300px;
+    height: 100%;
+    display: block;
+
+    & ul {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+    }
+
+    &__item {
+      list-style: none;
+      display: inline;
+
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  // モバイル用のメニュー、ボタンは非表示とする
+  visibility: hidden;
+  &__button {
+    display: none;
+    visibility: hidden;
+  }
+}
