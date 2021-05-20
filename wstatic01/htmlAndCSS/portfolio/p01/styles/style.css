@@ -358,6 +358,87 @@ swiper-container {
   color: #323232;
 }
 
+.skill__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skill__head {
+  width: 100%;
+  padding-left: 0.2em;
+  font-size: 24px;
+  border-bottom: 3px solid gray;
+}
+
+.skill__item {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+          box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+  border-radius: 5px;
+}
+
+.skill__item-head {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.skill__item-desc {
+  font-size: 16px;
+}
+
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+          box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+  background-color: #f5f5fa;
+  padding: 30px;
+}
+
+.about__img-wrap {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.about__item-wrap {
+  width: 100%;
+}
+
+.about__img {
+  background-color: lightblue;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+.about__img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about__item-head {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about__item-desc {
+  font-size: 16px;
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -379,7 +460,7 @@ body {
   margin: 0 auto;
 }
 
-.mb-sm, .accordion-1__item, .section-title {
+.mb-sm, .accordion-1__item, .skill__head, .skill__item, .section-title {
   margin-bottom: 16px !important;
 }
 
@@ -456,22 +537,6 @@ section {
   text-align: center;
 }
 
-.section-skill {
-  height: 100vh;
-}
-
-.section-work .img11-container {
-  width: 100%;
-  height: 200px;
-}
-
-.section-work .img11-container > img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .footer {
   background-color: rgba(135, 206, 235, 0.6);
 }
@@ -482,7 +547,7 @@ section {
 Stylesheet: 600px
 
 ******************************************************************/
-  .mb-sm, .accordion-1__item, .section-title {
+  .mb-sm, .accordion-1__item, .skill__head, .skill__item, .section-title {
     margin-bottom: 16px !important;
   }
   .mb-lg, .hero, section {
@@ -550,6 +615,18 @@ Stylesheet: 600px
   }
   .accordion-1__item {
     width: 49%;
+  }
+  .about__inner {
+    padding-left: 0;
+  }
+  .about__img-wrap {
+    width: 35%;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+  .about__item-wrap {
+    width: 65%;
   }
 }
 

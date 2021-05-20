@@ -78,3 +78,19 @@ Stylesheet: 600px
     width: 49%;
   }
 }
+
+.about {
+  &__inner {
+    padding-left: 0;
+  }
+
+  &__img-wrap {
+    width: 35%;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+  &__item-wrap {
+    width: 65%;
+  }
+}

@@ -98,23 +98,6 @@ section {
   @extend .mb-sm;
 }
 
-.section-skill {
-  height: 100vh;
-}
-
-.section-work {
-  // work1
-  & .img11-container {
-    width: 100%;
-    height: 200px;
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
 .footer {
   background-color: rgba($color: $cFooterColor, $alpha: 0.6);
 
