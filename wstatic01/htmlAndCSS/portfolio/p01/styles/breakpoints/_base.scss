@@ -98,11 +98,41 @@ section {
   @extend .mb-sm;
 }
 
+.contact {
+  &__msg {
+    text-align: center;
+    @extend .mb-sm;
+  }
+  &__mail {
+    text-align: center;
+  }
+}
+
+.to-top {
+  &__msg {
+    text-align: center;
+    // box-shadow: 1px 1px 3px 0px rgba(128, 128, 128, 0.15);
+    // background-color: rgb(245, 245, 250);
+  }
+}
+
 .footer {
+  @extend .global-max-width;
+
   background-color: rgba($color: $cFooterColor, $alpha: 0.6);
+  height: $footerHeight;
 
   &__inner {
-    @extend .global-max-width;
-    // background-color: $cSectionColor;
+    height: 100%;
+    margin-left: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & small {
+      font-size: 12px;
+      opacity: 0.5;
+    }
   }
 }
