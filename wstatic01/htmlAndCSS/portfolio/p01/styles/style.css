@@ -77,8 +77,8 @@
 
 .appear .item {
   opacity: 0;
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .header {

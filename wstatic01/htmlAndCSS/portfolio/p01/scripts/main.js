@@ -39,4 +39,21 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleClass(".accordion-1 " + className, "open")
     );
   });
+
+  // scroll observer
+  const observers = [];
+  observers.push(new ScrollObserver(".appear", inviewAnimation));
 });
+
+function inviewAnimation(el, inview) {
+  // 特定の要素は対象外とする
+  if (el.classList.contains("mobile-menu")) {
+    return;
+  }
+
+  if (inview) {
+    el.classList.add("inview");
+  } else {
+    el.classList.remove("inview");
+  }
+}
