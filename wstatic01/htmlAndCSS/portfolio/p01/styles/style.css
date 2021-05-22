@@ -556,7 +556,7 @@ body {
 }
 
 #global-container {
-  background-color: white;
+  background-color: #fafafa;
 }
 
 #container {
@@ -581,7 +581,7 @@ body {
 }
 
 #content {
-  background-color: white;
+  background-color: #fafafa;
 }
 
 .hero {
@@ -589,7 +589,7 @@ body {
 }
 
 section {
-  background-color: white;
+  background-color: #fafafa;
 }
 
 .section-title {
