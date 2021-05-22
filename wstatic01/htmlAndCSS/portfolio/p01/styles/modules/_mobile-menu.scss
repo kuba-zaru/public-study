@@ -7,7 +7,7 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  transition: background-color, $menuOpenTime;
+  // transition: all $menuOpenTime;
 
   height: $headerHeight;
 
@@ -18,25 +18,51 @@
     align-items: center;
     height: 100%;
 
+    & .header__logo-link {
+      height: 100%;
+      text-decoration: none;
+    }
+
     & .logo {
       height: 100%;
-      display: flex;
-      align-items: center;
-      &__icon {
-        font-size: 26px;
-        padding-right: 0.15em;
-      }
     }
   }
 
   & .header-menu {
+    height: 100%;
+    width: 250px;
     // PC用のメニューは非表示とする
     visibility: hidden;
     display: none;
+
+    &__item {
+      list-style: none;
+      display: inline;
+    }
+
     & ul {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+
+      :hover {
+        // background-color: rgba($cLinkColor, 0.05);
+        color: blue;
+        transform: scale(1.05);
+        transition: all 0.3s;
+      }
+
       & li {
+        height: 100%;
         & a {
           color: $cLinkColor;
+          text-decoration: none;
+          user-select: none;
+          display: inline-block; // 上下中央寄せ用
+          line-height: $headerHeight;
         }
       }
     }
@@ -71,16 +97,11 @@
     list-style: none;
     padding-left: $mobileMenuWidth * 0.1 / 2;
     padding-left: $mobileMenuWidth * 0.1;
-    // mobileMenuWidth
+
     width: 90%;
     & li {
       border-bottom: 2px solid rgba($cLinkColor, 0.3);
       margin-bottom: 16px;
-
-      //   transform: scale(2);
-      //   transform: scale(3);
-      //   transform: scale(1.5);
-      //   background-color: red;
 
       & > a {
         display: block;

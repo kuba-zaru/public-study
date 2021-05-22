@@ -8,10 +8,10 @@ $cFontBasic1: #333132; // 文字色 基本 ノワール(Noir)
 $cLogo: #5d79e1; // logo icon color
 $contentMaxWidth: 800px; // 全体の幅
 $mobileMenuWidth: 250px; // mobileメニューの幅
-$headerHeight: 60px; // ヘッダー部分の高さ
-$footerHeight: 60px; // フッター部分の高さ
-$headerHeight-PC: 80px; // ヘッダー部分の高さ(PC)
-$menuOpenTime: 0.3s; // mobileメニューの動作
+$headerHeight: 60px; // ヘッダーの高さ
+$footerHeight: 60px; // フッターの高さ
+$headerHeight-PC: 80px; // ヘッダーの高さ(PC)
+$menuOpenTime: 0.3s; // mobileメニューの開閉速度
 
 @import "modules/appear";
 @import "modules/mobile-menu";

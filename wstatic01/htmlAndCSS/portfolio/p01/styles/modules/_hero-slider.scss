@@ -4,12 +4,14 @@
 
   &__main-title {
     position: absolute;
+    width: 80%;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translateY(-30%) translateX(-50%);
     z-index: 10;
 
-    font-size: 28px;
+    font-size: 32px;
     color: rgba(255, 255, 255, 0.8);
   }
 }
@@ -39,10 +41,14 @@ swiper-container {
     position: absolute;
     font-size: 20px;
     color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
 
     top: 50%;
-    left: 50%;
-    transform: translateY(40px) translateX(-50%);
+    left: 0%;
+
+    // transform: translateY(40px) translateX(-50%);
+    transform: translateY(40px);
     z-index: 10;
 
     transition: all 2s;
@@ -52,14 +58,13 @@ swiper-container {
   // 画像がactiveとなった
   &-active {
     & > .hero__sub-title {
-      transform: translateY(20px) translateX(-50%);
+      // transform: translateY(20px) translateX(-50%);
+      transform: translateY(20px);
       opacity: 0.75;
     }
   }
 }
 
-.swiper-button-prev,
-.swiper-button-next,
 .swiper-pagination {
   //   color: white;
   opacity: 0.3;
