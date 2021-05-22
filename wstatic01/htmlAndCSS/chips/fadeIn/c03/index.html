@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HelloWorld</title>
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <!-- header -->
+        <header class="header">
+          <div class="header__inner">
+            <div class="logo">Logo</div>
+            <nav class="header__nav"></nav>
+          </div>
+        </header>
+        <div id="content">
+          <!-- hero -->
+          <div class="hero">
+            <p>hero</p>
+          </div>
+          <div id="main-content">
+            <main>
+              <!-- section1 -->
+              <section id="section1" class="section1">
+                <h2>section1</h2>
+                <div>シンプルなフェードイン</div>
+                <div>item_container全体をフェードインする</div>
+                <button class="btn01">Btn</button>
+                <div class="item_container appear left">
+                  <div class="item left">
+                    <div class="item__msg">img1</div>
+                    <div class="item__img">
+                      <img src="images/08-99015.jpeg" />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item__msg">img2</div>
+                    <div class="item__img">
+                      <img src="images/13-97008.jpeg" />
+                    </div>
+                  </div>
+                  <div class="item">あいうえお</div>
+                  <div class="item">
+                    <input type="text" />
+                    <button>btn</button>
+                  </div>
+                </div>
+
+                <!-- <div>transition-delayを使用したフェードイン</div>
+                <div>itemごとにフェードインする</div>
+                <button class="btn02">Btn</button>
+                <div class="item_container2">
+                  <div class="item">
+                    <div class="item__msg">img1</div>
+                    <div class="item__img">
+                      <img src="images/08-99015.jpeg" />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item__msg">img2</div>
+                    <div class="item__img">
+                      <img src="images/13-97008.jpeg" />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item__msg">img3</div>
+                    <div class="item__img">
+                      <img src="images/17-101685.jpeg" />
+                    </div>
+                  </div>
+                  <div class="item">あいうえお</div>
+                  <div class="item">かきくけこ</div>
+                </div> -->
+
+                <!-- <div>translateXを使用したフェードイン</div>
+                <div>transition-delayはextendsを使用する</div>
+                <button class="btn03">Btn</button>
+                <div class="item_container3">
+                  <div class="item">
+                    <div class="item__msg">img1</div>
+                    <div class="item__img">
+                      <img src="images/08-99015.jpeg" />
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="item__msg">img2</div>
+                    <div class="item__img">
+                      <img src="images/13-97008.jpeg" />
+                    </div>
+                  </div>
+                  <div class="item">あいうえお</div>
+                </div> -->
+              </section>
+
+              <!-- section2 -->
+              <section id="section2" class="section2">
+                <h2>section2</h2>
+              </section>
+              <!-- section3 -->
+              <section id="section3" class="section3">
+                <h2>section3</h2>
+              </section>
+            </main>
+          </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+          <div class="footer__inner">
+            <div>footer</div>
+          </div>
+        </footer>
+      </div>
+      <nav class="mobile-menu"></nav>
+    </div>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/scroll.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

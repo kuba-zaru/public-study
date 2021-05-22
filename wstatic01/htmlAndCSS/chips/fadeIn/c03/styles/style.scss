@@ -1,0 +1,12 @@
+@import "appear";
+
+// map
+.item_container {
+  background-color: lightgray;
+
+  & .item {
+    & img {
+      height: 50px;
+    }
+  }
+}
