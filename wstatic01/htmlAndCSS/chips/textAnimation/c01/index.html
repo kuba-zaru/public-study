@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HelloWorld</title>
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <!-- header -->
+        <header class="header">
+          <div class="header__inner">
+            <div class="logo">Logo</div>
+            <nav class="header__nav"></nav>
+          </div>
+        </header>
+        <div id="content">
+          <!-- hero -->
+          <div class="hero">
+            <p>hero</p>
+          </div>
+          <div id="main-content">
+            <main>
+              <!-- section1 -->
+              <section id="section1" class="section1">
+                <h2>section1</h2>
+                <div>text animation</div>
+                <div>
+                  アニメーションしたい要素に tween-animate-title を付与するだけ
+                </div>
+                <h1 class="tween-animate-title">1 お気に入りの</h1>
+                <h2 class="tween-animate-title">
+                  2 お気に入りのあああああああああああああ
+                </h2>
+                <h3 class="tween-animate-title">3 お気に入りの</h3>
+                <h4 class="tween-animate-title">4 お気に入りの</h4>
+              </section>
+
+              <!-- section2 -->
+              <section id="section2" class="section2">
+                <h2>section2</h2>
+                <h1 class="tween-animate-title">1 お気に入りの</h1>
+                <h2 class="tween-animate-title">
+                  2 お気に入りのあああああああああああああ
+                </h2>
+                <h3 class="tween-animate-title">3 お気に入りの</h3>
+                <h4 class="tween-animate-title">4 お気に入りの</h4>
+              </section>
+
+              <!-- section3 -->
+              <section id="section3" class="section3">
+                <h2>section3</h2>
+              </section>
+            </main>
+          </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+          <div class="footer__inner">
+            <div>footer</div>
+          </div>
+        </footer>
+      </div>
+      <nav class="mobile-menu"></nav>
+    </div>
+    <script src="scripts/TweenMax.min.js"></script>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/scroll.js"></script>
+    <script src="scripts/text-animation.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
