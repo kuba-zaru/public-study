@@ -43,6 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // scroll observer
   const observers = [];
   observers.push(new ScrollObserver(".appear", inviewAnimation));
+  observers.push(
+    new ScrollObserver(".tween-animate-title", textAnimation, {
+      rootMargin: "0px 0px",
+    })
+  );
 });
 
 function inviewAnimation(el, inview) {
@@ -55,5 +60,12 @@ function inviewAnimation(el, inview) {
     el.classList.add("inview");
   } else {
     el.classList.remove("inview");
+  }
+}
+
+function textAnimation(el, inview) {
+  if (inview) {
+    const ta = new TweenTextAnimation(el);
+    ta.animate();
   }
 }

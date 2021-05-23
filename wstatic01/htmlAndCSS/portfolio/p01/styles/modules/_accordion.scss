@@ -67,7 +67,7 @@
       text-align: center;
     }
     & > .accordion-1__img-title-desc {
-      font-size: 14px;
+      font-size: 18px;
       text-align: center;
     }
   }
@@ -97,6 +97,13 @@
       font-size: 11px;
       color: rgb(100, 50, 50);
       padding-bottom: 0.3em;
+    }
+  }
+
+  &__footer {
+    font-size: 20px;
+    & a {
+      color: $cOutLink;
     }
   }
 }
