@@ -87,4 +87,12 @@
 .item_container .item img {
   height: 50px;
 }
+
+#section1 {
+  height: 100vh;
+}
+
+#section2 .item {
+  background-color: lightblue;
+}
 /*# sourceMappingURL=style.css.map */

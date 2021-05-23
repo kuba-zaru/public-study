@@ -10,3 +10,13 @@
     }
   }
 }
+
+#section1 {
+  height: 100vh;
+}
+
+#section2 {
+  & .item {
+    background-color: lightblue;
+  }
+}
