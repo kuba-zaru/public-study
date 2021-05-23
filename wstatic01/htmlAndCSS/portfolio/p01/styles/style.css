@@ -700,12 +700,13 @@ swiper-container {
 }
 
 .about__item-head {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .about__item-desc {
   font-size: 16px;
+  margin-bottom: 6px;
 }
 
 /******************************************************************
