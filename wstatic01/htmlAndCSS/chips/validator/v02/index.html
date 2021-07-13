@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>validator</h1>
+    <p>HTMLとjavascriptでvalidateを行う。結果はconsoleで表示する。</p>
+    <p>submitボタンは初期値disabled</p>
+    <p>
+      入力欄のinputイベントで入力を監視し、チェックOKの場合はsubmitボタンを活性化する
+    </p>
+    <form action="result.html" novalidate>
+      <div>
+        <input
+          type="text"
+          name=""
+          id=""
+          class="validate-target"
+          minlength="4"
+          required
+          maxlength="20"
+          pattern="[a-zA-Z0-9]+"
+          autofocus
+        />
+      </div>
+      <div>
+        <input type="submit" class="submitBtn" value="submit" disabled />
+      </div>
+    </form>
+    <script src="validate.js"></script>
+  </body>
+</html>

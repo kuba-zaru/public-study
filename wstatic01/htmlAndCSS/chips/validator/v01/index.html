@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>HTML validator</h1>
+    <p>HTMLのみでvalidateを行う。手軽だがあまり使わないはず。</p>
+    <form action="result.html">
+      <div>
+        <pre>
+# validate
+inputタグに下記の属性を設定する
+minlength="4"
+required
+maxlength="10"
+pattern="[a-zA-Z0-9]+"
+        </pre>
+
+        <input
+          type="text"
+          name=""
+          id=""
+          minlength="4"
+          required
+          maxlength="10"
+          pattern="[a-zA-Z0-9]+"
+          autofocus
+        />
+      </div>
+      <div>
+        <input type="submit" value="submit" />
+      </div>
+    </form>
+  </body>
+</html>
