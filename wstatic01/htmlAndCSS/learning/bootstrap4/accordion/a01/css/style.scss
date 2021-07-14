@@ -1,0 +1,16 @@
+@import "../../../../../vendors/bootstrap-4.5.0/scss/bootstrap.scss";
+
+body {
+  background-color: #fafffa;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.btn:focus,
+.btn:active {
+  // ボタンの青い枠を消す
+  outline: none !important;
+  box-shadow: none;
+}
