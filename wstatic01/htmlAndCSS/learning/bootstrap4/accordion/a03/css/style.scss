@@ -1,0 +1,44 @@
+@import "../../../../../vendors/bootstrap-4.5.0/scss/bootstrap.scss";
+
+$cGray: gray;
+
+body {
+  background-color: #f8fff8;
+}
+
+.container {
+  max-width: 1120px;
+}
+
+.btn:focus,
+.btn:active {
+  // ボタンの青い枠を消す
+  outline: none !important;
+  box-shadow: none;
+}
+
+.card-header {
+  background-color: #fafafa;
+}
+
+.site-name {
+  a {
+    font-size: 0.5em;
+    color: $cGray;
+  }
+}
+
+.t_t {
+  width: 100%;
+}
+
+.t_h {
+  & > span {
+    color: #008000;
+  }
+}
+
+footer {
+  color: $cGray;
+  font-size: 0.5rem;
+}

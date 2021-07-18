@@ -1,0 +1,84 @@
+@import "../../../vendors/bootstrap-4.5.0/scss/bootstrap.scss";
+
+$cBackground: #f0f0f0;
+$cHeader: #666666;
+$cFooter: #666666;
+$cAccent: #999999;
+$cSideBar: #e0e0e0;
+$cRed: #ca0000;
+
+$cTextGray: gray;
+$cTextBlack: #404048;
+$cTextGreen: #008000;
+$cTextWhite: white;
+$cLogo: #f3f47f;
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: $cBackground;
+}
+
+.container {
+  max-width: 1120px;
+}
+
+header {
+  background-color: $cHeader;
+  color: $cTextWhite;
+  .logo {
+    color: inherit;
+    text-decoration: none;
+    h1 {
+      font-size: 1.5rem;
+      height: 100%;
+      i {
+        color: $cLogo;
+      }
+      // }
+    }
+  }
+}
+
+.separate-line {
+  height: 0.4rem;
+  background-color: $cAccent;
+}
+
+.sidebar {
+  background-color: white;
+  color: $cTextGray;
+}
+
+.btn:focus,
+.btn:active {
+  // ボタンの青い枠を消す
+  outline: none !important;
+  box-shadow: none;
+}
+
+.card-header {
+  background-color: #fafafa;
+}
+
+.site-name {
+  a {
+    font-size: 0.5em;
+    color: $cTextGray;
+  }
+}
+
+.t_t {
+  width: 100%;
+}
+
+.t_h {
+  & > span {
+    color: $cTextGreen;
+  }
+}
+
+footer {
+  background-color: $cFooter;
+  color: $cTextWhite;
+  font-size: 0.5rem;
+}
