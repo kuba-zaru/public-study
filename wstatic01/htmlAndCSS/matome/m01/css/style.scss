@@ -23,7 +23,7 @@ body {
 }
 
 header {
-  background-color: $cHeader;
+  // background-color: $cHeader;
   color: $cTextWhite;
   .logo {
     color: inherit;
@@ -34,12 +34,16 @@ header {
       i {
         color: $cLogo;
       }
-      // }
     }
   }
 }
 
 .separate-line {
+  height: 0.4rem;
+  background-color: $cBackground;
+}
+
+.separate-line-bottom {
   height: 0.4rem;
   background-color: $cAccent;
 }

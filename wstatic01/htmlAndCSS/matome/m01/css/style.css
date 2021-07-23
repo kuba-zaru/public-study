@@ -10828,7 +10828,6 @@ body {
 }
 
 header {
-  background-color: #666666;
   color: white;
 }
 
@@ -10847,6 +10846,11 @@ header .logo h1 i {
 }
 
 .separate-line {
+  height: 0.4rem;
+  background-color: #f0f0f0;
+}
+
+.separate-line-bottom {
   height: 0.4rem;
   background-color: #999999;
 }
