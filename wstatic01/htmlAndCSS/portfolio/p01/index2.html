@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hello World</title>
+    <meta
+      name="description"
+      content="ポートフォリオをイメージしたランディングページ。自主制作したアプリケーション、スキル、経歴などを記載する。"
+    />
+    <link rel="stylesheet" href="styles/loader.css" />
+    <script src="scripts/vendors/pace.js"></script>
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/icons8-link-24.png" />
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <div class="mobile-menu__cover"></div>
+        <!-- header -->
+        <header class="header">
+          <div class="header__inner">
+            <a href="#global-container" class="header__logo-link">
+              <div class="logo">
+                <i class="fab fa-docker logo__icon"></i>
+                <span>Hello World</span>
+              </div>
+            </a>
+            <nav class="header-menu">
+              <ul class="appear up">
+                <li class="header-menu__item item">
+                  <a class="header-menu__link" href="#section-work">
+                    <span class="">work</span>
+                  </a>
+                </li>
+                <li class="header-menu__item item">
+                  <a class="header-menu__link" href="#section-skill">
+                    <span class="">skill</span>
+                  </a>
+                </li>
+                <li class="header-menu__item item">
+                  <a class="header-menu__link" href="#section-about">
+                    <span class="">about</span>
+                  </a>
+                </li>
+                <li class="header-menu__item item">
+                  <a class="header-menu__link" href="#section-contact">
+                    <span class="">contact</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="mobile-menu__button">
+              <i class="fas fa-bars icon"></i>
+            </div>
+          </div>
+        </header>
+        <div id="content">
+          <!-- hero -->
+          <div class="hero">
+            <div class="swiper-container">
+              <!-- slides -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="images/lenovo-JmnHeJQjs2w-unsplash-min.jpg"
+                    alt=""
+                  />
+                  <div class="hero__sub-title">welcome</div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/nrd-c3tNiAb098I-unsplash-min.jpg" alt="" />
+                  <div class="hero__sub-title">take your time</div>
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="images/fabio-hanashiro-ur4pyEnPdA0-unsplash-min.jpg"
+                    alt=""
+                  />
+                  <div class="hero__sub-title">thank you</div>
+                </div>
+              </div>
+              <!-- pagination -->
+              <div class="swiper-pagination swiper-pagination-white"></div>
+              <!-- Navigation arrows -->
+              <div class="swiper-button-prev swiper-button-white"></div>
+              <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+            <div class="hero__main-title">Hello World</div>
+          </div>
+
+          <div id="main-content">
+            <main>
+              <!-- section-work -->
+              <section id="section-work" class="section-work">
+                <div class="section-title">work</div>
+
+                <!-- accordion-1 -->
+                <div class="accordion-1">
+                  <div class="accordion-1__inner appear">
+                    <!-- item1 -->
+                    <div class="accordion-1__item item-1 item">
+                      <div class="accordion-1__img">
+                        <img src="images/macbook1694_TP_V4.jpg" />
+                        <div class="accordion-1__img-cover"></div>
+                        <div class="accordion-1__img-title">
+                          <div class="accordion-1__img-title-main">
+                            BookList(React)
+                          </div>
+                          <div class="accordion-1__img-title-desc">
+                            open description
+                          </div>
+                        </div>
+                        <div class="accordion-1__description">
+                          <div class="accordion-1__description-title">概要</div>
+                          <div class="accordion-1__description-msg">
+                            Google Books APIsを利用した書籍検索ツール。
+                          </div>
+                          <div class="accordion-1__description-title">
+                            制作期間
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            1ヵ月未満
+                          </div>
+                          <div class="accordion-1__description-title">
+                            フロントエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            React、Typescript、Material-UI、sass
+                          </div>
+                          <div class="accordion-1__description-title">
+                            バックエンド
+                          </div>
+                          <div class="accordion-1__description-msg">Apache</div>
+                          <div class="accordion-1__description-title">
+                            その他
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            SPA、Google Book APIs、session
+                            storage、レスポンシブ対応、AWS、Docker
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-1__footer">
+                        <div>
+                          <a
+                            class="tween-animate-title"
+                            href="http://ec2-54-95-73-10.ap-northeast-1.compute.amazonaws.com:8082/"
+                            target="_blank"
+                            >Go to Application</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item2 -->
+                    <div class="accordion-1__item item-2 item">
+                      <div class="accordion-1__img">
+                        <img src="images/macbook1694_TP_V4.jpg" />
+                        <div class="accordion-1__img-cover"></div>
+                        <div class="accordion-1__img-title">
+                          <div class="accordion-1__img-title-main">
+                            アンテナサイト(PHP)
+                          </div>
+                          <div class="accordion-1__img-title-desc">
+                            open description
+                          </div>
+                        </div>
+                        <div class="accordion-1__description">
+                          <div class="accordion-1__description-title">概要</div>
+                          <div class="accordion-1__description-msg">
+                            掲示板のアンテナサイト。
+                          </div>
+                          <div class="accordion-1__description-title">
+                            制作期間
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            1ヵ月未満
+                          </div>
+                          <div class="accordion-1__description-title">
+                            フロントエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            sass、Bootstrap
+                          </div>
+                          <div class="accordion-1__description-title">
+                            バックエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            PHP、MySQL、Apache
+                          </div>
+                          <div class="accordion-1__description-title">
+                            その他
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            Beautifulsoup(Python)、スクレイピング、レスポンシブ対応、AWS、Docker
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-1__footer">
+                        <div>
+                          <a
+                            class="tween-animate-title"
+                            href="http://ec2-54-95-73-10.ap-northeast-1.compute.amazonaws.com:8086/"
+                            target="_blank"
+                            >Go to Application</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item3 -->
+                    <div class="accordion-1__item item-3 item">
+                      <div class="accordion-1__img">
+                        <img src="images/macbook1694_TP_V4.jpg" />
+                        <div class="accordion-1__img-cover"></div>
+                        <div class="accordion-1__img-title">
+                          <div class="accordion-1__img-title-main">
+                            Covid-19(Python)
+                          </div>
+                          <div class="accordion-1__img-title-desc">
+                            open description
+                          </div>
+                        </div>
+                        <div class="accordion-1__description">
+                          <div class="accordion-1__description-title">概要</div>
+                          <div class="accordion-1__description-msg">
+                            Covid-19の国内陽性者数の推移をDashフレームワークを使用してグラフィカルに表示する。
+                          </div>
+                          <div class="accordion-1__description-title">
+                            制作期間
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            1ヵ月未満
+                          </div>
+                          <div class="accordion-1__description-title">
+                            フロントエンド、バックエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            Dash(Python)
+                          </div>
+                          <div class="accordion-1__description-title">
+                            その他
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            Beautifulsoup(Python)、スクレイピング、AWS、Docker
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-1__footer">
+                        <div>
+                          <a
+                            class="tween-animate-title"
+                            href="http://ec2-54-95-73-10.ap-northeast-1.compute.amazonaws.com:8081/"
+                            target="_blank"
+                            >Go to Application</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item4 -->
+                    <div class="accordion-1__item item-4 item">
+                      <div class="accordion-1__img">
+                        <img src="images/macbook1694_TP_V4.jpg" />
+                        <div class="accordion-1__img-cover"></div>
+                        <div class="accordion-1__img-title">
+                          <div class="accordion-1__img-title-main">
+                            掲示板(Python+React)
+                          </div>
+                          <div class="accordion-1__img-title-desc">
+                            open description
+                          </div>
+                        </div>
+                        <div class="accordion-1__description">
+                          <div class="accordion-1__description-title">概要</div>
+                          <div class="accordion-1__description-msg">
+                            簡素な掲示板。
+                          </div>
+                          <div class="accordion-1__description-title">
+                            制作期間
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            約1ヵ月
+                          </div>
+                          <div class="accordion-1__description-title">
+                            フロントエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            React、Material-UI
+                          </div>
+                          <div class="accordion-1__description-title">
+                            バックエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            Python、Django REST Framework、SQLite、Apache
+                          </div>
+                          <div class="accordion-1__description-title">
+                            その他
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            AWS、Docker
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-1__footer">
+                        <div>
+                          <a
+                            class="tween-animate-title"
+                            href="http://ec2-54-95-73-10.ap-northeast-1.compute.amazonaws.com:8084/"
+                            target="_blank"
+                            >Go to Application</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item5 -->
+                    <div class="accordion-1__item item-5 item">
+                      <div class="accordion-1__img">
+                        <img src="images/macbook1694_TP_V4.jpg" />
+                        <div class="accordion-1__img-cover"></div>
+                        <div class="accordion-1__img-title">
+                          <div class="accordion-1__img-title-main">
+                            掲示板(Java)
+                          </div>
+                          <div class="accordion-1__img-title-desc">
+                            open description
+                          </div>
+                        </div>
+                        <div class="accordion-1__description">
+                          <div class="accordion-1__description-title">概要</div>
+                          <div class="accordion-1__description-msg">
+                            簡素な掲示板。
+                          </div>
+                          <div class="accordion-1__description-title">
+                            制作期間
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            約1ヵ月
+                          </div>
+                          <div class="accordion-1__description-title">
+                            フロントエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            Skeleton(CSSフレームワーク)
+                          </div>
+                          <div class="accordion-1__description-title">
+                            バックエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            Java、Spring Boot、MySQL
+                          </div>
+                          <div class="accordion-1__description-title">
+                            その他
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            AWS、Docker
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-1__footer">
+                        <div>
+                          <a
+                            class="tween-animate-title"
+                            href="http://ec2-54-95-73-10.ap-northeast-1.compute.amazonaws.com:8085/"
+                            target="_blank"
+                            >Go to Application</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- item6 -->
+                    <div class="accordion-1__item item-6 item">
+                      <div class="accordion-1__img">
+                        <img src="images/macbook1694_TP_V4.jpg" />
+                        <div class="accordion-1__img-cover"></div>
+                        <div class="accordion-1__img-title">
+                          <div class="accordion-1__img-title-main">
+                            portfolio
+                          </div>
+                          <div class="accordion-1__img-title-desc">
+                            open description
+                          </div>
+                        </div>
+                        <div class="accordion-1__description">
+                          <div class="accordion-1__description-title">概要</div>
+                          <div class="accordion-1__description-msg">
+                            ポートフォリオの為のランディングページ。
+                          </div>
+                          <div class="accordion-1__description-title">
+                            制作期間
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            1ヵ月未満
+                          </div>
+                          <div class="accordion-1__description-title">
+                            フロントエンド
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            html、css(sass)、javascript
+                          </div>
+                          <div class="accordion-1__description-title">
+                            その他
+                          </div>
+                          <div class="accordion-1__description-msg">
+                            レスポンシブ対応、GitHub Pages
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-1__footer">
+                        <div>
+                          <a
+                            class="tween-animate-title"
+                            href="index.html"
+                            target=""
+                            >Go to Application</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- section-skill -->
+              <section id="section-skill" class="section-skill">
+                <div class="section-title">skill</div>
+
+                <div class="skill">
+                  <div class="skill__inner">
+                    <div class="appear left">
+                      <!-- head -->
+                      <div class="skill__head item"># 業務</div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">Java</div>
+                        <div class="skill__item-desc">
+                          Struts、Springなどのフレームワークを用いたWebアプリケーションの開発。業務歴10年。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">C#</div>
+                        <div class="skill__item-desc">
+                          デスクトップアプリケーションの開発。業務歴1年半。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">
+                          HTML, CSS, Javascript
+                        </div>
+                        <div class="skill__item-desc">
+                          業務系の簡素な画面を作成する程度。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">DB</div>
+                        <div class="skill__item-desc">設計、構築。</div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">Windows Server</div>
+                        <div class="skill__item-desc">
+                          各種PPのインストール、セットアップ、アプリケーションのデプロイ。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">Linux</div>
+                        <div class="skill__item-desc">
+                          アプリケーションのデプロイができる程度。
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="appear left">
+                      <!-- head -->
+                      <div class="skill__head item"># 業務外</div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">React</div>
+                        <div class="skill__item-desc">SPAの作成。</div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">Typescript</div>
+                        <div class="skill__item-desc">
+                          Reactと組み合わせて使用する。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">sass</div>
+                        <div class="skill__item-desc">
+                          簡単なランディングページを作成する程度。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">Python</div>
+                        <div class="skill__item-desc">
+                          Webスクレイピング、Djangoを用いたWebAPIサーバの構築。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">PHP</div>
+                        <div class="skill__item-desc">
+                          フレームワークを使わない程度のWebアプリケーションの開発。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">Docker</div>
+                        <div class="skill__item-desc">
+                          ローカル環境の構築、クラウド環境へのデプロイ、Dockerfile、docker-compose.ymlの作成。
+                        </div>
+                      </div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">AWS</div>
+                        <div class="skill__item-desc">
+                          EC2上にDocker環境を構築し、アプリケーションを起動する程度。
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="appear left">
+                      <!-- head -->
+                      <div class="skill__head item"># その他</div>
+                      <!-- item -->
+                      <div class="skill__item item">
+                        <div class="skill__item-head">C/C++</div>
+                        <div class="skill__item-desc">
+                          Win32API、画像表示ライブラリ(DXライブラリ)を使用したゲーム開発。
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- section-about -->
+              <section id="section-about" class="section-about">
+                <div class="section-title">about</div>
+
+                <div class="about">
+                  <div class="about__inner appear left">
+                    <div class="about__img-wrap item">
+                      <div class="about__img">
+                        <img src="images/boy_01.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="about__item-wrap">
+                      <div class="about__item item">
+                        <div class="about__item-head">出身</div>
+                        <div class="about__item-desc">沖縄</div>
+                      </div>
+                      <div class="about__item item">
+                        <div class="about__item-head">生まれ</div>
+                        <div class="about__item-desc">1977年</div>
+                      </div>
+                      <div class="about__item item">
+                        <div class="about__item-head">経歴</div>
+                        <div class="about__item-desc">
+                          2008年にSES会社に就職し、SIer系のプログラマーとしてキャリアをスタート。業界歴13年。<br />
+                          近年は3～7人程度の開発チームの管理者として、要件定義～運用保守までを担当する。
+                        </div>
+                      </div>
+                      <div class="about__item item">
+                        <div class="about__item-head">
+                          今後伸ばしていきたいスキル
+                        </div>
+                        <div class="about__item-desc">
+                          クラウド関連技術、仮想化技術、フロントエンド関連技術、Webマーケティング、英語。
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- section-contact -->
+              <section id="section-contact" class="section-contact">
+                <div class="section-title">contact</div>
+                <div class="contact">
+                  <div class="contact__inner appear up">
+                    <div class="contact__msg item">
+                      お問い合わせは下記よりお願いします。
+                    </div>
+                    <div class="contact__mail item">dummy@gmail.com</div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- to-top-->
+              <div class="to-top">
+                <div class="to-top__msg">
+                  <a href="#global-container">top</a>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <div class="footer__inner">
+            <div>
+              <small>Copyright (c) dummy.co,.ltd. All Rights Reserved.</small>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- mobile-menu -->
+      <nav class="mobile-menu appear left">
+        <ul>
+          <li class="mobile-menu__item item">
+            <a class="mobile-menu__link" href="#section-work">
+              <span class="main-title">work</span>
+              <span class="sub-title">アプリケーション</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item item">
+            <a class="mobile-menu__link" href="#section-skill">
+              <span class="main-title">skill</span>
+              <span class="sub-title">skillについて</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item item">
+            <a class="mobile-menu__link" href="#section-about">
+              <span class="main-title">about</span>
+              <span class="sub-title">わたしについて</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item item">
+            <a class="mobile-menu__link" href="#section-contact">
+              <span class="main-title">contact</span>
+              <span class="sub-title">ご連絡</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script src="scripts/vendors/TweenMax.min.js"></script>
+    <script src="scripts/vendors/swiper-bundle.min.js"></script>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/modules/text-animation.js"></script>
+    <script src="scripts/modules/hero-slider.js"></script>
+    <script src="scripts/modules/scroll.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
