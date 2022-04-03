@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Map Sample</title>
+    <meta charset="utf-8" />
+    <style>
+      /* マップを表示する div 要素の高さを必ず明示的に指定します。 */
+      #gmap {
+        height: 200px;
+        width: 300px;
+      }
+      #gmap2 {
+        height: 200px;
+        width: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>gmap</h2>
+    <div id="gmap"></div>
+
+    <h2>gmap2</h2>
+    <div id="gmap2"></div>
+
+    <script>
+      function initMap() {
+        let map = new google.maps.Map(document.getElementById("gmap"), {
+          center: { lat: 40.748441, lng: -73.985664 },
+          zoom: 14,
+        });
+        let map2 = new google.maps.Map(document.getElementById("gmap2"), {
+          center: { lat: 40.748441, lng: -73.985664 },
+          zoom: 14,
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyB2pkW7zCDSl4C6G3moqNyiCRWkbX6nBGk&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>

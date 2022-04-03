@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Map Sample</title>
+    <meta charset="utf-8" />
+    <style>
+      /* マップを表示する div 要素の高さを必ず明示的に指定します。 */
+      #gmap {
+        height: 400px;
+        width: 600px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="gmap"></div>
+    <!-- 地図を表示する div 要素（id="map"）-->
+    <script>
+      let map;
+      function initMap() {
+        const target = document.getElementById("gmap");
+        //Empire State Bldg の緯度（latitude）と経度（longitude）
+        const empire = { lat: 40.748441, lng: -73.985664 };
+
+        map = new google.maps.Map(target, {
+          center: empire,
+          zoom: 14,
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyB2pkW7zCDSl4C6G3moqNyiCRWkbX6nBGk&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
