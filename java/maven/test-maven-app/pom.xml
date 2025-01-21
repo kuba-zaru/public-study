@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.7</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.example</groupId> <!-- 起業の名前などを指定する -->
+    <artifactId>test-maven-app</artifactId> <!-- プロジェクトに割り当てるID -->
+    <version>0.0.1-SNAPSHOT</version> <!-- このプロジェクトのバージョン -->
+    <name>test-maven-app</name>
+    <description>Demo project for Spring Boot</description>
+    <url/>
+    <licenses>
+        <license/>
+    </licenses>
+    <developers>
+        <developer/>
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    <properties> <!-- プロジェクト全体に対する設定を記述する -->
+        <java.version>17</java.version>
+    </properties>
+    <dependencies> <!-- 依存関係を記述する -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope> <!-- テスト用のライブラリ。テスト時にしか使用されない。 -->
+        </dependency>
+    </dependencies>
+
+    <build> <!-- ビルド時の設定を記述する -->
+        <plugins> <!-- Mavenに対する設定。Mavenの拡張をしたい場合に記述する。 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
