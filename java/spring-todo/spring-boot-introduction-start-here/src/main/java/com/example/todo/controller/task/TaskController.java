@@ -183,4 +183,39 @@ public class TaskController {
         // 一覧画面にリダイレクトする
         return "redirect:/tasks";
     }
+
+    /**
+     * テストコード
+     * フォーム２画面を表示する
+     *
+     * @param taskForm フォーム２
+     * @param model    Model
+     * @return テンプレートファイル名
+     */
+    @GetMapping("/tasks/form2")
+    public String showForm2(@ModelAttribute TaskForm taskForm, Model model) {
+        return "tasks/form2";
+    }
+
+    /**
+     * テストコード
+     *
+     * @param taskForm
+     * @param bindingResult
+     * @param model
+     * @return
+     */
+    @PostMapping("/tasks/create2")
+    public String create2(@Validated TaskForm taskForm, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            // エラーの場合は、作成画面に戻る
+            return showForm2(taskForm, model);
+        }
+
+        // テスト用のコードなのでコメントアウト
+        //　taskService.create(taskForm.toEntity());
+
+        // とりあえず一覧画面にリダイレクトする
+        return "redirect:/";
+    }
 }

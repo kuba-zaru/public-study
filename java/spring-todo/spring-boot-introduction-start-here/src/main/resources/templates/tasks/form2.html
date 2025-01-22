@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja"
+      layout:decorate="~{layout/layout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <title th:text="編集２"></title>
+    <style>
+    </style>
+</head>
+<body>
+<section layout:fragment="content">
+    <h1>編集２</h1>
+    <div class="form-container mt-3">
+        <form th:action="@{/tasks/create2}" method="post" class="form-group"
+              th:object="${taskForm}">
+
+            <div class="form-group">
+                <label class="form-label" for="summary">概要</label>
+                <input type="text"
+                       name="summary"
+                       id="summary"
+                       class="form-control"
+                       placeholder="概要"
+                       th:field="*{summary}"
+                       th:errorclass="is-invalid">
+                <span th:errors="*{summary}"
+                      class="invalid-feedback"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="description">詳細</label>
+                <input type="text"
+                       name="description"
+                       id="description"
+                       class="form-control"
+                       placeholder="詳細"
+                       th:field="*{description}"
+                       th:errorclass="is-invalid">
+                <span th:errors="*{description}"
+                      class="invalid-feedback"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="status">status</label>
+                <input type="text"
+                       name="status"
+                       class="form-control"
+                       id="status"
+                       placeholder="TODO"
+                       th:field="*{status}"
+                       th:errorclass="is-invalid">
+                <span th:errors="*{status}"
+                      class="invalid-feedback"></span>
+            </div>
+            <div>
+                <button type="submit">送信</button>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
