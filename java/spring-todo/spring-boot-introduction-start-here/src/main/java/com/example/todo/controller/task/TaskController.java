@@ -218,4 +218,9 @@ public class TaskController {
         // とりあえず一覧画面にリダイレクトする
         return "redirect:/";
     }
+
+    @GetMapping("/tasks/file-upload")
+    public String showFileUploadForm(@ModelAttribute FileUploadForm fileUploadForm, Model model) {
+        return "tasks/form-file-upload";
+    }
 }
