@@ -8,6 +8,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 /**
  * TaskController
  */
@@ -241,14 +243,24 @@ public class TaskController {
      * @return xxx画面
      */
     @PostMapping("/tasks/file-upload")
-    public String uploadFile(
-            @Validated FileUploadForm fileUploadForm, BindingResult bindingResult, Model model) {
-        if (bindingResult.hasErrors()) {
+    public String uploadFile(@ModelAttribute FileUploadForm fileUploadForm,
+                             BindingResult bindingResult,
+                             Model model) {
+
+        if (fileUploadForm.getFile().isEmpty()) {
             // エラーの場合は、元の画面に戻る
             return showFileUploadForm(fileUploadForm, model);
         }
 
-        // TODO: ファイルアップロード処理を実装する
+        try {
+            // TODO: ファイルアップロード処理を実装する
+            // ファイル名を表示する
+            System.out.println("ファイル: " + fileUploadForm.getFile().getOriginalFilename());
+            // ファイルの内容を表示する
+            System.out.println(new String(fileUploadForm.getFile().getBytes()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         // TODO: とりあえず一覧画面にリダイレクトする
         return "redirect:/";

@@ -1,11 +1,10 @@
 package com.example.todo.controller.task;
 
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * ファイルアップロードの入力フォーム
@@ -14,8 +13,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public class FileUploadForm {
-    // TODO: 拡張子チェック
-    @NotBlank
-    @Size(max = 256, message = "256文字以内で入力してください")
-    String fileName;
+
+    /**
+     * ファイル
+     */
+    private MultipartFile file;
 }

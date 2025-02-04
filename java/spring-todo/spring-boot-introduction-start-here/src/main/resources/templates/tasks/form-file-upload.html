@@ -14,20 +14,14 @@
     <div class="form-container">
         <form th:action="@{/tasks/file-upload}"
               th:method="post"
-              th:object="${fileUploadForm}">
-            <!--            <div class="form-group mt-3">-->
-            <!--                <label class="form-label" for="fileName">ファイル</label>-->
-            <!--                <input type="text"-->
-            <!--                       class="form-control"-->
-            <!--                       id="fileName"-->
-            <!--                       th:field="*{fileUploadForm.fileName}">-->
-            <!--            </div>-->
+              th:object="${fileUploadForm}"
+              enctype="multipart/form-data">
             <div class="form-group">
-                <label for="fileName" class="form-label">ファイルを選択</label>
-                <input class="form-control" type="file" id="fileName"
-                       name="fileName"
+                <label for="file" class="form-label">ファイルを選択</label>
+                <input class="form-control" type="file" id="file"
+                       name="file"
                        th:errorclass="is-invalid"
-                       th:field="*{fileName}">
+                       th:field="*{file}">
                 <span></span>
             </div>
 
