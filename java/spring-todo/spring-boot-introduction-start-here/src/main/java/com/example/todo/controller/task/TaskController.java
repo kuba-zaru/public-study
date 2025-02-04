@@ -199,6 +199,7 @@ public class TaskController {
 
     /**
      * テストコード
+     * フォーム２の後続処理
      *
      * @param taskForm
      * @param bindingResult
@@ -219,8 +220,37 @@ public class TaskController {
         return "redirect:/";
     }
 
+    /**
+     * ファイルアップロード画面を表示する
+     *
+     * @param fileUploadForm ファイルアップロードフォーム
+     * @param model          Model
+     * @return ファイルアップロード画面
+     */
     @GetMapping("/tasks/file-upload")
     public String showFileUploadForm(@ModelAttribute FileUploadForm fileUploadForm, Model model) {
         return "tasks/form-file-upload";
+    }
+
+    /**
+     * ファイルをアップロードする
+     *
+     * @param fileUploadForm ファイルアップロードフォーム
+     * @param bindingResult  バインディング結果
+     * @param model          Model
+     * @return xxx画面
+     */
+    @PostMapping("/tasks/file-upload")
+    public String uploadFile(
+            @Validated FileUploadForm fileUploadForm, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            // エラーの場合は、元の画面に戻る
+            return showFileUploadForm(fileUploadForm, model);
+        }
+
+        // TODO: ファイルアップロード処理を実装する
+
+        // TODO: とりあえず一覧画面にリダイレクトする
+        return "redirect:/";
     }
 }
