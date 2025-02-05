@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja"
+      layout:decorate="~{layout/layout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <title>ファイル内容</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <h1>ファイル内容</h1>
+    <div th:object="${fileContentsDTO}" >
+        <p th:text="*{fileName}" ></p>
+        <p>TODO: 実装上の都合でcsvファイルの内容を改行無しで表示しているが、本来は改行して表示すべき。</p>
+        <p th:text="*{contents}" ></p>
+    </div>
+</section>
+</body>
+</html>

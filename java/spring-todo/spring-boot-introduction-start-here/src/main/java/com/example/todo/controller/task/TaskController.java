@@ -248,21 +248,38 @@ public class TaskController {
                              Model model) {
 
         if (fileUploadForm.getFile().isEmpty()) {
-            // エラーの場合は、元の画面に戻る
+            // エラーの場合
+            // エラーメッセージを設定する
+            // TODO: エラーメッセージを画面に表示する箇所が未実装
+            bindingResult.rejectValue("file", "error.fileUploadForm", "ファイルを選択してください");
+            // 元の画面に戻る
             return showFileUploadForm(fileUploadForm, model);
         }
 
+//        List<String> fileData = new ArrayList<String>();
+        FileContentsDTO fileContentsDTO = new FileContentsDTO();
+
+        // TODO: ファイルアップロード処理を実装する
         try {
-            // TODO: ファイルアップロード処理を実装する
             // ファイル名を表示する
             System.out.println("ファイル: " + fileUploadForm.getFile().getOriginalFilename());
             // ファイルの内容を表示する
             System.out.println(new String(fileUploadForm.getFile().getBytes()));
+
+            // ファイル名を設定する
+            fileContentsDTO.setFileName(fileUploadForm.getFile().getOriginalFilename());
+
+            // ファイルの内容を改行コードごとにリストに格納する
+            // TODO: ファイルの内容はlistにすべきだが、実装の都合上Stringで実装している。
+            fileContentsDTO.setContents(new String(fileUploadForm.getFile().getBytes()));
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        // TODO: とりあえず一覧画面にリダイレクトする
-        return "redirect:/";
+        model.addAttribute("fileContentsDTO", fileContentsDTO);
+
+        // ファイル内容を表示する
+        return "tasks/show-file-contents";
     }
 }
