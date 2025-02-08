@@ -272,14 +272,64 @@ public class TaskController {
             // ファイルの内容を改行コードごとにリストに格納する
             // TODO: ファイルの内容はlistにすべきだが、実装の都合上Stringで実装している。
             fileContentsDTO.setContents(new String(fileUploadForm.getFile().getBytes()));
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
+        // 表示用のデータを設定する
         model.addAttribute("fileContentsDTO", fileContentsDTO);
 
         // ファイル内容を表示する
-        return "tasks/show-file-contents";
+        return "/tasks/show-file-contents";
+    }
+
+    /**
+     * タスク検索テスト
+     *
+     * @param taskSearchTestForm フォーム
+     * @return タスク検索画面
+     */
+    @GetMapping("/tasks/search-task-test")
+    public String searchTaskTest(
+            @ModelAttribute TaskSearchTestForm taskSearchTestForm) {
+
+        // デフォルト値を設定する
+        // NOTE: 本来は初期値を設定する処理をControllerで行うべきではないが、学習のために記載している。
+        taskSearchTestForm.setId("1");
+
+        return "/tasks/search-task-test";
+    }
+
+    /**
+     * タスク検索テスト
+     *
+     * @param taskSearchTestForm フォーム
+     * @param model              Model
+     * @return タスク検索画面
+     */
+    @PostMapping("/tasks/search-task-test")
+    public String searchResultTaskTest(
+            @ModelAttribute TaskSearchTestForm taskSearchTestForm,
+            Model model) {
+
+        // 入力値を表示する
+        System.out.println("入力値: " + taskSearchTestForm);
+
+        // taskを検索する
+        var taskListEntity = taskService.findById(Long.parseLong(taskSearchTestForm.getId()));
+
+        // エラーメッセージを設定する
+        if (taskListEntity.isEmpty()) {
+            model.addAttribute("errorMessage", "Taskが見つかりませんでした。");
+            return "/tasks/search-task-test";
+        }
+
+        // EntityからDTOに変換する
+        var taskDTO = taskListEntity.map(TaskDTO::toDTO).orElse(null);
+
+        // modelに画面情報を設定する
+        model.addAttribute("task", taskDTO);
+
+        return "/tasks/search-task-test";
     }
 }

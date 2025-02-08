@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja"
+      layout:decorate="~{layout/layout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <title>タスク検索</title>
+</head>
+<body>
+<section layout:fragment="content">
+
+    <div th:if="${errorMessage != null}" class="alert alert-danger">
+        <ul class="list-unstyled mb-0">
+            <li th:text="${errorMessage}"></li>
+        </ul>
+    </div>
+
+    <h1 class="display-5 text-center">タスク検索</h1>
+
+    <div>
+        <form class="mt-3"
+              th:action="@{/tasks/search-task-test}"
+              th:object="${taskSearchTestForm}"
+              method="POST">
+
+            <div class="row g-3 d-flex justify-content-center align-items-center">
+                <div class="col-auto">
+                    <label for="input-id"
+                           class="col-form-label">〇〇番号</label>
+                </div>
+                <div class="col-auto">
+                    <input class="form-control" id="input-id" type="text"
+                           th:field="*{id}">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary form-control">
+                        検索
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="mt-5" th:if="${task != null}">
+        <h2 class="display-6 text-center">検索結果</h2>
+
+        <div class="d-flex justify-content-center ">
+            <table class="table w-75"
+                   th:object="${task}">
+                <tr>
+                    <th class="w-25"><p>ID</p></th>
+                    <td><p th:text="*{id}"></p></td>
+                </tr>
+                <tr>
+                    <th class="w-25"><p>概要</p></th>
+                    <td><p th:text="*{summary}"></p></td>
+                </tr>
+                <tr>
+                    <th class="w-25"><p>説明</p></th>
+                    <td><p th:text="*{description}"></p></td>
+                </tr>
+                <tr>
+                    <th class="w-25"><p>ステータス</p></th>
+                    <td><p th:text="*{status}"></p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="mt-3">
+        <a class="btn btn-secondary" th:href="@{/}">Home</a>
+    </div>
+</section>
+</body>
+</html>
