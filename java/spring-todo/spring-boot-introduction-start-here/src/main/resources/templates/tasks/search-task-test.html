@@ -24,14 +24,17 @@
               th:object="${taskSearchTestForm}"
               method="POST">
 
-            <div class="row g-3 d-flex justify-content-center align-items-center">
+            <div class="row g-3 d-flex justify-content-center ">
                 <div class="col-auto">
                     <label for="input-id"
                            class="col-form-label">〇〇番号</label>
                 </div>
-                <div class="col-auto">
+                <div class="col-auto w-25">
                     <input class="form-control" id="input-id" type="text"
+                           th:errorclass="is-invalid"
                            th:field="*{id}">
+                    <span class="invalid-feedback"
+                          th:errors="*{id}"></span>
                 </div>
                 <div class="col-auto">
                     <button type="submit" class="btn btn-primary form-control">

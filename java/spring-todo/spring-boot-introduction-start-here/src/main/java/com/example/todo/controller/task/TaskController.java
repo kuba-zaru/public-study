@@ -309,11 +309,17 @@ public class TaskController {
      */
     @PostMapping("/tasks/search-task-test")
     public String searchResultTaskTest(
-            @ModelAttribute TaskSearchTestForm taskSearchTestForm,
+            @ModelAttribute @Validated TaskSearchTestForm taskSearchTestForm,
+            BindingResult bindingResult,
             Model model) {
 
         // 入力値を表示する
         System.out.println("入力値: " + taskSearchTestForm);
+
+        if (bindingResult.hasErrors()) {
+            // エラーの場合は、作成画面に戻る
+            return searchTaskTest(taskSearchTestForm);
+        }
 
         // taskを検索する
         var taskListEntity = taskService.findById(Long.parseLong(taskSearchTestForm.getId()));
