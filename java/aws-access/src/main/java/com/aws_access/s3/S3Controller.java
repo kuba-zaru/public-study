@@ -3,15 +3,12 @@ package com.aws_access.s3;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
-import software.amazon.awssdk.auth.credentials.AwsCredentials;
 import software.amazon.awssdk.auth.credentials.AwsSessionCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
+import software.amazon.awssdk.core.ResponseBytes;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
-import software.amazon.awssdk.services.s3.model.Bucket;
-import software.amazon.awssdk.services.s3.model.ListBucketsRequest;
-import software.amazon.awssdk.services.s3.model.ListBucketsResponse;
+import software.amazon.awssdk.services.s3.model.*;
 
 import java.util.List;
 
@@ -27,13 +24,16 @@ public class S3Controller {
     @Value("${aws.session.token}")
     private String AWS_SESSION_TOKEN;
 
+    @Value("${aws.region}")
+    private String AWS_REGION;
+
     /**
      * S3のバケット一覧を表示する
      *
      * @return バケット一覧表示画面
      */
     @GetMapping("/s3-show-bucket")
-    public String s3ShowBucke() {
+    public String s3ShowBucket() {
 
         //認証情報を設定
         AwsSessionCredentials credentials =
@@ -44,7 +44,7 @@ public class S3Controller {
 
         //S3クライアントを生成
         S3Client s3 = S3Client.builder()
-                .region(Region.US_EAST_1)
+                .region(Region.of(AWS_REGION))
                 .credentialsProvider(StaticCredentialsProvider.create(credentials))
                 .build();
         ListBucketsRequest listBucketsRequest = ListBucketsRequest.builder().build();
@@ -59,6 +59,17 @@ public class S3Controller {
         for (Bucket bucket : list) {
             System.out.println(bucket.name());
         }
+
+        //オブジェクトの取得
+        GetObjectRequest objRequest = GetObjectRequest
+                .builder()
+                .key("index.html")
+                .bucket("kuba-test-backet")
+                .build();
+        ResponseBytes<GetObjectResponse> objBytes = s3.getObjectAsBytes(objRequest);
+        //UTF-8文字列として取得
+        String message = objBytes.asUtf8String();
+        System.out.println(message);
 
         return "s3/s3-show-bucket";
     }
