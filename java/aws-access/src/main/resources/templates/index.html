@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja"
+      layout:decorate="~{layout/layout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <section>
+        <h1 class="h1">Home</h1>
+        <p class="">AWS操作のサンプル</p>
+    </section>
+    <section class="mt-3">
+        <div>
+            <a class="btn btn-primary" th:href="@{s3-show-bucket}">s3</a>
+        </div>
+    </section>
+</section>
+</body>
+</html>
