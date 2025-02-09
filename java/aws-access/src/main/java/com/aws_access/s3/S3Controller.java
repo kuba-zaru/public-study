@@ -18,8 +18,8 @@ public class S3Controller {
     @Value("${aws.access.key}")
     private String AWS_ACCESS_KEY;
 
-    @Value("${aws.secret.key}")
-    private String AWS_SECRET_KEY;
+    @Value("${aws.secret.access.key}")
+    private String AWS_SECRET_ACCESS_KEY;
 
     @Value("${aws.session.token}")
     private String AWS_SESSION_TOKEN;
@@ -39,7 +39,7 @@ public class S3Controller {
         AwsSessionCredentials credentials =
                 AwsSessionCredentials.create(
                         AWS_ACCESS_KEY,
-                        AWS_SECRET_KEY,
+                        AWS_SECRET_ACCESS_KEY,
                         AWS_SESSION_TOKEN);
 
         //S3クライアントを生成
