@@ -1,0 +1,25 @@
+spring:
+  application:
+    # アプリケーション名を設定します。この名前は、Spring Boot Actuatorのエンドポイントで表示される名前になります。
+    name: aws-access
+  devtools:
+    # Spring Boot DevToolsのリモート再起動とライブリロード機能が有効になります。
+    remote:
+      restart:
+        enabled: true
+    livereload:
+      enabled: true
+  thymeleaf:
+    # Thymeleaf テンプレートのキャッシュを無効にする設定です。これにより、テンプレートファイルの変更が即座に反映されるようになります。開発中にテンプレートを頻繁に変更する場合に便利です。
+    cache: false
+
+# AWS
+aws:
+  access:
+    key: ${AWS_ACCESS_KEY}
+  secret:
+    access:
+      key: ${AWS_SECRET_ACCESS_KEY}
+  session:
+    token: ${AWS_SESSION_TOKEN}
+  region: ap-northeast-1
