@@ -12,10 +12,14 @@
 
 ## 起動方法
 
-- Gradle > Tasks > application > bootRun
+- 起動方法
+    - Gradle > Tasks > application > bootRun
+- URL
+    - http://localhost:8080/
 
 ## ログイン情報
 
-- ユーザー名：xxx
+- ユーザー名：user
 - パスワード：xxx
+- ロール：xxx
 

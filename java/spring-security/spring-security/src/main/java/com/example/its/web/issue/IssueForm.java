@@ -9,11 +9,11 @@ import javax.validation.constraints.Size;
 public class IssueForm {
 
     @NotBlank
-    @Size(max=256)
+    @Size(max = 256)
     private String summary;
 
     @NotBlank
-    @Size(max=256)
+    @Size(max = 256)
     private String description;
 
 }
