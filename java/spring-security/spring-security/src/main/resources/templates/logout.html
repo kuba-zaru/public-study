@@ -2,18 +2,15 @@
 <html th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>トップページ | 課題管理アプリケーション</title>
+    <title>ログアウト | 課題管理アプリケーション</title>
 </head>
 <body>
 <h1 class="mt-3">課題管理アプリケーション</h1>
-<ul>
-    <li>
-        <a href="./issues/list.html" th:href="@{/issues}">課題一覧</a>
-    </li>
-    <li>
-        <a href="./logout">ログアウト画面を表示</a>
-    </li>
-</ul>
+<form method="post" th:action="@{/logout}">
+    <div class="mt-3">
+        <button class="btn btn-primary" type="submit">ログアウト</button>
+    </div>
+</form>
 <hr>
 <p><a href="./login.html" th:href="@{/}">ルートパス</a></p>
 <p><a href="./login.html" th:href="@{/login}">ログイン画面</a></p>
