@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}">
+<!DOCTYPE html >
+<html lang="ja"
+      th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>トップページ | 課題管理アプリケーション</title>
 </head>
@@ -11,5 +12,8 @@
         <a href="./issues/list.html" th:href="@{/issues}">課題一覧</a>
     </li>
 </ul>
+<hr>
+<p><a href="./login.html" th:href="@{/}">ルートパス</a></p>
+<p><a href="./login.html" th:href="@{/login}">ログイン画面</a></p>
 </body>
 </html>
