@@ -11,4 +11,14 @@ public class IndexController {
         System.out.println("IndexController.index start...");
         return "index";
     }
+
+    /**
+     * ログイン画面を表示する
+     *
+     * @return ログイン画面
+     */
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "login";
+    }
 }
