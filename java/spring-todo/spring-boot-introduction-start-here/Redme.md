@@ -20,3 +20,5 @@
     - http://localhost:8080/
 - データベース
     - http://localhost:8080/h2-console/
+- 起動方法
+  - `./gradlew bootRun`

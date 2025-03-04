@@ -338,4 +338,15 @@ public class TaskController {
 
         return "/tasks/search-task-test";
     }
+
+    /**
+     * 計算テスト
+     */
+    @GetMapping("/tasks/calc-1")
+    public String searchTaskTest() {
+
+
+
+        return "/tasks/calc-1";
+    }
 }
