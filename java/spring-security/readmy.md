@@ -23,3 +23,7 @@
 - パスワード：xxx
 - ロール：xxx
 
+## ツール
+
+- Chrome
+    - EditThisCookie
