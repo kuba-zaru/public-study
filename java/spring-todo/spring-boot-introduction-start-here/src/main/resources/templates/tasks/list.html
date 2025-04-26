@@ -13,6 +13,24 @@
         <a class="btn btn-primary" th:href="@{/tasks/creationForm}">作成</a>
     </div>
     <div>
+        <form th:action="@{/tasks}" method="get" >
+            <div class="gorm-group" >
+                <label class="form-label" for="summarySearch">概要</label>
+                <input type="text" class="form-control" id="summarySearch" name="summary"
+                       placeholder="概要">
+            </div>
+            <div class="gorm-group">
+                <input  type="checkbox" id="statusSearchTodo" name="status" value="TODO">
+                <label class="form-label" for="statusSearchTodo">Todo</label>
+                <input  type="checkbox" id="statusSearchDoint" name="status" value="DOING">
+                <label class="form-label" for="statusSearchTodo">Doing</label>
+                <input  type="checkbox" id="statusSearchDone" name="status" value="DONE">
+                <label class="form-label" for="statusSearchTodo">Done</label>
+            </div>
+            <button type="submit" class="btn btn-primary" >検索</button>
+        </form>
+    </div>
+    <div>
         <table class="table">
             <thead>
             <tr>
@@ -23,8 +41,10 @@
             </thead>
             <tbody>
             <tr th:each="task : ${taskList}" th:object="${task}">
-                <td><a th:href="@{tasks/{id}(id=*{id})}" th:text="'#' + *{id}"></a></td>
-                <td><a th:href="@{tasks/{id}(id=*{id})}" th:text="*{summary}"></a></td>
+                <td><a th:href="@{tasks/{id}(id=*{id})}"
+                       th:text="'#' + *{id}"></a></td>
+                <td><a th:href="@{tasks/{id}(id=*{id})}"
+                       th:text="*{summary}"></a></td>
                 <td th:text="*{status}"></td>
             </tr>
             </tbody>
