@@ -25,21 +25,8 @@ public class TaskService {
      *
      * @return taskリスト
      */
-    public List<TaskEntity> find() {
-//        テストコード
-//        var task1 = new TaskEntity(
-//                1L,
-//                "String Bootを学ぶ",
-//                "TODOアプリケーションを作ってみる",
-//                TaskStatus.TODO);
-//        var task2 = new TaskEntity(
-//                2L,
-//                "String Securityを学ぶ",
-//                "ログイン機能を作ってみる",
-//                TaskStatus.DOING);
-//        var taskList = List.of(task1, task2);
-
-        // DBからselectする
+    public List<TaskEntity> find(TaskSearcEntity taskSearcEntity) {
+        // taskテーブルを取得する
         var taskList = taskRepository.select();
 
         return taskList;

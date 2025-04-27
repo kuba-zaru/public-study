@@ -29,11 +29,12 @@ public class TaskController {
      * @return テンプレートファイル名
      */
     @GetMapping("/tasks")
-    public String list(Model model) {
+    public String list(TaskSearchForm taskSearchForm, Model model) {
         System.out.println("TaskController.list start...");
+        System.out.println(taskSearchForm);
 
         // taskテーブルを取得する
-        var taskListEntity = taskService.find();
+        var taskListEntity = taskService.find(taskSearchForm.toEntity());
 
         // EntityからDTOに変換する
         // NOTE:変換はtaskDTO側に記載するほうがベターだが、学習のためにController内に記載している。
@@ -344,7 +345,6 @@ public class TaskController {
      */
     @GetMapping("/tasks/calc-1")
     public String searchTaskTest() {
-
 
 
         return "/tasks/calc-1";
