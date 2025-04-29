@@ -1,6 +1,7 @@
 package com.example.todo.repository.task;
 
 import com.example.todo.service.task.TaskEntity;
+import com.example.todo.service.task.TaskSearcEntity;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -13,12 +14,29 @@ import java.util.Optional;
 public interface TaskRepository {
 
     /**
-     * taskを全件取得する
+     * taskを検索取得する
      *
      * @return taskリスト
      */
-    @Select("SELECT id, summary, description, status FROM tasks;")
-    List<TaskEntity> select();
+    @Select("""
+            <script>
+              SELECT id, summary, description, status 
+              FROM tasks
+              <where>
+                <if test="condition.summary != null and !condition.summary.isBlank()">
+                  summary LIKE CONCAT('%', #{condition.summary}, '%')
+                </if>
+                <if test="condition.status != null and !condition.status.isEmpty()"  >
+                  AND status IN (
+                    <foreach item="item" index="index" collection="condition.status" separator="," >
+                      #{item}
+                    </foreach>
+                  )
+                </if>
+              </where>
+            </script>
+            """)
+    List<TaskEntity> select(@Param("condition") TaskSearcEntity condition);
 
     /**
      * taskを1件取得する

@@ -27,7 +27,7 @@ public class TaskService {
      */
     public List<TaskEntity> find(TaskSearcEntity taskSearcEntity) {
         // taskテーブルを取得する
-        var taskList = taskRepository.select();
+        var taskList = taskRepository.select(taskSearcEntity);
 
         return taskList;
     }

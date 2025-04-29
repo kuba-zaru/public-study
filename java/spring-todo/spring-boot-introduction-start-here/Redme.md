@@ -17,8 +17,8 @@
 # 開発情報
 
 - TODOアプリ
-    - http://localhost:8080/
+  http://localhost:8080/
 - データベース
-    - http://localhost:8080/h2-console/
+  http://localhost:8080/h2-console/
 - 起動方法
-  - `./gradlew bootRun`
+    - `./gradlew bootRun`

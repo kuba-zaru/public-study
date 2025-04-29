@@ -19,33 +19,35 @@
         </div>
         <div class="card-body">
             <form th:action="@{/tasks}" method="get">
-                <div class="gorm-group">
+                <div class="gorm-group" th:object="${searchForm}">
                     <label class="form-label" for="summarySearch">概要</label>
                     <input type="text" class="form-control" id="summarySearch"
-                           name="summary"
-                           placeholder="概要">
+                           placeholder="概要" th:field="*{summary}"/>
                 </div>
                 <div class="gorm-group mt-3">
                     <div>
                         <label class="form-label">ステータス</label>
                     </div>
-                    <div class="btn-group">
+                    <div class="btn-group" th:object="${searchForm}">
                         <input class="btn-check" type="checkbox"
                                id="statusSearchTodo"
                                name="status"
-                               value="TODO">
+                               value="TODO"
+                               th:checked="*{isChecked('TODO')}">
                         <label class="btn btn-outline-primary"
                                for="statusSearchTodo">Todo</label>
                         <input class="btn-check" type="checkbox"
                                id="statusSearchDoing"
                                name="status"
-                               value="DOING">
+                               value="DOING"
+                               th:checked="*{isChecked('DOING')}">
                         <label class="btn btn-outline-primary"
                                for="statusSearchDoing">Doing</label>
                         <input class="btn-check" type="checkbox"
                                id="statusSearchDone"
                                name="status"
-                               value="DONE">
+                               value="DONE"
+                               th:checked="*{isChecked('DONE')}">
                         <label class="btn btn-outline-primary"
                                for="statusSearchDone">Done</label>
                     </div>

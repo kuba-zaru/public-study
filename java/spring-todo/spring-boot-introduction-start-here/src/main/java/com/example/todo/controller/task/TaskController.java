@@ -50,6 +50,7 @@ public class TaskController {
 
         // modelに画面情報を設定する
         model.addAttribute("taskList", taskList);
+        model.addAttribute("searchForm", taskSearchForm);
 
         return "tasks/list";
     }
